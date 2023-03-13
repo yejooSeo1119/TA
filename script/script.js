@@ -1,0 +1,99 @@
+$(document).ready(function() {
+	$('#fullpage').fullpage({
+		//options here
+		autoScrolling:true,
+		scrollHorizontally: true,
+        navigation:true
+	});
+
+	//methods
+	$.fn.fullpage.setAllowScrolling(false);
+});
+
+
+
+
+HTML CSS JSResult Skip Results Iframe
+EDIT ON
+$(function(){
+    setInterval(function(){
+        if($('.mainbotBk').hasClass("swiper-slide-active") === true ) {
+            $(".mainfull_navi").addClass("bk");
+            $("header.head").css("border","none");
+            $(".logo_header").css("color","#000");
+            $("nav > ul > li > a").css("color","#000");
+            $("header .menu-icon .navicon").addClass("bk");
+        }else {
+            $(".mainfull_navi").removeClass("bk");
+            $("header.head").css("border-bottom","1px solid #fff");
+            $(".logo_header").css("color","#fff");
+            $("nav > ul > li > a").css("color","#fff");
+            $("header .menu-icon .navicon").removeClass("bk");
+        }
+        if($('.mainfullbox_Last').hasClass("swiper-slide-active") === true){
+            $("header.head").css("background","#000");
+        }else{
+            $("header.head").css("background","transparent"); 
+        }
+    },500);
+
+    var ww = $(window).width();
+    var mySwiper = undefined;
+
+    function initSwiper() {
+
+    if (ww >= 640 && mySwiper == undefined) {
+        mySwiper = new Swiper(".swiper-container", {
+        speed: 500,
+        direction: 'vertical',
+        mousewheel: true,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        watchOverflow : true,
+            on: {
+                slideChange: function() {
+                    setTimeout(function () {
+                    mySwiper.params.touchReleaseOnEdges = false;  
+                    mySwiper.params.mousewheel.releaseOnEdges = false;
+                    });
+                },
+                reachEnd: function() {
+                    setTimeout(function () {
+                        mySwiper.params.touchReleaseOnEdges = true;
+                        mySwiper.params.mousewheel.releaseOnEdges = true;
+                    }, 500);
+                },
+                reachBeginning: function() {
+                    setTimeout(function () {
+                        mySwiper.params.touchReleaseOnEdges = true;
+                        mySwiper.params.mousewheel.releaseOnEdges = true;
+                    }, 500);
+                }
+        }
+    });
+    $("footer").addClass("foot_main");
+    } 
+    }
+
+    initSwiper();
+
+    $(window).on('resize', function () {
+    setTimeout(function(){
+        ww = $(window).width();
+        initSwiper();
+    },15);
+    });
+    $("header").addClass("head");
+});
+
+$(window).scroll(function () {
+  if (document.body.scrollHeight - $(this).scrollTop() <= $(this).height()) {
+    $(".foot_main").addClass("transition-up");
+    $("header.head").css("background","#000");
+  } else {
+    $(".foot_main").removeClass("transition-up");
+    $("header.head").css("background","transparent");
+  }
+});
