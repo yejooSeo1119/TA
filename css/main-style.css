@@ -1,3 +1,9 @@
+@font-face {
+    font-family: 'GongGothicMedium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10@1.0/GongGothicMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
 *{
     margin: 0;
     padding: 0;
@@ -289,6 +295,12 @@ nav > ul > li {
   background:#fff;
 }
 
+
+
+
+
+
+
 .mainfullbox0 .main{
     width: 1920px;
     max-width: 100%;
@@ -296,17 +308,109 @@ nav > ul > li {
     overflow: hidden;
     background: url(../images/bg.jpg) no-repeat center center;
     background-size: cover;
+    position: relative;
 }
+
 .main .Title{
-    display: flex;
-    width: 30%;
-    height: 100%;
-    align-items: flex-start;
-    flex-direction: column;
-    justify-content: center;
-    margin-left: 10%;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 3%;
+    transform: translateY(-50%);
+    
 }
 .titleImg{
     width: 100%;
     max-width: 100%;
+}
+.main .imgBox img{
+    width: 300px;
+}
+
+@keyframes pan {
+    to {
+        transform: translateY(0); 
+    }
+    50% {
+        transform: translatey(-10px); 
+    }
+    from {
+        transform: translatey(0);
+    }
+ }
+ 
+/* 컨설팅 */
+.mainImg1{
+    position: absolute;
+    top: 60%;
+    left: 40%;
+    z-index: 999;
+    opacity:1; 
+    transition: all ease 0.5s 0s; 
+    transition-delay: 2s;  
+    transform: translateY(0);
+}
+.mainImg1 .textBox{
+    position: absolute;
+    top: 60%;
+    left: 90%;
+}
+.mainImg1 .on{
+    position: absolute;
+    top: 60%;
+    left: 40%;
+    z-index: 999;
+    animation: pan 1.5s linear infinite;
+    filter: grayscale(0); 
+    transition: all ease 0.5s 0s;
+}
+/* 운영 */
+.mainImg2{
+    position: absolute;
+    top: 15%;
+    left: 60%;
+    z-index: 999;
+}
+.mainImg2 .imgBox img{
+    width: 200px;
+}
+.mainImg2 .textBox{
+    position: absolute;
+    top: 60%;
+    left: 90%;
+}
+
+/* 분석 */
+.mainImg3{
+    position: absolute;
+    top: 60%;
+    left: 80%;
+    z-index: 999;
+    filter: grayscale(80%);
+    transition:filter ease 1s infinite;
+}
+.mainImg3 .textBox{
+    position: absolute;
+    top: 60%;
+    left: -20%;
+}
+/* circle */
+@keyframes rotate_image{
+    100% {
+        transform: rotate(360deg);
+    }
+}
+.mainImg4{
+    position: absolute;
+    top: 39%;
+    left: 53%;
+    z-index: 888;
+    animation: rotate_image 9s linear infinite;
+    transform-origin: 50% 50%;
+    opacity: 1;
+    transition: all ease 0.5s 0s;
+    transition-delay: 3s;
+}
+.mainImg4 .imgBox img{
+    width: 100%;
 }
