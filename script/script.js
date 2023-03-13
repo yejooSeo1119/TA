@@ -1,20 +1,4 @@
-$(document).ready(function() {
-	$('#fullpage').fullpage({
-		//options here
-		autoScrolling:true,
-		scrollHorizontally: true,
-        navigation:true
-	});
 
-	//methods
-	$.fn.fullpage.setAllowScrolling(false);
-});
-
-
-
-
-HTML CSS JSResult Skip Results Iframe
-EDIT ON
 $(function(){
     setInterval(function(){
         if($('.mainbotBk').hasClass("swiper-slide-active") === true ) {
