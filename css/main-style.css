@@ -14,6 +14,7 @@ ul,li,ol{
 a{
     text-decoration: none;
     color: #000;
+    font-family: "Noto Sans KR";
 }
 .clearfix {
     *zoom: 1;
@@ -114,6 +115,7 @@ header {
   top: 0px;
   left: 50%;
   transform: translateX(-50%);
+  font-family: "Noto Sans KR";
 }
 header > .container {
   min-width: 1600px;
@@ -160,6 +162,7 @@ header .download{
     justify-content: right;
     padding:0 30px;
     background: url(../images/download.png) right no-repeat;
+    backdrop-filter: #4026EE;
     background-size: 30px;
 
 }
@@ -172,6 +175,7 @@ header .download a{
   color: #535353;
   padding-bottom: 30px;
   letter-spacing: -0.5px;
+  font-family: "Noto Sans KR";
 }
 .foot .container > ul.logoArea {
   justify-content: space-between;
@@ -224,6 +228,7 @@ nav > ul,
 .swiper {
   width: 100%;
   height: 100%;
+  font-family: "Noto Sans KR";
 }
 
 .swiper-wrapper.bg {
@@ -285,6 +290,7 @@ nav > ul > li {
 
 .mainfullbox_Last {
   background:#000;
+  color: #fff;
 }
 .mainfullbox1 {
   background:#fff;
@@ -449,4 +455,123 @@ nav > ul > li {
 .logoBox img{
   max-width: 200px;
   width: 100%;
+}
+
+
+
+/* quick */
+.quick{
+  position: fixed;
+  right: 0;
+  z-index: 999;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center;
+  background-color: #fff;
+  border-radius: 20px 0 0 20px;
+  box-shadow: 5.142px 6.128px 12.35px 0.65px rgba(25,48,88,0.3);
+}
+.quick p{
+  font-weight: 600;
+  padding: 20px 10px;
+  box-sizing: border-box;
+  color: #fff;
+  background-color:#4026EE;
+  border-radius: 20px 0 0 0px;
+}
+.quick a{
+  display: block;
+  padding: 10px 15px;
+}
+.quick .iconBox a:nth-child(1){
+  padding-top: 20px;
+}
+.quick .iconBox a:last-child{
+  padding-bottom: 20px;
+}
+.quick .iconBox{
+  background-color: #fff;
+  border-radius: 0 0 0 20px;
+}
+.quick .iconBox span{
+  display: block;
+  color: #000;
+  font-weight: 700;
+  padding-top: 8px;
+  font-size: 14px;
+  font-family: "Noto Sans KR";
+}
+
+
+
+
+
+/* mainfullbox_Last */
+.mainfullbox_Last{
+  width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+  box-sizing: border-box;
+  flex-direction: column;
+}
+.mainfullbox_Last h1{
+  font-weight: 400;
+}
+.scrollWrap{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+.scrollWrap .mr-10{
+  margin-right: 10%;
+}
+.scrollBox{
+  width: 40%;
+  background-color: transparent;
+  color: #000;
+  border-radius: 20px;
+}
+.s-headerWrap{
+  overflow: hidden;
+  
+  border-radius: 20px 20px 0 0;
+  width: 100%;
+}
+.s-header{
+  width: 100%;
+  padding: 20px 10px;
+  font-size: 24px;
+  font-weight: 500;
+}
+.scroll01 .s-header{
+background: rgb(47,91,181);
+  background: linear-gradient(90deg, rgba(47,91,181,1) 0%, rgba(9,125,173,1) 50%, rgba(29,0,166,1) 100%);}
+
+.s-header strong{
+  font-size: 26px;
+}
+.s-now{
+  width: 100%;
+  background-color: #fff;
+}
+.s-now p{
+  padding: 15px 0;
+}
+span.date{
+  display: inline-block;
+  width: 20%;
+}
+span.title{
+  display: inline-block;
+  width: 60%;
+}
+i.name{
+  font-style: normal;
+}
+span.done{
+  background-color: #a41012;
+  padding: 5px 15px;
+  border-radius: 5px;
 }
