@@ -41,6 +41,13 @@ html,
 body {
   width: 100%;
   height: 100%;
+  object-fit: cover;
+}
+
+.content {
+  width: 100%;
+  height: 100vh;
+  position: relative;
 }
 
 body {
@@ -53,6 +60,7 @@ body {
   font-family: 'Noto Sans KR', 'Noto Sans', 'Roboto', sans-serif;
   font-size: 16px;
 }
+
 
 ul,
 li,
@@ -147,12 +155,15 @@ header {
   font-family: "Noto Sans KR";
   transition: background-color 0.5s ease;
 }
-header:hover{
+
+header:hover {
   background-color: #fff;
 }
-header:hover a{
-  color: #000;
+
+header:hover a {
+  color: #000 !important;
 }
+
 header>.container {
   margin: 0px auto;
   background-color: transparent;
@@ -182,22 +193,25 @@ header .menu li {
   height: 88px;
   position: relative;
   display: block;
+  transition: color border-bottom 0.5s ease;
 }
 
 header .menu a {
   font-size: 20px;
   font-weight: 600;
-  transition: background-color 0.5s ease;
+  transition: color border-bottom 0.5s ease;
   width: 100%;
   display: block;
-  line-height: 88px;
-  width: 100%;
+  height: 86px;
   text-align: center;
+  line-height: 86px;
 }
 
-  header ul> li:hover > a {
-    color: #4026EE !important;
+header ul>li:hover>a {
+  color: #4026EE !important;
+  border-bottom: 2px solid #4026EE;
 }
+
 .head-r {
   flex-wrap: nowrap;
   flex-direction: row;
@@ -282,11 +296,13 @@ nav>ul,
   font-family: "Noto Sans KR";
   clear: both;
 }
-section{
+
+section {
   clear: both;
   overflow: hidden;
   display: block;
 }
+
 .swiper-wrapper.bg {
   min-height: 100%;
 }
@@ -339,7 +355,7 @@ section{
   text-decoration: none;
 }
 
-.logo_header img{
+.logo_header img {
   height: 80px;
   max-width: 100%;
   position: absolute;
@@ -370,7 +386,6 @@ nav>ul>li {
 .mainfullbox0 .main {
   width: 1920px;
   max-width: 100%;
-  height: 1080px;
   overflow: hidden;
   background: url(../images/bg.jpg) no-repeat center center;
   background-size: cover;
@@ -480,7 +495,7 @@ nav>ul>li {
 
 .mainImg4 {
   position: absolute;
-  top: 39%;
+  top: 38%;
   left: 53%;
   z-index: 888;
   animation: rotate_image 9s linear infinite;
@@ -499,19 +514,28 @@ nav>ul>li {
 
 
 /* mainfullbox1 */
+
+
 .mainfullbox1 {
-  padding: 50px 0;
   box-sizing: border-box;
   margin: 0 auto;
   text-align: center;
   width: 100%;
+  height: 100vh;
   overflow: hidden;
+  position: relative;
 }
-
+.client{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
 .client h1 {
   font-family: 'GongGothicMedium';
   text-transform: uppercase;
   font-size: 40px;
+  padding-top: 50px;
 }
 
 .client p {
@@ -522,11 +546,12 @@ nav>ul>li {
   display: flex;
   flex-wrap: wrap;
   overflow: hidden;
+  width: 100%;
 }
 
 .logoBox {
-  width: 100%;
   max-width: 1500px;
+  margin: auto;
 }
 
 .logoBox span {
@@ -604,9 +629,13 @@ nav>ul>li {
   box-sizing: border-box;
   flex-direction: column;
 }
-
+.now{
+  width: 80%;
+  margin: auto;
+}
 .mainfullbox_Last h1 {
   font-weight: 400;
+  padding-top: 100px;
 }
 
 .scrollWrap {
@@ -647,9 +676,10 @@ nav>ul>li {
   background: rgb(47, 91, 181);
   background: linear-gradient(90deg, rgba(47, 91, 181, 1) 0%, rgba(9, 125, 173, 1) 50%, rgba(29, 0, 166, 1) 100%);
 }
+
 .scroll02 .s-header {
-  background: rgb(72,16,113);
-  background: linear-gradient(90deg, rgba(72,16,113,1) 0%, rgba(110,3,196,1) 50%, rgba(40,13,68,1) 100%);
+  background: rgb(72, 16, 113);
+  background: linear-gradient(90deg, rgba(72, 16, 113, 1) 0%, rgba(110, 3, 196, 1) 50%, rgba(40, 13, 68, 1) 100%);
 }
 
 .s-header strong {
@@ -668,7 +698,8 @@ nav>ul>li {
   max-width: 100%;
   box-sizing: border-box;
 }
-.s-now p:last-child{
+
+.s-now p:last-child {
   border-radius: 0 0 20px 20px;
 }
 
@@ -702,20 +733,323 @@ span.done {
 
 
 /* footer */
-.copy li{
-  color: #000;
+.copy ul {
+  display: block;
+  width: 100%;
+  overflow: hidden;
 }
-.copy li span.head{
+
+.copy li {
+  color: #797979;
+  font-size: 14px;
+  float: left;
+}
+
+.copy li:last-child {
+  padding-left: 3em;
+}
+
+.copy ul:last-child li {
+  padding-left: 0;
+}
+
+.copy li span.head {
   padding-right: 0.5em;
 }
-.f-logo p{
+
+.f-logo p {
   font-weight: 700;
 }
-.f-logo p.small{
+
+.f-logo p.small {
   font-size: 25px;
 }
-.f-logo p.strong{
+
+.f-logo p.strong {
   font-size: 40px;
   margin-top: -15px;
   margin-bottom: 30px;
+}
+
+.loginBtn {
+  margin-top: 10px;
+}
+
+.loginBtn button {
+  padding: 0.2em 1.5em;
+}
+
+.contentWrap .textBox {
+  color: #fff;
+}
+
+.bgWrap {
+  background: url(../images/about1-1.jpg) center center no-repeat;
+  width: 1920px;
+  max-width: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+
+.about01 .textBox {
+  position: absolute;
+  top: 15%;
+  right: 8%;
+  text-align: right;
+}
+
+.about01 .textBox h1 {
+  font-size: 50px;
+  padding-bottom: 20px;
+}
+
+.about01 .textBox p {
+  font-size: 24px;
+  line-height: 44pxpx;
+}
+
+.aboutWrap {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.about02 .headLogo img {
+  width: 300px;
+}
+
+.aboutWrap .about02 .Title {
+  color: #4026EE;
+  padding: 20px 0 40px 0;
+}
+
+.aboutWrap .about02 ul {
+  display: block;
+  width: 50%;
+  margin: 0 auto;
+}
+
+.aboutWrap .about02 ul li {
+  float: left;
+  display: block;
+  font-size: 20px;
+  font-weight: 800;
+  width: 25%;
+}
+
+.aboutWrap .about02 .step ul li p {
+  background-color: #fff;
+  display: inline-block;
+  color: #000;
+  padding: 1em 1.5em;
+  border-radius: 50px;
+  border: 5px solid #dedede;
+}
+
+.aboutWrap .about02 .step ul li::after {
+  content: "";
+  background: url(../images/next_wh.png) right center no-repeat;
+  padding: 0 30px;
+}
+
+.aboutWrap .about02 .step ul li:last-child::after {
+  background: none;
+}
+
+.about02 .direct {
+  width: 100%;
+  max-width: 1920px;
+  padding: 100px 0;
+  clear: both;
+  margin: 0 auto;
+  display: block;
+}
+
+.about02 .direct ul {
+  width: 80%;
+  margin: auto;
+}
+
+.about02 .direct ul li {
+  width: 33.333%;
+  text-align: center;
+  position: relative;
+}
+
+.about02 .direct p {
+  width: 100%;
+  font-size: 40px;
+  padding: 1em 1.5em;
+  background-color: #fff;
+  text-align: center;
+  color: #000;
+  box-sizing: border-box;
+  border-radius: 100px;
+  border: 5px solid #dedede;
+}
+
+.aboutWrap .about02 {
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  background: url(../images/about1-2.jpg) center no-repeat;
+  position: relative;
+}
+
+.about02 .title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.aboutWrap .about02 .title h1 {
+  font-size: 60px;
+  padding: 100px 0 50px 0;
+}
+
+.aboutWrap .about02 .title p {
+  font-size: 24px;
+  padding: 10px 0;
+}
+
+.about03 {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.about03 .title {
+  color: #fff;
+  padding: 0 0 100px 0;
+}
+
+.about03 .title h1 {
+  font-size: 60px;
+  padding:50px 0 30px 0;
+}
+
+.about03 .title p {
+  font-size: 24px;
+  padding: 10px 0;
+}
+
+.about03 .imgBox {
+  margin: 0 auto;
+  width: 100%;
+}
+
+.about03 .imgBox img {
+  text-align: center;
+  display: block;
+  margin: auto;
+}
+
+section {
+  clear: both;
+  background-color: #000;
+  height: 100%;
+}
+
+.about04 {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  background: url(../images/about04.jpg) no-repeat center center;
+  position: relative;
+}
+.about04 .center{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+.about04 .title strong {
+  color: #4026EE;
+  font-size: 50px;
+}
+
+.about04 .title h1 {
+  padding: 10px 0;
+  color: #fff;
+  font-size: 40px;
+}
+
+.about04 .down {
+  padding: 50px 0;
+}
+
+.about04 .down a {
+  padding: 10px 20px;
+  border: 2px solid #fff;
+  border-radius: 10px;
+}
+
+.about04 .down a::after {
+  content: "";
+  background: url(../images/download.png) no-repeat right center;
+  padding-left: 20px;
+  background-size: 100%;
+}
+
+.contentWrap {
+  margin-top: 88px;
+  color: #000;
+  background-color: #fff;
+
+}
+
+.contentWrap .product {
+  width: 80%;
+  margin: auto;
+}
+
+.product h3 {
+  font-size: 30px;
+  padding: 100px 0 150px 0;
+}
+
+.product ul {
+  display: block;
+  margin: auto;
+  padding: 20px 0;
+  overflow: hidden;
+}
+
+.product li {
+  color: #000;
+  width: 33.333%;
+  float: left;
+  position: relative;
+  line-height: 300px;
+}
+
+.product li p {
+  border: 2px solid #000;
+  display: inline-block;
+  width: 300px;
+  height: 300px;
+  text-align: center;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 22px;
+}
+
+.contentWrap .bgBox {
+  position: relative;
+  background: url(../images/productBg.jpg) no-repeat center;
+}
+
+.contentWrap .bgBox .Title {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  transform: translateY(-50%);
+}
+
+.contentWrap .bgBox .Title h1 {
+  font-size: 50px;
+  padding-bottom: 30px;
+}
+
+.contentWrap .bgBox .Title p {
+  font-size: 24px;
 }

@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="./css/main-style.css">
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
     <script src="./script/script.js"></script>
     <title>트러스트애드</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -29,13 +30,12 @@
             </div>
             <nav>
                 <ul class="menu">
-                    <li class="">
-                        <a href="#">회사소개</a>
-                        <span class="underline"></span>
+                    <li>
+                        <a href="./about.html">회사소개</a>
                     </li>
-                    <li class=""><a href="#">상품소개</a></li>
-                    <li class=""><a href="#">성공사례</a></li>
-                    <li class=""><a href="#">무료상담</a></li>
+                    <li><a href="./product.html">상품소개</a></li>
+                    <li><a href="#">성공사례</a></li>
+                    <li><a href="#">무료상담</a></li>
                 </ul>
             </nav>
             <div class="head-r">
@@ -71,7 +71,7 @@
     <div class="swiper mySwiper swiper-container">
         <div class="swiper-wrapper bg">
             <section class="mainfullbox0 swiper-slide">
-                <div class="main">
+                <div class="main content">
                     <div class="Title">
                         <div class="titleImg"><img src="./images/Title_1_1.png" alt="title"></div>
                         <div class="pt50"></div>
@@ -136,11 +136,9 @@
                     </div>
                     <!--circle-->
                 </div>
-
             </section>
             <section class="mainfullbox1 swiper-slide mainbotBk">
-                <div class="client">
-                    <div class="pt50"></div>
+                <div class="client content">
                     <h1 class="font">clients</h1>
                     <div class="pt100"></div>
                     <p>유아동, 식품, 여행 등 다양한 분야의 업체에서 트러스트애드의 가치를 더해주시고 있습니다.</p>
@@ -163,6 +161,7 @@
                 </div>
             </section>
             <section class="mainfullbox_Last swiper-slide">
+                <div class="content now">
                 <div class="pt100"></div>
                 <h1><strong>트러스트애드의 실시간 문의 현황</strong>입니다.</h1>
                 <div class="pt100"></div>
@@ -243,6 +242,7 @@
                     <!-- scrollBox -->
                 </div>
                 <div class="pt100"></div>
+            </div>
             </section>
         </div>
         <!-- <div class="swiper-pagination mainfull_navi">
@@ -251,11 +251,11 @@
     </div>
     <footer class="foot">
         <div class="footer_main_area">
-           <div class="f-logo">
+            <div class="f-logo">
                 <p class="small">트러스트애드</p>
                 <p class="strong">TRUST AD</p>
-           </div>
-           <div class="copy">
+            </div>
+            <div class="copy">
                 <ul>
                     <li>
                         <span class="head">사업자 등록 번호 |</span><span class="text">786-05-01942</span>
@@ -273,13 +273,40 @@
                         <span class="head">대표자명 |</span><span class="text">박주형</span>
                     </li>
                 </ul>
-           </div>
-           <div class="loginBtn">
+            </div>
+            <div class="loginBtn">
                 <button>Login</button>
-           </div>
+            </div>
         </div>
-        
     </footer>
 </body>
+
+<script>
+
+    window.addEventListener("wheel", function(e){
+	e.preventDefault();},{passive : false});
+
+</script>
+<script>
+    var mHtml = $("html");
+var page = 1;
+
+
+mHtml.animate({scrollTop : 0},10);
+</script>
+<script>
+    $(window).on("wheel", function(e) {
+    if(mHtml.is(":animated")) return;
+    if(e.originalEvent.deltaY > 0) {
+        if(page == 4) return;
+        page++;
+    } else if(e.originalEvent.deltaY < 0) {
+        if(page == 1) return;
+        page--;
+    }
+    var posTop =(page-1) * $(window).height();
+    mHtml.animate({scrollTop : posTop});
+})
+</script>
 
 </html>
