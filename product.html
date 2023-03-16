@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -15,6 +16,7 @@
         href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Noto+Sans:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap"
         rel="stylesheet">
 </head>
+
 <body>
     <header>
         <div class="container">
@@ -27,13 +29,13 @@
             </div>
             <nav>
                 <ul class="menu">
-                    <li class="">
+                    <li>
                         <a href="./about.html">회사소개</a>
                         <span class="underline"></span>
                     </li>
-                    <li class="#"><a href="#">상품소개</a></li>
-                    <li class=""><a href="#">성공사례</a></li>
-                    <li class=""><a href="#">무료상담</a></li>
+                    <li><a href="./product.html">상품소개</a></li>
+                    <li><a href="./case.html">성공사례</a></li>
+                    <li><a href="./consult.html">무료상담</a></li>
                 </ul>
             </nav>
             <div class="head-r">
@@ -67,9 +69,9 @@
         </div>
     </div>
 
-    <div class="contentWrap">
-        <section>
-            <div class="bgBox content">
+    <div class="contentWrap" id="contentWrap">
+        <section class="content">
+            <div class="bgBox bgBox01">
                 <div class="Title product">
                     <h1>소비자의 니즈를 충족시키는 마케팅</h1>
                     <p>각 타겟에 맞는 다양한 마케팅 상품을 통해</p>
@@ -77,11 +79,9 @@
                 </div>
             </div>
             <!-- bgWrap -->
-        </section>
-        <section>
-            <div class="prod01 product content">
+            <div class="prod01 product">
                 <div class="prod01Inner inner">
-                    <h3>카페 바이럴</h3>
+                    <h3 style="padding-top: 50px;">카페 바이럴</h3>
                     <ul>
                         <li>
                             <p>일반 배포형</p>
@@ -109,7 +109,7 @@
                             <p>체험단 & 기자단</p>
                         </li>
                         <li>
-                            <p>블로그 상위 보장형</p> 
+                            <p>블로그 상위 보장형</p>
                         </li>
                     </ul>
                 </div>
@@ -125,7 +125,7 @@
                             <p>지식인 상위 보장형</p>
                         </li>
                         <li>
-                            <p>PR기사 송출</p> 
+                            <p>PR기사 송출</p>
                         </li>
                     </ul>
                 </div>
@@ -154,7 +154,7 @@
                     <h3>검색광고</h3>
                     <ul>
                         <li>
-                            <p>검색광고 관리 대행</p> 
+                            <p>검색광고 관리 대행</p>
                         </li>
                     </ul>
                 </div>
@@ -162,32 +162,69 @@
             <!-- prod05 -->
         </section>
     </div>
+    <footer class="foot content">
+        <div class="footer_main_area">
+            <div class="f-logo">
+                <p class="small">트러스트애드</p>
+                <p class="strong">TRUST AD</p>
+            </div>
+            <div class="copy">
+                <ul>
+                    <li>
+                        <span class="head">사업자 등록 번호 |</span><span class="text">786-05-01942</span>
+                    </li>
+                    <li>
+                        <span class="head">주소 |</span><span class="text">부산광역시 부전동 125-6, 3층 트러스트애드</span>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <span class="head">전화번호 |</span><span class="text">1600-9735</span>
+                    </li>
+                    <li>
+                        <span class="head">이메일 |</span><span class="text">trustad@trustad.co.kr</span>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <span class="head">대표자명 |</span><span class="text">박주형</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="loginBtn">
+                <button>Login</button>
+            </div>
+        </div>
+    </footer>
 </body>
+
+
 <script>
 
-    window.addEventListener("wheel", function(e){
-	e.preventDefault();},{passive : false});
+    window.addEventListener("wheel", function (e) {
+        e.preventDefault();
+    }, { passive: false });
 
 </script>
 <script>
     var mHtml = $("html");
-var page = 1;
-
-
-mHtml.animate({scrollTop : 0},10);
+    var page = 1;
+    mHtml.animate({ scrollTop: 0 }, 10);
 </script>
 <script>
-    $(window).on("wheel", function(e) {
-    if(mHtml.is(":animated")) return;
-    if(e.originalEvent.deltaY > 0) {
-        if(page == 4) return;
-        page++;
-    } else if(e.originalEvent.deltaY < 0) {
-        if(page == 1) return;
-        page--;
-    }
-    var posTop =(page-1) * $(window).height();
-    mHtml.animate({scrollTop : posTop});
-})
+    $(window).on("wheel", function (e) {
+        if (mHtml.is(":animated")) return;
+        if (e.originalEvent.deltaY > 0) {
+            if (page == 6) return;
+            page++;
+            // page 7로 하면 푸터도 page처림 됨 6 하면 스크롤 막힘.ㅠ
+        } else if (e.originalEvent.deltaY < 0) {
+            if (page == 1) return;
+            page--;
+        }
+        var posTop = (page - 1) * $(window).height();
+        mHtml.animate({ scrollTop: posTop });
+    })
 </script>
+
 </html>

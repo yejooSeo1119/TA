@@ -393,12 +393,14 @@ nav>ul>li {
 }
 
 .main .Title {
-  display: block;
-  position: absolute;
-  top: 50%;
-  left: 3%;
-  transform: translateY(-50%);
+  display: inline-block;
+  width: 40%;
+  padding-right: 5%;
+}
 
+.main .rImg {
+  display: inline-block;
+  width: 50%;
 }
 
 .titleImg {
@@ -407,7 +409,7 @@ nav>ul>li {
 }
 
 .main .imgBox img {
-  width: 300px;
+  width: 150px;
 }
 
 @keyframes pan {
@@ -460,10 +462,6 @@ nav>ul>li {
   z-index: 999;
 }
 
-.mainImg2 .imgBox img {
-  width: 200px;
-}
-
 .mainImg2 .textBox {
   position: absolute;
   top: 60%;
@@ -472,18 +470,16 @@ nav>ul>li {
 
 /* 분석 */
 .mainImg3 {
-  position: absolute;
-  top: 60%;
-  left: 80%;
+  position: relative;
+  bottom: 100%;
+  left: 60%;
   z-index: 999;
   filter: grayscale(80%);
   transition: filter ease 1s infinite;
 }
 
 .mainImg3 .textBox {
-  position: absolute;
-  top: 60%;
-  left: -20%;
+  margin-right: 50px;
 }
 
 /* circle */
@@ -495,9 +491,9 @@ nav>ul>li {
 
 .mainImg4 {
   position: absolute;
-  top: 38%;
-  left: 53%;
-  z-index: 888;
+  top: 20%;
+  left: 50%;
+  z-index: 666;
   animation: rotate_image 9s linear infinite;
   transform-origin: 50% 50%;
   opacity: 1;
@@ -525,12 +521,14 @@ nav>ul>li {
   overflow: hidden;
   position: relative;
 }
-.client{
+
+.client {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
 }
+
 .client h1 {
   font-family: 'GongGothicMedium';
   text-transform: uppercase;
@@ -629,10 +627,12 @@ nav>ul>li {
   box-sizing: border-box;
   flex-direction: column;
 }
-.now{
+
+.now {
   width: 80%;
   margin: auto;
 }
+
 .mainfullbox_Last h1 {
   font-weight: 400;
   padding-top: 100px;
@@ -897,14 +897,14 @@ span.done {
 
 .about02 .title {
   position: absolute;
-  top: 50%;
+  top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 
 .aboutWrap .about02 .title h1 {
   font-size: 60px;
-  padding: 100px 0 50px 0;
+  padding: 50px 0 50px 0;
 }
 
 .aboutWrap .about02 .title p {
@@ -924,7 +924,7 @@ span.done {
 
 .about03 .title h1 {
   font-size: 60px;
-  padding:50px 0 30px 0;
+  padding: 50px 0 30px 0;
 }
 
 .about03 .title p {
@@ -943,10 +943,8 @@ span.done {
   margin: auto;
 }
 
-section {
-  clear: both;
+.black {
   background-color: #000;
-  height: 100%;
 }
 
 .about04 {
@@ -956,15 +954,18 @@ section {
   background: url(../images/about04.jpg) no-repeat center center;
   position: relative;
 }
-.about04 .center{
+
+.about04 .center {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
 }
+
 .about04 .title strong {
   color: #4026EE;
   font-size: 50px;
+  text-shadow: 0px 1px 3px rgba(255, 255, 255, 0.4);
 }
 
 .about04 .title h1 {
@@ -981,6 +982,12 @@ section {
   padding: 10px 20px;
   border: 2px solid #fff;
   border-radius: 10px;
+  transition: all 0.5s ease;
+  background-color: transparent;
+}
+
+.about04 .down a:hover {
+  background-color: #000;
 }
 
 .about04 .down a::after {
@@ -1000,11 +1007,15 @@ section {
 .contentWrap .product {
   width: 80%;
   margin: auto;
+  overflow: hidden;
 }
 
 .product h3 {
   font-size: 30px;
-  padding: 100px 0 150px 0;
+}
+
+.product.content h3 {
+  padding: 100px 0 100px 0;
 }
 
 .product ul {
@@ -1035,7 +1046,13 @@ section {
 
 .contentWrap .bgBox {
   position: relative;
-  background: url(../images/productBg.jpg) no-repeat center;
+  height: 300px;
+}
+.contentWrap .bgBox01{
+  background: url(../images/productBg.jpg) no-repeat center center;
+}
+.contentWrap .bgBox02{
+  background: url(../images/case01.jpg) no-repeat center center;
 }
 
 .contentWrap .bgBox .Title {
@@ -1052,4 +1069,11 @@ section {
 
 .contentWrap .bgBox .Title p {
   font-size: 24px;
+}
+
+.bgBox02{
+  color: #FFF;
+}
+.bgBox02 span{
+  color: #bdbdbd;
 }
