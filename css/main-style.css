@@ -146,7 +146,10 @@ body::-webkit-scrollbar {
   display: none;
 }
 
-
+.center{
+  text-align: center;
+  margin: 0 auto;
+}
 
 
 
@@ -403,6 +406,7 @@ nav>ul>li {
   overflow: hidden;
   background: url(../images/bg.jpg) no-repeat center center;
   background-size: cover;
+  background-attachment: fixed;
   position: relative;
 }
 
@@ -807,6 +811,7 @@ span.done {
   max-width: 100%;
   margin: 0 auto;
   position: relative;
+  background-attachment: fixed;
 }
 
 .about01 .textBox.right {
@@ -822,7 +827,7 @@ span.done {
 }
 
 .textBox.left div.gray p {
-  color: #7b7b7b;
+  color: rgb(225, 225, 225, 0.5);
   font-weight: 600;
   font-size: 22px;
   line-height: 42px;
@@ -842,7 +847,9 @@ span.done {
   margin: 0 auto;
   text-align: center;
 }
-
+.about02{
+  position: relative;
+}
 .about02 .headLogo img {
   width: 300px;
 }
@@ -958,16 +965,16 @@ span.done {
 
 .about03 .title h1 {
   font-size: 72px;
-  padding: 30px 0 30px 0;
+  padding: 30px 0 10px 0;
 }
 
 .about03 .title p {
-  font-size: 26px;
-  padding: 10px 0;
+  font-size: 20px;
+  padding: 5px 0;
   font-weight: 400;
 }
 .about03 .title p strong{
-  font-size: 28px;
+  font-size: 24px;
   font-weight: 700;
 }
 
@@ -1084,9 +1091,15 @@ span.done {
   font-size: 22px;
 }
 
+
+
+/* case */
+
 .contentWrap .bgBox {
   position: relative;
-  height: 300px;
+  height: 180px;
+  margin-bottom: 50px;
+
 }
 
 .contentWrap .bgBox01 {
@@ -1094,7 +1107,10 @@ span.done {
 }
 
 .contentWrap .bgBox02 {
-  background: url(../images/case01.jpg) no-repeat center center;
+  background: url(../images/case01.jpg) no-repeat top center;
+  background-attachment: fixed;
+  width: 100%;
+  height: 180px;
 }
 
 .contentWrap .bgBox .Title {
@@ -1105,15 +1121,15 @@ span.done {
 }
 
 .contentWrap .bgBox .Title h1 {
-  font-size: 40px;
+  font-size: 30px;
   padding-bottom: 10px;
 }
 .contentWrap .bgBox .Title strong {
-  font-size: 50px;
+  font-size: 38px;
 }
 .contentWrap .bgBox .Title span {
   font-size: 16px;
-  padding-top: 30px;
+  padding-top: 10px;
   display: block;
 }
 
@@ -1128,3 +1144,220 @@ span.done {
 .bgBox02 span {
   color: #bdbdbd;
 }
+.center ol{
+  width: 100%;
+  margin: auto;
+  display: block;
+}
+.center ol li{
+  float: left;
+  display: block;
+  width: calc(50% - 100px);
+}
+.center ol li:first-child{
+  text-align: right;
+  padding-right: 50px;
+}
+.center ol li:last-child{
+  padding-left: 50px;
+  text-align: left;
+}
+.center ol li img{
+  width: 300px;
+}
+
+.case .center h2{
+  font-size: 30px;
+  padding-bottom: 20px;
+}
+
+
+
+
+/* scroll */
+
+
+@keyframes scroll {
+
+	0%,100% {
+		transform: translateY(0);
+	}
+
+	50% {
+		transform: translateY(5px);
+	}
+
+}
+
+.bgWrap .scroll{
+  width: 35px;
+  height: 60px;
+  border: 2px solid #fff;
+  position: relative;
+  bottom: -2%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 20px;
+}
+.about02 .scroll{
+  width: 35px;
+  height: 60px;
+  border: 2px solid #fff;
+  position: absolute;
+  bottom: 18%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 20px;
+}
+.scroll .pointer{
+  width: 2px;
+  height: 6px;
+  background-color: #fff;
+  position: absolute;
+  top: 20%;
+  left: 49.5%;
+  transform: translateX(-50%);
+  animation: scroll 2s  ease infinite;
+}
+.scrollT{
+  position: absolute;
+  bottom: 13%;
+  left: 48.5%;
+  transform: translateX(-50%);
+  border-radius: 20px;
+  color: #F2CB05;
+  animation: scroll 2s  ease infinite;
+}
+.about03{
+  position: relative;
+}
+.about03 .scroll{
+  width: 35px;
+  height: 60px;
+  border: 2px solid #fff;
+  position: absolute;
+  bottom: 18%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 20px;
+}
+.about03 .scrollT{
+  position: absolute;
+  bottom: 13%;
+  left: 48%;
+  transform: translateX(-50%);
+  border-radius: 20px;
+  color: #F2CB05;
+  animation: scroll 2s  ease infinite;
+}
+
+
+/* google */
+.google {
+  padding-top: 50px;
+}
+.google img{
+  width: 600px;
+}
+.bImgBox{
+  padding-top: 100px;
+}
+.bImgBox, .fImgBox{
+  position: relative;
+  width: 1200px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+.ex p{
+  font-size: 24px;
+  font-weight: 500;
+}
+.ex p strong{
+  font-weight: 700;
+  font-size: 30px;
+}
+.google .bImgBox img{
+  position: absolute;
+  top: 10%;
+  left: 0;
+}
+.bImgBox .ex{
+  position: absolute;
+  right: 20%;
+  padding-top: 50px;
+  text-align: left;
+  border-radius: 10px;
+  padding: 10px 20px;
+  background: #E2FCF3;  /* fallback for old browsers */
+background: -webkit-radial-gradient( #FFFFFF, #E2FCF3);  /* Chrome 10-25, Safari 5.1-6 */
+background: radial-gradient( #FFFFFF, #E2FCF3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+box-shadow: 10px 10px 5px rgb(0, 0, 0, 0.2);
+}
+.bImgBox .ex:after {
+  border-top:15px solid transparent;
+  border-left: 15px solid transparent;
+  border-right: 0px solid transparent;
+  border-bottom: 15px solid #E2FCF3;
+  content:"";
+  position:absolute;
+  bottom:10px;
+  left:-15px;
+  
+ }
+.fImgBox{
+  padding-top: 20%;
+  
+}
+.google .fImgBox img{
+  position: absolute;
+  top: 40%;
+  right: 0;
+}
+.fImgBox .ex{
+  position: absolute;
+  bottom: -20%;
+  left: 20%;
+  text-align: right;
+  background:#333333;
+  border-radius: 10px;
+  padding: 10px 20px;
+  background: #E2FCF3;  /* fallback for old browsers */
+  background: -webkit-radial-gradient( #FFFFFF, #E2FCF3);  /* Chrome 10-25, Safari 5.1-6 */
+  background: radial-gradient( #FFFFFF, #E2FCF3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  box-shadow: -10px 10px 5px rgb(0, 0, 0, 0.2);
+}
+
+.fImgBox .ex:after {
+ border-top:0px solid transparent;
+ border-left: 0px solid transparent;
+ border-right:15px solid transparent;
+ border-bottom: 15px solid #E2FCF3;
+ content:"";
+ position:absolute;
+ bottom:10px;
+ right:-15px;
+
+}
+.case p{
+  font-size: 30px !important;
+}
+.case p.small{
+  font-size: 16px !important;
+  padding: 20px 0;
+}
+.exWrap{
+  width: 1500px;
+  max-width: 100%;
+  margin: auto;
+  overflow: hidden;
+}
+.exWrap img{
+  width: 1000px;
+}
+.exWrap.exWrap01{
+  text-align: left;
+} 
+.exWrap.exWrap02{
+  padding: 10px 0 0 0;
+  text-align: right;
+} 

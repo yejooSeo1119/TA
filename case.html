@@ -18,7 +18,7 @@
 <body>
     <header><div id="header"></div></header>
     <div class="quick" id="quick"></div>
-    <div class="contentWrap">
+    <div class="contentWrap case">
         <section class="content">
             <div class="bgBox bgBox02">
                 <div class="Title product">
@@ -27,14 +27,100 @@
                     <span>트러스트애드는 회사명처럼 신뢰를 최우선으로 다양한 분야의 고객사와 동행하고 있습니다.</span>
                 </div>
             </div>
-             <div class="naver">
+             <div class="naver center">
                 <h2>네이버 데이터랩</h2>
                 <p>네이버 포털상 브랜드 및 제품 키워드 상승량 추이 확인</p>
-                <p>영향 매체: 카페바이럴, PR기사, 인스타그램, 페이스북 등</p>
-                <img src="./images/naver01.jpg" alt="">
+                <p class="small">영향 매체: 카페바이럴, PR기사, 인스타그램, 페이스북 등</p>
+                <ol>
+                    <li><img src="./images/naver01.jpg" alt="교육 관련 고객사A"></li>
+                    <li><img src="./images/naver02.jpg" alt="뷰티 관련 고객사B"></li>
+                </ol>
+                <ol>
+                    <li><img src="./images/naver03.jpg" alt="식품 관련 고객사C"></li>
+                    <li><img src="./images/naver04.jpg" alt="가전 관련 고객사D"></li>
+                </ol>
              </div>
+             <!-- naver -->
+        </section>
+        <section>
+            <div class="google content center">
+                <h2>구글 애널리틱스</h2>
+                <p>자사몰 유입 및 전환데이터 확인</p>
+                <p class="small">영향 매체: 블로그, 지식인, 검색광고 등</p>
+                <div class="bImgBox">
+                    <img src="./images/google01.png" alt="여행 관련 고객사A">
+                    <div class="ex">
+                        <p>여행 관련 고객사 A</p>
+                        <p>인플루언서 상위 노출 1건으로 <strong>3,489명 유입</strong></p>
+                    </div>
+                </div>
+                <div class="fImgBox">
+                    <img src="./images/google02.png" alt="유아용품 관련 고객사B">
+                    <div class="ex">
+                        <p>유아용품 관련 고객사 A</p>
+                        <p>지식인 상위 노출 1건으로 <strong>1,146명 유입</strong></p>
+                    </div>
+                </div>
+            </div>
+            <!-- google -->
+        </section>
+        <section>
+            <div class="search content center">
+                <h2>구글 애널리틱스</h2>
+                <p>노출 및 유입, 직·간접적인 광고 매출 확인</p>
+                <p class="small">영향 매체: 네이버, 카카오, 구글, 메타 등</p>
+                <div class="exWrap exWrap01">
+                    <h2>식품 관련 고객사 A</h2>
+                    <div class="ex01">
+                        <p><img src="./images/before01.png" alt="식품 관련 고객사 before"></p>
+                    </div>
+                    <div class="ex02">
+                        <p><img src="./images/after01.png" alt="식품 관련 고객사 after"></p>
+                    </div>
+                </div>
+              
+                <div class="exWrap exWrap02">
+                    <h2>유아용품 관련 고객사 B</h2>
+                    <div class="ex01">
+                        <p><img src="./images/before02.png" alt="식품 관련 고객사 before"></p>
+                    </div>
+                    <div class="ex02">
+                        <p><img src="./images/after02.png" alt="식품 관련 고객사 after"></p>
+                    </div>
+                </div>
+            </div>
+            <!-- search -->
         </section>
     </div>
     <footer class="foot"><div id="footer"></div></footer>
+    <script>
+
+        window.addEventListener("wheel", function (e) {
+            e.preventDefault();
+        }, { passive: false });
+    
+    </script>
+    <script>
+        var mHtml = $("html");
+        var page = 1;
+    
+    
+        mHtml.animate({ scrollTop: 0 }, 10);
+    </script>
+    <script>
+        $(window).on("wheel", function (e) {
+            if (mHtml.is(":animated")) return;
+            if (e.originalEvent.deltaY > 0) {
+                if (page == 4) return;
+                page++;
+            } else if (e.originalEvent.deltaY < 0) {
+                if (page == 1) return;
+                page--;
+            }
+            var posTop = (page - 1) * $(window).height();
+            mHtml.animate({ scrollTop: posTop });
+        })
+    </script>
+    
 </body>
 </html>
