@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="./css/main-style.css">
-    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
     <script src="./script/script.js"></script>
     <title>트러스트애드</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -19,25 +19,8 @@
 
 <body>
 
-    <header>
-    </header>
-    <div class="quick">
-        <p>QUICK<br>MENU</p>
-        <div class="iconBox">
-            <a href="">
-                <img src="./images/fix-kakao.png" alt="카카오톡 바로가기">
-                <span>카카오톡</span>
-            </a>
-            <a href="">
-                <img src="./images/fix-call.png" alt="대표전화 바로가기">
-                <span>전화상담</span>
-            </a>
-            <a href="https://blog.naver.com/trustad_official" target=”_blank”>
-                <img src="./images/fix-blog.png" alt="블로그 바로가기">
-                <span>네이버<br>블로그</span>
-            </a>
-        </div>
-    </div>
+    <header><div id="header"></div></header>
+    <div class="quick" id="quick"></div>
     <div class="swiper mySwiper swiper-container">
         <div class="swiper-wrapper bg">
             <section class="mainfullbox0 swiper-slide">
@@ -198,20 +181,10 @@
 
         </div> -->
     </div>
-    <footer class="foot">
-       <div id="foot"></div>
-    </footer>
+    <footer class="foot"><div id="footer"></div></footer>
 </body>
 
-<script>
-    $(document).ready(function(){
 
-$("#header").load("/header.html");
-
-$("#foot").load("/footer.html");
-
-});
-</script>
 <script>
 
     window.addEventListener("wheel", function(e){

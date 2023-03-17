@@ -18,57 +18,8 @@
 </head>
 
 <body>
-    <header>
-        <div class="container">
-            <div class="leftBox">
-                <a href="./index.html" class="logo_menu">
-                    <div class="logo logo_header">
-                        <img src="./images/logo.png" alt="logo">
-                    </div>
-                </a>
-            </div>
-            <nav>
-                <ul class="menu">
-                    <li>
-                        <a href="./about.html">회사소개</a>
-                        <span class="underline"></span>
-                    </li>
-                    <li><a href="./product.html">상품소개</a></li>
-                    <li><a href="./case.html">성공사례</a></li>
-                    <li><a href="./consult.html">무료상담</a></li>
-                </ul>
-            </nav>
-            <div class="head-r">
-                <div class="call">
-                    <a href="tel:+82-1600-9735">
-                        <p>신속정확한 상담<br>1600-9735</p>
-                    </a>
-                </div>
-                <div class="download">
-                    <a href="download/trustad_company.pdf" download>회사소개서 다운로드</a>
-                </div>
-            </div>
-            <!-- head-r -->
-        </div>
-    </header>
-    <div class="quick">
-        <p>QUICK<br>MENU</p>
-        <div class="iconBox">
-            <a href="">
-                <img src="./images/fix-kakao.png" alt="카카오톡 바로가기">
-                <span>카카오톡</span>
-            </a>
-            <a href="">
-                <img src="./images/fix-call.png" alt="대표전화 바로가기">
-                <span>전화상담</span>
-            </a>
-            <a href="https://blog.naver.com/trustad_official" target=”_blank”>
-                <img src="./images/fix-blog.png" alt="블로그 바로가기">
-                <span>네이버<br>블로그</span>
-            </a>
-        </div>
-    </div>
-
+    <header><div id="header"></div></header>
+    <div class="quick" id="quick"></div>
     <div class="contentWrap" id="contentWrap">
         <section class="content">
             <div class="bgBox bgBox01">
@@ -162,40 +113,7 @@
             <!-- prod05 -->
         </section>
     </div>
-    <footer class="foot content">
-        <div class="footer_main_area">
-            <div class="f-logo">
-                <p class="small">트러스트애드</p>
-                <p class="strong">TRUST AD</p>
-            </div>
-            <div class="copy">
-                <ul>
-                    <li>
-                        <span class="head">사업자 등록 번호 |</span><span class="text">786-05-01942</span>
-                    </li>
-                    <li>
-                        <span class="head">주소 |</span><span class="text">부산광역시 부전동 125-6, 3층 트러스트애드</span>
-                    </li>
-                </ul>
-                <ul>
-                    <li>
-                        <span class="head">전화번호 |</span><span class="text">1600-9735</span>
-                    </li>
-                    <li>
-                        <span class="head">이메일 |</span><span class="text">trustad@trustad.co.kr</span>
-                    </li>
-                </ul>
-                <ul>
-                    <li>
-                        <span class="head">대표자명 |</span><span class="text">박주형</span>
-                    </li>
-                </ul>
-            </div>
-            <div class="loginBtn">
-                <button>Login</button>
-            </div>
-        </div>
-    </footer>
+    <footer class="foot"><div id="footer"></div></footer>
 </body>
 
 

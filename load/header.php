@@ -10,12 +10,11 @@
         <nav>
             <ul class="menu">
                 <li>
-                    <a href="./about.html">회사소개</a>
-                    <span class="underline"></span>
+                    <a href="./about.php">회사소개</a>
                 </li>
-                <li><a href="./product.html">상품소개</a></li>
-                <li><a href="./case.html">성공사례</a></li>
-                <li><a href="./consult.html">무료상담</a></li>
+                <li><a href="./product.php">상품소개</a></li>
+                <li><a href="./case.php">성공사례</a></li>
+                <li><a href="./consult.php">무료상담</a></li>
             </ul>
         </nav>
         <div class="head-r">

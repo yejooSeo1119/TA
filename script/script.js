@@ -83,3 +83,13 @@ $(window).scroll(function () {
 });
 
 
+// load
+    $(document).ready(function(){
+
+        $("#header").load("/load/header.html");
+
+        $("#quick").load("/load/quick.html");
+
+        $("#footer").load("/load/footer.html");
+
+    });

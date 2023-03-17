@@ -142,7 +142,7 @@ body::-webkit-scrollbar {
 
 
 
-header {
+#header {
   background-color: #000;
   width: 100%;
   max-width: 100%;
@@ -156,15 +156,15 @@ header {
   transition: background-color 0.5s ease;
 }
 
-header:hover {
+#header:hover {
   background-color: #fff;
 }
 
-header:hover a {
+#header:hover a {
   color: #000 !important;
 }
 
-header>.container {
+#header>.container {
   margin: 0px auto;
   background-color: transparent;
   align-items: center;
@@ -177,18 +177,18 @@ header>.container {
 
 }
 
-header nav {
+#header nav {
   display: flex;
   justify-content: center;
 }
 
-header .menu {
+#header .menu {
   text-align: center;
   text-transform: uppercase;
 
 }
 
-header .menu li {
+#header .menu li {
   width: 25%;
   height: 88px;
   position: relative;
@@ -196,7 +196,7 @@ header .menu li {
   transition: color border-bottom 0.5s ease;
 }
 
-header .menu a {
+#header .menu a {
   font-size: 20px;
   font-weight: 600;
   transition: color border-bottom 0.5s ease;
@@ -207,31 +207,31 @@ header .menu a {
   line-height: 86px;
 }
 
-header ul>li:hover>a {
+#header ul>li:hover>a {
   color: #4026EE !important;
   border-bottom: 2px solid #4026EE;
 }
 
-.head-r {
+#header .head-r {
   flex-wrap: nowrap;
   flex-direction: row;
   display: flex;
   align-items: center;
 }
 
-header .call a {
+#header .call a {
   text-align: center;
   font-size: 20px;
 }
 
-header .download {
+#header .download {
   padding: 0 30px;
   background: url(../images/download.png) right no-repeat;
   backdrop-filter: #4026EE;
   background-size: 30px;
 }
 
-header .download a {
+#header .download a {
   font-size: 16px;
 }
 
@@ -246,7 +246,7 @@ header .download a {
 }
 
 
-.foot_main {
+#footer .foot_main {
   position: fixed;
   display: flex;
   flex-direction: column;
@@ -261,11 +261,10 @@ header .download a {
   background-color: transparent;
 }
 
-.foot_main.transition-up {
+#footer .foot_main.transition-up {
   top: 0px;
 }
-
-.footer_main_area {
+#footer .footer_main_area {
   background-color: #fff;
   width: 1600px;
   max-width: 100%;
@@ -275,13 +274,13 @@ header .download a {
   box-sizing: border-box;
 }
 
-.foot_main .footer_main_area {
+#footer .foot_main .footer_main_area {
   margin-top: auto;
   width: 100%;
 }
 
 /* flex */
-header>.container,
+#header>.container,
 nav>ul,
 .mainfullbox1>.container>ul,
 .mainfullbox3>.container>ul,
