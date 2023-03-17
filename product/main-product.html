@@ -5,10 +5,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
-    <link rel="stylesheet" href="./css/main-style.css">
-    <script src="http://code.jquery.com/jquery-latest.js"></script>
-    <script src="./script/script.js"></script>
+    <link rel="shortcut icon" href="../images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="../css/main-style.css">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"
+        integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+    <script src="../script/script.js"></script>
     <title>트러스트애드</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -116,7 +117,17 @@
     <footer class="foot"><div id="footer"></div></footer>
 </body>
 
-
+<script>
+    $(document).ready(function(){
+    
+        $("#header").load("./load/header.html");
+    
+        $("#quick").load("./load/quick.html");
+    
+        $("#footer").load("./load/footer.html");
+    
+    });
+    </script>
 <script>
 
     window.addEventListener("wheel", function (e) {

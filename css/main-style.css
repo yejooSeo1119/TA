@@ -114,6 +114,9 @@ body::-webkit-scrollbar {
 
 
 /* padding-top */
+.pt150 {
+  padding-top: 150px !important;
+}
 .pt100 {
   padding-top: 100px !important;
 }
@@ -221,7 +224,8 @@ body::-webkit-scrollbar {
 
 #header .call a {
   text-align: center;
-  font-size: 20px;
+  font-size: 16px;
+  font-weight: 600;
 }
 
 #header .download {
@@ -233,6 +237,7 @@ body::-webkit-scrollbar {
 
 #header .download a {
   font-size: 16px;
+  font-weight: 600;
 }
 
 .foot {
@@ -741,7 +746,7 @@ span.done {
 .copy li {
   color: #797979;
   font-size: 14px;
-  float: left;
+  padding: 3px 0;
 }
 
 .copy li:last-child {
@@ -751,7 +756,9 @@ span.done {
 .copy ul:last-child li {
   padding-left: 0;
 }
-
+.copy li span{
+  font-weight: 600;
+}
 .copy li span.head {
   padding-right: 0.5em;
 }
@@ -790,21 +797,28 @@ span.done {
   position: relative;
 }
 
-.about01 .textBox {
-  position: absolute;
-  top: 15%;
-  right: 8%;
+.about01 .textBox.right {
   text-align: right;
+  padding-right: 12%;
+  padding-top: 5%;
 }
-
-.about01 .textBox h1 {
-  font-size: 50px;
-  padding-bottom: 20px;
+.about01 .textBox.left{
+  text-align: left;
+  padding-left: 12%;
+  margin-top: -5%;
+}
+.textBox .gray{
+  color: #7b7b7b;
+  font-weight: 600;
+}
+.about01 .textBox.right h1 {
+  font-size: 72px;
 }
 
 .about01 .textBox p {
-  font-size: 24px;
-  line-height: 44pxpx;
+  font-size: 28px;
+  line-height: 48px;
+  font-weight: 600;
 }
 
 .aboutWrap {

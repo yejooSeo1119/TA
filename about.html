@@ -1,44 +1,62 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="./css/main-style.css">
-    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"
+        integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
     <script src="./script/script.js"></script>
     <title>트러스트애드</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Noto+Sans:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Noto+Sans:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
-    <header><div id="header"></div></header>
+    <header>
+        <div id="header"></div>
+    </header>
     <div class="quick" id="quick"></div>
     <div class="contentWrap">
         <section>
             <div class="bgWrap content">
                 <div class="bgInner">
                     <div class="about01">
-                        <div class="textBox">
-                        <h1>신뢰,</h1>
-                        <p>매출 상승이라는 달콤한 말에 속지 마세요.</p> 
-                        <p>지키지 못할 허황된 말 백 마디 보다</p>
-                        <div class="pt50"></div>
-                        <p>클라이언트가 추구하는 마케팅 실현을 통해</p>
-                        <p>형성되는 믿음을 최우선으로 생각합니다.</p>
+                        <div class="textBox right">
+                            <h1>신뢰,</h1>
+                        </div>
+                        <div class="textBox left">
+                            <div class="gray">
+                                <p> Don't be fooled by claims of increased sales.</p>
+                                <p> Rather than words that cannot be kept,</p>
+                                <div class="pt50"></div>
+                                <p> we prioritize trust created by realizing </p>
+                                <p>marketing that customers want.</p>
+                            </div>
+                            <div class="pt150"></div>
+                            <div>
+                                <p>매출 상승이라는 달콤한 말에 속지 마세요.</p>
+                                <p>지키지 못할 허황된 말 백 마디 보다</p>
+                                <div class="pt50"></div>
+                                <p>클라이언트가 추구하는 마케팅 실현을 통해</p>
+                                <p>형성되는 믿음을 최우선으로 생각합니다.</p>
+                            </div>
                         </div>
                     </div>
+                    <!-- bgInner -->
                 </div>
-                <!-- bgInner -->
-            </div>
-            <!-- bgWrap -->
+                <!-- bgWrap -->
         </section>
         <section>
             <div class="aboutWrap content">
                 <div class="about02">
-                   
+
                     <!-- <div class="Title">
                         <h1>마케팅 회사가 마케팅을 의뢰하는 원청회사</h1>
                     </div>
@@ -106,41 +124,46 @@
                         <h1>그것이 <strong>TRUST AD</strong>의 힘입니다.</h1>
                     </div>
                     <div class="down">
-                        <a href="./download/trustad_company.pdf" class="downFile" download="TRUST AD 회사소개서">회사소개서 다운로드</a>
+                        <a href="./download/trustad_company.pdf" class="downFile" download="TRUST AD 회사소개서">회사소개서
+                            다운로드</a>
                     </div>
                 </div>
             </div>
         </section>
     </div>
     <!-- contentWrap -->
-    <footer class="foot"><div id="footer"></div></footer>
+    <footer class="foot">
+        <div id="footer"></div>
+    </footer>
 </body>
 <script>
 
-    window.addEventListener("wheel", function(e){
-	e.preventDefault();},{passive : false});
+    window.addEventListener("wheel", function (e) {
+        e.preventDefault();
+    }, { passive: false });
 
 </script>
 
 <script>
     var mHtml = $("html");
-var page = 1;
+    var page = 1;
 
 
-mHtml.animate({scrollTop : 0},10);
+    mHtml.animate({ scrollTop: 0 }, 10);
 </script>
 <script>
-    $(window).on("wheel", function(e) {
-    if(mHtml.is(":animated")) return;
-    if(e.originalEvent.deltaY > 0) {
-        if(page == 4) return;
-        page++;
-    } else if(e.originalEvent.deltaY < 0) {
-        if(page == 1) return;
-        page--;
-    }
-    var posTop =(page-1) * $(window).height();
-    mHtml.animate({scrollTop : posTop});
-})
+    $(window).on("wheel", function (e) {
+        if (mHtml.is(":animated")) return;
+        if (e.originalEvent.deltaY > 0) {
+            if (page == 5) return;
+            page++;
+        } else if (e.originalEvent.deltaY < 0) {
+            if (page == 1) return;
+            page--;
+        }
+        var posTop = (page - 1) * $(window).height();
+        mHtml.animate({ scrollTop: posTop });
+    })
 </script>
+
 </html>

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="../css/main-style.css">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"
+        integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+    <script src="../script/script.js"></script>
+    <title>트러스트애드</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Noto+Sans:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header><div id="header"></div></header>
+    <div class="quick" id="quick"></div>
+    <div class="contentWrap" id="contentWrap">
+        <section class="content">
+            <div class="bgBox bgBox01">
+                <div class="Title product">
+                    <h1>소비자의 니즈를 충족시키는 마케팅</h1>
+                    <p>각 타겟에 맞는 다양한 마케팅 상품을 통해</p>
+                    <p>최고의 퍼포먼스를 제공하겠습니다.</p>
+                </div>
+            </div>
+            <!-- bgWrap -->
+            <div class="prod01 product">
+                <div class="prod01Inner inner">
+                    <h3 style="padding-top: 50px;">카페 바이럴</h3>
+                    <ul>
+                        <li>
+                            <p>일반 배포형</p>
+                        </li>
+                        <li>
+                            <p>핫딜형</p>
+                        </li>
+                        <li>
+                            <p>카페 상위 보장형</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- prod01 -->
+        </section>
+        <section>
+            <div class="prod02 product content">
+                <div class="prod02Inner inner">
+                    <h3>블로그 바이럴</h3>
+                    <ul>
+                        <li>
+                            <p>인플루언서</p>
+                        </li>
+                        <li>
+                            <p>체험단 & 기자단</p>
+                        </li>
+                        <li>
+                            <p>블로그 상위 보장형</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- prod02 -->
+        </section>
+        <section>
+            <div class="prod03 product content">
+                <div class="prod03Inner inner">
+                    <h3>지식인 / PR 기사</h3>
+                    <ul>
+                        <li>
+                            <p>지식인 상위 보장형</p>
+                        </li>
+                        <li>
+                            <p>PR기사 송출</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- prod03 -->
+        </section>
+        <section>
+            <div class="prod04 product content">
+                <div class="prod04Inner inner">
+                    <h3>인스타그램 / 페이스북</h3>
+                    <ul>
+                        <li>
+                            <p>인스타그램 인기 게시글</p>
+                        </li>
+                        <li>
+                            <p>메타 (IG/FB)페이드 광고 관리</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- prod04 -->
+        </section>
+        <section>
+            <div class="prod05 product content">
+                <div class="prod05Inner inner">
+                    <h3>검색광고</h3>
+                    <ul>
+                        <li>
+                            <p>검색광고 관리 대행</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- prod05 -->
+        </section>
+    </div>
+    <footer class="foot"><div id="footer"></div></footer>
+</body>
+
+<script>
+    $(document).ready(function(){
+    
+        $("#header").load("./load/header.html");
+    
+        $("#quick").load("./load/quick.html");
+    
+        $("#footer").load("./load/footer.html");
+    
+    });
+    </script>
+<script>
+
+    window.addEventListener("wheel", function (e) {
+        e.preventDefault();
+    }, { passive: false });
+
+</script>
+<script>
+    var mHtml = $("html");
+    var page = 1;
+    mHtml.animate({ scrollTop: 0 }, 10);
+</script>
+<script>
+    $(window).on("wheel", function (e) {
+        if (mHtml.is(":animated")) return;
+        if (e.originalEvent.deltaY > 0) {
+            if (page == 6) return;
+            page++;
+            // page 7로 하면 푸터도 page처림 됨 6 하면 스크롤 막힘.ㅠ
+        } else if (e.originalEvent.deltaY < 0) {
+            if (page == 1) return;
+            page--;
+        }
+        var posTop = (page - 1) * $(window).height();
+        mHtml.animate({ scrollTop: posTop });
+    })
+</script>
+
+</html>
