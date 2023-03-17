@@ -117,12 +117,21 @@ body::-webkit-scrollbar {
 .pt150 {
   padding-top: 150px !important;
 }
+
 .pt100 {
   padding-top: 100px !important;
 }
 
 .pt50 {
   padding-top: 50px !important;
+}
+
+.pt40 {
+  padding-top: 40px !important;
+}
+
+.pt30 {
+  padding-top: 30px !important;
 }
 
 .pt20 {
@@ -269,6 +278,7 @@ body::-webkit-scrollbar {
 #footer .foot_main.transition-up {
   top: 0px;
 }
+
 #footer .footer_main_area {
   background-color: #fff;
   width: 1600px;
@@ -756,9 +766,11 @@ span.done {
 .copy ul:last-child li {
   padding-left: 0;
 }
-.copy li span{
+
+.copy li span {
   font-weight: 600;
 }
+
 .copy li span.head {
   padding-right: 0.5em;
 }
@@ -802,17 +814,22 @@ span.done {
   padding-right: 12%;
   padding-top: 5%;
 }
-.about01 .textBox.left{
+
+.about01 .textBox.left {
   text-align: left;
   padding-left: 12%;
   margin-top: -5%;
 }
-.textBox .gray{
+
+.textBox.left div.gray p {
   color: #7b7b7b;
   font-weight: 600;
+  font-size: 22px;
+  line-height: 42px;
 }
+
 .about01 .textBox.right h1 {
-  font-size: 72px;
+  font-size: 120px;
 }
 
 .about01 .textBox p {
@@ -1061,10 +1078,12 @@ span.done {
   position: relative;
   height: 300px;
 }
-.contentWrap .bgBox01{
+
+.contentWrap .bgBox01 {
   background: url(../images/productBg.jpg) no-repeat center center;
 }
-.contentWrap .bgBox02{
+
+.contentWrap .bgBox02 {
   background: url(../images/case01.jpg) no-repeat center center;
 }
 
@@ -1084,9 +1103,10 @@ span.done {
   font-size: 24px;
 }
 
-.bgBox02{
+.bgBox02 {
   color: #FFF;
 }
-.bgBox02 span{
+
+.bgBox02 span {
   color: #bdbdbd;
 }
