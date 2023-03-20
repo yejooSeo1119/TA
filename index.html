@@ -19,12 +19,12 @@
 </head>
 
 <body>
-
+    <div class="quick" id="quick"></div>
     <header>
         <div id="header"></div>
     </header>
     <div id="m_menu" class="m_menu"></div>
-    <div class="quick" id="quick"></div>
+
     <div class="swiper mySwiper swiper-container">
         <div class="swiper-wrapper bg">
             <section class="mainfullbox0 swiper-slide">
@@ -83,7 +83,6 @@
             <section class="mainfullbox1 swiper-slide mainbotBk">
                 <div class="client content">
                     <div class="pt100"></div>
-                    <div class="pt100"></div>
                     <h1 class="font">clients</h1>
                     <div class="pt100"></div>
                     <p>유아동, 식품, 여행 등 다양한 분야의 업체에서 트러스트애드의 가치를 더해주시고 있습니다.</p>
@@ -106,9 +105,7 @@
             </section>
             <section class="mainfullbox_Last swiper-slide">
                 <div class="content now">
-                    <div class="pt100"></div>
                     <h4><strong>트러스트애드의 실시간 문의 현황</strong>입니다.</h4>
-                    <div class="pt100"></div>
                     <div class="scrollWrap">
                         <div class="scrollBox mr-10">
                             <div class="scroll01 scroll">
@@ -220,6 +217,7 @@
 
 <script>
     $(window).on("wheel", function (e) {
+        
         if (mHtml.is(":animated")) return;
         if (e.originalEvent.deltaY > 0) {
             if (page == 4) return;
