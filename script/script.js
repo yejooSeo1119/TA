@@ -88,7 +88,7 @@ $(document).ready(function(){
 
     $("#header").load("/load/header.html");
 
-    $("#m_nav").load("/load/m_header.html");
+    $("#m_menu").load("/load/m_header.html");
 
     $("#quick").load("/load/quick.html");
 
@@ -99,7 +99,7 @@ $(document).ready(function(){
 
 
 // scroll
-jQuery(document).ready(function($){
+$(document).ready(function($){
 	
 	$('a.scroll-link').click(function(e){
 		e.preventDefault();
@@ -110,3 +110,18 @@ jQuery(document).ready(function($){
 	});
 	
 });
+
+
+
+//menu
+$(document).ready(function(){
+
+    $('.m_header>a.menuOpen').click( function(){
+        $('.m_menu .m_nav').show()
+    });
+
+    $('.m_header>a.menuClose').click(function(){
+        $('.m_menu m_nav').hide(); 
+    });
+
+}); 
