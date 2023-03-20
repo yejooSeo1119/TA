@@ -1631,7 +1631,7 @@ nav>ul>li {
   .main .Title {
     width: 100%;
     overflow: hidden;
-    padding-left: 80px;
+    padding-left: 10px;
     padding-top: 100px;
     display: block;
     margin: auto;
