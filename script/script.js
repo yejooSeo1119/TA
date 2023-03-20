@@ -88,6 +88,8 @@ $(document).ready(function(){
 
     $("#header").load("/load/header.html");
 
+    $("#m_nav").load("/load/m_header.html");
+
     $("#quick").load("/load/quick.html");
 
     $("#footer").load("/load/footer.html");

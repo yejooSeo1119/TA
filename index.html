@@ -23,52 +23,61 @@
     <header>
         <div id="header"></div>
     </header>
+    <div id="m_header"></div>
     <div class="quick" id="quick"></div>
     <div class="swiper mySwiper swiper-container">
         <div class="swiper-wrapper bg">
             <section class="mainfullbox0 swiper-slide">
                 <div class="main content">
-                    <div class="Title">
-                        <div class="titleImg"><img src="./images/Title_1_1.png" alt="title"></div>
-                        <div class="pt50"></div>
-                        <div class="title1Img"><img src="./images/Title_2.png" alt="sub" style="width: 90%;"></div>
+                    <div class="contentWrap">
+                        <div class="Title">
+                            <div class="titleImg"><img src="./images/Title_1_1.png" alt="title"></div>
+                        </div>
+                        <!-- 텍스트 -->
+                        <div class="main_detail">
+                            <div class="detail_1">
+                                <div class="detail_1_1">
+                                    <img src="./images/main-img1.png" alt="컨설팅">
+                                </div>
+                                <div class="detail_1_text">
+                                    <img src="./images/main-text01.png" alt="컨설팅">
+                                </div>
+                            </div>
+                            <!-- 컨설팅 -->
+                            <div class="detail_2">
+                                <div class="detail_2_1">
+                                    <img src="./images/main-img2.png" alt="운영">
+                                </div>
+                                <div class="detail_2_text">
+                                    <img src="./images/main-text02.png" alt="운영">
+                                </div>
+                            </div>
+                            <!-- 운영 -->
+                            <div class="detail_3">
+                                <div class="detail_3_1">
+                                    <img src="./images/main-img3.png" alt="분석">
+                                </div>
+                                <div class="detail_3_text">
+                                    <img src="./images/main-text03.png" alt="분석">
+                                </div>
+                            </div>
+                            <!-- 분석 -->
+                            <div class="detail_4 ">
+                                <div class="detail_circle">
+                                    <img src="./images/circle.png" alt="circle">
+                                </div>
+                            </div>
+                            <!--circle-->
+                            <div class="detail_5 ">
+                                <div class="detail_5_1">
+                                    <img src="./images/main-img4.png" alt="circle">
+                                </div>
+                            </div>
+                            <!--circle-->
+                        </div>
+                        <!-- main_detail -->
                     </div>
-                    <!-- 텍스트 -->
-                    <div class="rImg">
-                        <div class="mainImg1">
-                            <div class="imgBox">
-                                <img src="./images/main-img1.png" alt="컨설팅">
-                            </div>
-                            <div class="textBox">
-                                <img src="./images/main-text01.png" alt="컨설팅">
-                            </div>
-                        </div>
-                        <!-- 컨설팅 -->
-                        <div class="mainImg2">
-                            <div class="imgBox">
-                                <img src="./images/main-img2.png" alt="운영">
-                            </div>
-                            <div class="textBox">
-                                <img src="./images/main-text02.png" alt="운영">
-                            </div>
-                        </div>
-                        <!-- 운영 -->
-                        <div class="mainImg3">
-                            <div class="imgBox">
-                                <img src="./images/main-img3.png" alt="운영">
-                            </div>
-                            <div class="textBox">
-                                <img src="./images/main-text03.png" alt="운영">
-                            </div>
-                        </div>
-                        <!-- 분석 -->
-                        <div class="mainImg4">
-                            <div class="imgBox">
-                                <img src="./images/circle.png" alt="circle">
-                            </div>
-                        </div>
-                        <!--circle-->
-                    </div>
+                    <!-- contentWrap -->
                 </div>
             </section>
             <section class="mainfullbox1 swiper-slide mainbotBk">
@@ -98,7 +107,7 @@
             <section class="mainfullbox_Last swiper-slide">
                 <div class="content now">
                     <div class="pt100"></div>
-                    <h1><strong>트러스트애드의 실시간 문의 현황</strong>입니다.</h1>
+                    <h4><strong>트러스트애드의 실시간 문의 현황</strong>입니다.</h4>
                     <div class="pt100"></div>
                     <div class="scrollWrap">
                         <div class="scrollBox mr-10">
@@ -199,6 +208,7 @@
     }, { passive: false });
 
 </script>
+
 <script>
     var mHtml = $("html");
     var page = 1;
@@ -206,6 +216,7 @@
 
     mHtml.animate({ scrollTop: 0 }, 10);
 </script>
+
 <script>
     $(window).on("wheel", function (e) {
         if (mHtml.is(":animated")) return;
@@ -220,5 +231,83 @@
         mHtml.animate({ scrollTop: posTop });
     })
 </script>
+
+<script>
+    $( document ).ready(function() {
+        $('.main_detail').addClass('on');
+        $('.main_text').addClass('on');
+        var Num = 0;
+        setInterval(function(){
+            if(Num == 3){
+                Num = 0;
+            }
+            Num++;
+            $('.main_detail .detail_1').removeClass('on');
+            $('.main_detail .detail_2').removeClass('on');
+            $('.main_detail .detail_3').removeClass('on');
+            $('.main_detail .detail_'+ Num).addClass('on');		
+        },3000);
+        
+        $('.item1').hover( function() {
+            $(".item1 img").attr("src", "./images/main-img1.png");
+            $('.item1').addClass('on');
+        }, function() {
+            $(".item1 img").attr("src", "./images/main-text01.png");
+            $('.item1').removeClass('on');
+        });
+    
+        $('.item2').hover( function() {
+            $(".item2 img").attr("src", "./images/main-img2.png");
+            $('.item2').addClass('on');
+        }, function() {
+            $(".item2 img").attr("src", "./images/main-text02.png");
+            $('.item2').removeClass('on');
+        });
+        $('.item3').hover( function() {
+            $(".item3 img").attr("src", "./images/main-img3.png");
+            $('.item3').addClass('on');
+        }, function() {
+            $(".item3 img").attr("src", "./images/main-text03.png");
+            $('.item3').removeClass('on');
+        });
+    });
+    $(window).on('scroll', function() {
+        if ($(window).scrollTop() > 1900) {
+            $('.count-num').each(function() { // .count-num에 각각 적용
+                var $this = $(this),
+                countTo = $this.attr('data-count');
+                // $this = 첫번째~세번째 .count-num
+                // countTo = 첫번째~세번째 .count-num의 data-count 속성의 값(777,555,333)
+    
+                $({ countNum: $this.text()}).animate({
+                countNum: countTo 
+                // countNum: $this.text() = 0, countNum: countTo = 777, 555, 333
+                // 0에서 countNum이 된다
+                },
+                {
+                duration: 3000, // 애니메이션이 완료될때까지 걸리는 시간
+                easing:'linear', // 애니메이션 효과 방식
+                step: function() { // 움직임 각 스텝별로 실행될 함수
+                $this.text(Math.floor(this.countNum));
+                // Math.floor -> this.countNum의 값을 정수로 만들어준다
+                },
+                complete: function() { // 움직임이 멈춘 후 실행될 함수
+                $this.text(this.countNum);
+                // this.countNum이 $this의 text값이 된다
+                //alert('finished');
+                }
+                });  
+            });
+        }
+    
+        if ($(window).scrollTop() > 900){
+            $('.item1_pic').addClass('on');
+        };
+        
+        if ($(window).scrollTop() > 900){
+            $('.item2_pic').addClass('on');
+        };
+    });
+    </script>
 
 </html>
