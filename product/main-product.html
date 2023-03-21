@@ -19,8 +19,10 @@
 </head>
 
 <body>
-    <header><div id="header"></div></header>
     <div class="quick" id="quick"></div>
+    <header><div id="header"></div></header>
+    <div id="m_menu" class="m_menu"></div>
+    
     <div class="contentWrap" id="contentWrap">
         <section class="content">
             <div class="bgBox bgBox01">
@@ -121,6 +123,8 @@
     $(document).ready(function(){
     
         $("#header").load("./load/header.html");
+
+        $("#m_menu").load("./load/m_header.html");
     
         $("#quick").load("./load/quick.html");
     
