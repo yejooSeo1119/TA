@@ -22,7 +22,7 @@
     <div class="quick" id="quick"></div>
     <header><div id="header"></div></header>
     <div id="m_menu" class="m_menu"></div>
-    
+
     <div class="swiper mySwiper swiper-container">
         <div class="swiper-wrapper bg">
             <section class="mainfullbox0 swiper-slide">
@@ -202,7 +202,10 @@
     window.addEventListener("wheel", function (e) {
         e.preventDefault();
     }, { passive: false });
-
+// First we get the viewport height and we multiple it by 1% to get a value for a vh unit
+let vh = window.innerHeight * 0.01;
+// Then we set the value in the --vh custom property to the root of the document
+document.documentElement.style.setProperty('--vh', `${vh}px`);
 </script>
 
 <script>
