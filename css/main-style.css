@@ -3685,8 +3685,10 @@ nav>ul>li {
 
   .contentWrap .bgBox {
     position: relative;
-    height: 150px;
+    height: 200px;
     width: 100%;
+    display: flex;
+    align-items: center;
   }
 
   .contentWrap .bgBox02 {
