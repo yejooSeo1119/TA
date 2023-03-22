@@ -1,14 +1,19 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="../images/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="../css/main-style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"
         integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
     <script src="../script/script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
     <title>트러스트애드</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,8 +21,11 @@
         href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Noto+Sans:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap"
         rel="stylesheet">
 </head>
+
 <body>
-    <header><div id="header"></div></header>
+    <header>
+        <div id="header"></div>
+    </header>
     <div class="quick" id="quick"></div>
     <div id="m_menu" class="m_menu"></div>
     <div class="top"><a href="#"><img src="../images/top.png" alt="top"></a></div>
@@ -34,7 +42,7 @@
         </section>
         <section class="productWrap">
             <div class="product">
-                <h2>블로그 리뷰! 어떻게 활용해야 할까?</h2>
+                <h2 data-aos="fade-left" data-aos-duration="900">블로그 리뷰! 어떻게 활용해야 할까?</h2>
                 <span><img src="../images/product-img01.jpg" alt="체험단vs기자단"></span>
             </div>
         </section>
@@ -47,7 +55,7 @@
                             <a href="https://blog.naver.com/trustad_official/222969517043  " target="_blank">더 알아보기</a>
                         </div>
                     </li>
-                    <li> 
+                    <li>
                         <div class="down">
                             <a href="./download/trustad_company.pdf" class="downFile" download="TRUST AD 회사소개서">회사소개서
                                 다운로드</a>
@@ -64,19 +72,27 @@
     </footer>
 
 
+</body>
 
 <script>
-    $(document).ready(function(){
-    
+    AOS.init();
+    AOS.init({
+        disable: false,
+        once: true,
+    });
+</script>
+<script>
+    $(document).ready(function () {
+
         $("#header").load("./load/header.html");
 
         $("#m_menu").load("./load/m_header.html");
-    
+
         $("#quick").load("./load/quick.html");
-    
+
         $("#footer").load("./load/footer.html");
-    
+
     });
-    </script>
-    </body>
+</script>
+
 </html>

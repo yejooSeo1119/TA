@@ -6,9 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="../images/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="../css/main-style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"
         integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
     <script src="../script/script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
     <title>트러스트애드</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -32,8 +36,8 @@
             <!-- bgBox -->
             <div class="imgBox02">
                 <ul>
-                    <li><img src="../images/product08-1.jpg" alt="2-30대 타겟팅 가능"></li>
-                    <li><img src="../images/product08-2.jpg" alt="중복 해시태그 가능"></li>
+                    <li data-aos="fade-up" data-aos-duration="900"><img src="../images/product08-1.jpg" alt="2-30대 타겟팅 가능"></li>
+                    <li data-aos="fade-up" data-aos-duration="900" data-aos-delay="100"><img src="../images/product08-2.jpg" alt="중복 해시태그 가능"></li>
                 </ul>
             </div>
             <!-- imgBox02 -->
@@ -76,18 +80,25 @@
 
 
 
-<script>
-    $(document).ready(function(){
-    
-        $("#header").load("./load/header.html");
-
-        $("#m_menu").load("./load/m_header.html");
-    
-        $("#quick").load("./load/quick.html");
-    
-        $("#footer").load("./load/footer.html");
-    
-    });
-    </script>
     </body>
+    <script>
+        AOS.init();
+        AOS.init({
+            disable: false,
+            once: true,
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+    
+            $("#header").load("./load/header.html");
+    
+            $("#m_menu").load("./load/m_header.html");
+    
+            $("#quick").load("./load/quick.html");
+    
+            $("#footer").load("./load/footer.html");
+    
+        });
+    </script>
 </html>
