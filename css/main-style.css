@@ -5169,11 +5169,20 @@ li.clearfix{
   width: 100%;
   background: url(../images/case01.jpg) no-repeat center;
   background-size: cover;
-  padding-top: 90px;
+  display: flex;
+  align-items: center;
+  margin-top: 64px;
 }
-.Title{
+.bgBox03>.Title{
   width: 1200px;
   margin: auto;
+  color: #fff;
+}
+.bgBox03>.Title>h1{
+  font-size: 48px !important;
+}
+.bgBox03>.Title>p{
+  font-size: 20px !important;
 }
 .imgBox{
   width: 100%;
@@ -5181,22 +5190,69 @@ li.clearfix{
   overflow: hidden;
   margin: 0 auto;
   clear: both;
+  padding: 100px 0;
 }
 .imgBox ul{
 width: 100%;
-display: block;
+display: flex;
 padding: 50px 0;
 box-sizing: border-box;
+margin: auto;
+overflow: hidden;
+flex-wrap: nowrap;
 }
 .imgBox li{
-  width: 33.333%;
-  float: left;
-  display: block;
   text-align: center;
+  margin: auto;
+  overflow: hidden;
 }
+
 .imgBox li img{
   width: 500px;
   margin: auto;
   text-align: center;
+  display: block;
+}
+.referWrap{
+  width: 100%;
+  background-color: #faf1f9;
+}
+.refer{
+  width: 100%;
+  max-width: 1500px;
+  overflow: hidden;
+  margin: 0 auto;
+  padding: 100px 0 100px 0;
+}
+.refer h2{
+  font-size: 30px;
+  width: 80%;
+  margin: auto;
+}
+.refer ul{
+  display: flex;
+  width: 80%;
+  margin: auto;
+}
+.refer li{
+  color: #000;
+  text-align: center;  
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.refer p{
+  padding-top: 50px;
+  font-size: 20px;
+}
+.refer span {
+  width: 100%;
+  display: block;
+}
+.refer span img{
+  max-width: 500px;
+  width: 100%;
   display: block;
 }

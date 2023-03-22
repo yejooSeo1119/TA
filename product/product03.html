@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    ad>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="../css/main-style.css">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"
+        integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+    <script src="../script/script.js"></script>
+    <title>트러스트애드</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Noto+Sans:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+</head>
+<body>
+    <header><div id="header"></div></header>
+    <div class="quick" id="quick"></div>
+    <div id="m_menu" class="m_menu"></div>
+    <div class="contentWrap">
+        <section>
+            <div class="bgBox bgBox03">
+                <div class="Title">
+                    <h1>카페 바이럴 · 상위 보장형</h1>
+                    <p>특정 키워드(메인 및 관련 키워드) 검색 시</p>
+                    <p>긍정적인 후기, 정보성 게시글을 상위에 노출시키는 마케팅</p>
+                </div>
+            </div>
+            <!-- bgBox -->
+            <div class="imgBox">
+                <ul>
+                    <li><img src="../images/product03-1.jpg" alt="가격 경쟁력"></li>
+                    <li><img src="../images/product03-2.jpg" alt="전문 원고 작가 배치"></li>
+                </ul>
+            </div>
+            <!-- imgBox -->
+        </section>
+        <section class="referWrap">
+            <div class="refer">
+                <h2>레퍼런스</h2>
+                <ul>
+                    <li> <p>식품</p></li>
+                    <li> <p>의류</p></li>
+                </ul>
+                <ul>
+                    <li>
+                        <span><img src="../images/productImg05.png" alt="풀무원 얇은피만두 8봉"></span>
+                    </li>
+                    <li>
+                        <span><img src="../images/productImg06.png" alt="겨울 스키복 기모템"></span>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </div>
+    <!-- contentWrap -->
+    <footer class="foot black">
+        <div id="footer"></div>
+    </footer>
+
+
+
+<script>
+    $(document).ready(function(){
+    
+        $("#header").load("./load/header.html");
+
+        $("#m_menu").load("./load/m_header.html");
+    
+        $("#quick").load("./load/quick.html");
+    
+        $("#footer").load("./load/footer.html");
+    
+    });
+    </script>
+    </body>
+</html>
