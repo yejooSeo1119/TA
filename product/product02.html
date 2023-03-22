@@ -1,14 +1,19 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="../images/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="../css/main-style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"
         integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
     <script src="../script/script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
     <title>트러스트애드</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,8 +21,11 @@
         href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Noto+Sans:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap"
         rel="stylesheet">
 </head>
+
 <body>
-    <header><div id="header"></div></header>
+    <header>
+        <div id="header"></div>
+    </header>
     <div class="quick" id="quick"></div>
     <div id="m_menu" class="m_menu"></div>
     <div class="top"><a href="#"><img src="../images/top.png" alt="top"></a></div>
@@ -33,8 +41,10 @@
             <!-- bgBox -->
             <div class="imgBox02">
                 <ul>
-                    <li><img src="../images/product02-1.jpg" alt="가격 경쟁력"></li>
-                    <li><img src="../images/product02-2.jpg" alt="전문 원고 작가 배치"></li>
+                    <li data-aos="fade-up" data-aos-duration="900"><img src="../images/product02-1.jpg" alt="가격 경쟁력">
+                    </li>
+                    <li data-aos="fade-up" data-aos-duration="900" data-aos-delay="100"><img
+                            src="../images/product02-2.jpg" alt="전문 원고 작가 배치"></li>
                 </ul>
             </div>
             <!-- imgBox02 -->
@@ -45,10 +55,16 @@
                 <ul>
                     <li>
                         <p>식품</p>
-                        <span><img src="../images/productImg03.png" alt="풀무원 얇은피만두 8봉"></span>
                     </li>
                     <li>
                         <p>의류</p>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <span><img src="../images/productImg03.png" alt="풀무원 얇은피만두 8봉"></span>
+                    </li>
+                    <li>
                         <span><img src="../images/productImg04.png" alt="겨울 스키복 기모템"></span>
                     </li>
                 </ul>
@@ -63,7 +79,7 @@
                             <a href="https://blog.naver.com/trustad_official/223013499263 " target="_blank">더 알아보기</a>
                         </div>
                     </li>
-                    <li> 
+                    <li>
                         <div class="down">
                             <a href="./download/trustad_company.pdf" class="downFile" download="TRUST AD 회사소개서">회사소개서
                                 다운로드</a>
@@ -80,19 +96,27 @@
     </footer>
 
 
+</body>
+<script>
+    AOS.init();
+    AOS.init({
+        disable: false,
+        once: true,
+    });
+</script>
 
 <script>
-    $(document).ready(function(){
-    
+    $(document).ready(function () {
+
         $("#header").load("./load/header.html");
 
         $("#m_menu").load("./load/m_header.html");
-    
+
         $("#quick").load("./load/quick.html");
-    
+
         $("#footer").load("./load/footer.html");
-    
+
     });
-    </script>
-    </body>
+</script>
+
 </html>
