@@ -20,84 +20,98 @@
 </head>
 
 <body>
-    <header><div id="header"></div></header>
+    <header>
+        <div id="header"></div>
+    </header>
     <div class="quick" id="quick"></div>
     <div id="m_menu" class="m_menu"></div>
     <div class="top"><a href="#"><img src="../images/top.png" alt="top"></a></div>
     <div class="contentWrap">
-            <div class="gradientBox">
-                <div class="title">
-                    <h2>트러스트애드의 도움이 필요하신가요?</h2>
-                </div>
+        <div class="gradientBox">
+            <div class="title">
+                <h2>트러스트애드의 도움이 필요하신가요?</h2>
             </div>
-            <!-- bgBox -->
-            <div class="sub">
-                <p>아래 항목을 기입해 주시면 마케팅 전문가가 도와드리겠습니다</p>
-                <div class="pt10"></div>
-                <p>제품 및 예산 등 상세한 내용을 기입해 주신다면 정확한 상담이 가능합니다</p>
+        </div>
+        <!-- bgBox -->
+        <div class="sub">
+            <p>아래 항목을 기입해 주시면 마케팅 전문가가 도와드리겠습니다</p>
+            <div class="pt10"></div>
+            <p>제품 및 예산 등 상세한 내용을 기입해 주신다면 정확한 상담이 가능합니다</p>
+        </div>
+        <!-- sub -->
+        <div class="inside">
+            <div class="inputbox">
+                <p><i class="star">*</i> 표시는 필수로 기입해 주셔야 합니다</p>
+                <form action="">
+                    <ul>
+                        <li>
+                            <p><i class="star">*</i> 업체명</p>
+                            <input type="text" class="col">
+                        </li>
+                        <li>
+                            <p><i class="star">*</i>업종</p>
+                            <input type="text" class="col">
+                        </li>
+                        <li>
+                            <p><i class="star">*</i> 성함</p>
+                            <input type="text" class="col">
+                        </li>
+                        <li>
+                            <p><i class="star">*</i> 연락처</p>
+                            <div class="telbox">
+                                <input type="tel" class="tel">
+                                <span class="hypen">-</span>
+                                <input type="tel" class="tel">
+                                <span class="hypen">-</span>
+                                <input type="tel" class="tel">
+                            </div>
+                        </li>
+                        <li class="clearfix">
+                            <p>이메일</p>
+                            <input type="email" class="col">
+                        </li>
+                        <li>
+                            <p>예산</p>
+                            <select name="" id="" style="width: 100%;">
+                                <option value="">예산을 선택해 주세요</option>
+                                <option value="50만원 미만">50만 원 미만</option>
+                                <option value="50만 원 ~ 100만 원">50만 원 ~ 100만 원</option>
+                                <option value="100만 원 ~ 500만 원">100만 원 ~ 500만 원</option>
+                                <option value="500만 원 ~ 1000만 원">500만 원 ~ 1000만 원</option>
+                                <option value="1000만 원 ~ 5000만 원">1000만 원 ~ 5000만 원</option>
+                                <option value="5000만 원 이상">5000만 원 이상</option>
+                                <option value="예산 미정">예산 미정</option>
+                            </select>
+                        </li>
+                        <li>
+                            <p><i class="star">*</i> 문의 내용</p>
+                            <textarea name="" id=""></textarea>
+                        </li>
+                    </ul>
+                    <div class="btnBox">
+                        <button onclick="alert('문의가 등록되었습니다');return false;">문의하기</button>
+                    </div>
+                </form>
             </div>
-            <!-- sub -->
-            <div class="inside">
-                <div class="inputbox">
-                    <p><i class="star">*</i> 표시는 필수로 기입해 주셔야 합니다</p>
-                    <form action="">
-                        <ul>
-                            <li> 
-                                <p><i class="star">*</i> 업체명</p>
-                                <input type="text" class="col">
-                            </li>
-                            <li>
-                                 <p><i class="star">*</i>업종</p>
-                                <input type="text" class="col">
-                            </li>
-                            <li>
-                                <p><i class="star">*</i> 성함</p>
-                                <input type="text" class="col">
-                            </li>
-                            <li>
-                                <p><i class="star">*</i> 연락처</p>
-                                <div class="telbox">
-                                    <input type="tel" class="tel">
-                                    <span class="hypen">-</span>
-                                    <input type="tel" class="tel">
-                                    <span class="hypen">-</span>
-                                    <input type="tel" class="tel">
-                                </div>
-                            </li>
-                            <li class="clearfix">
-                                <p>이메일</p>
-                                <input type="email" class="col">
-                            </li>
-                            <li>
-                                <p>예산</p>
-                                <select name="" id="" style="width: 100%;">
-                                    <option value="">예산을 선택해 주세요</option>
-                                    <option value="50만원 미만">50만 원 미만</option>
-                                    <option value="50만 원 ~ 100만 원">50만 원 ~ 100만 원</option>
-                                    <option value="100만 원 ~ 500만 원">100만 원 ~ 500만 원</option>
-                                    <option value="500만 원 ~ 1000만 원">500만 원 ~ 1000만 원</option>
-                                    <option value="1000만 원 ~ 5000만 원">1000만 원 ~ 5000만 원</option>
-                                    <option value="5000만 원 이상">5000만 원 이상</option>
-                                    <option value="예산 미정">예산 미정</option>
-                                </select>
-                            </li>
-                            <li>
-                                <p><i class="star">*</i> 문의 내용</p>
-                                <textarea name="" id="" ></textarea>
-                            </li>
-                        </ul>
-                        <div class="btnBox">
-                            <button onclick="alert('문의가 등록되었습니다');return false;">문의하기</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
+        </div>
     </div>
     <!-- contentWrap -->
     <footer class="foot black">
         <div id="footer"></div>
     </footer>
 </body>
+<script>
+    $(document).ready(function () {
 
+        $("#header").load("./load/header.html");
+
+        $("#m_menu").load("./load/m_header.html");
+
+        $("#quick").load("./load/quick.html");
+
+        $("#footer").load("./load/footer.html");
+
+    });
+</script>
 
 </html>

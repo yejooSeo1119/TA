@@ -22,7 +22,9 @@
 </head>
 
 <body>
-    <header><div id="header"></div></header>
+    <header>
+        <div id="header"></div>
+    </header>
     <div class="quick" id="quick"></div>
     <div id="m_menu" class="m_menu"></div>
     <div class="top"><a href="#"><img src="../images/top.png" alt="top"></a></div>
@@ -114,35 +116,50 @@
     <footer class="foot">
         <div id="footer"></div>
     </footer>
-    <script>
-
-        window.addEventListener("wheel", function (e) {
-            e.preventDefault();
-        }, { passive: false });
-
-    </script>
-    <script>
-        var mHtml = $("html");
-        var page = 1;
-
-
-        mHtml.animate({ scrollTop: 0 }, 10);
-    </script>
-    <script>
-        $(window).on("wheel", function (e) {
-            if (mHtml.is(":animated")) return;
-            if (e.originalEvent.deltaY > 0) {
-                if (page == 4) return;
-                page++;
-            } else if (e.originalEvent.deltaY < 0) {
-                if (page == 1) return;
-                page--;
-            }
-            var posTop = (page - 1) * $(window).height();
-            mHtml.animate({ scrollTop: posTop });
-        })
-    </script>
 
 </body>
+<script>
+    $(document).ready(function () {
+
+        $("#header").load("./load/header.html");
+
+        $("#m_menu").load("./load/m_header.html");
+
+        $("#quick").load("./load/quick.html");
+
+        $("#footer").load("./load/footer.html");
+
+    });
+</script>
+
+<script>
+
+    window.addEventListener("wheel", function (e) {
+        e.preventDefault();
+    }, { passive: false });
+
+</script>
+<script>
+    var mHtml = $("html");
+    var page = 1;
+
+
+    mHtml.animate({ scrollTop: 0 }, 10);
+</script>
+<script>
+    $(window).on("wheel", function (e) {
+        if (mHtml.is(":animated")) return;
+        if (e.originalEvent.deltaY > 0) {
+            if (page == 4) return;
+            page++;
+        } else if (e.originalEvent.deltaY < 0) {
+            if (page == 1) return;
+            page--;
+        }
+        var posTop = (page - 1) * $(window).height();
+        mHtml.animate({ scrollTop: posTop });
+    })
+</script>
+
 
 </html>

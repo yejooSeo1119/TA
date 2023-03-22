@@ -23,7 +23,9 @@
 </head>
 
 <body>
-    <header><div id="header"></div></header>
+    <header>
+        <div id="header"></div>
+    </header>
     <div class="quick" id="quick"></div>
     <div id="m_menu" class="m_menu"></div>
     <div class="top"><a href="#"><img src="../images/top.png" alt="top"></a></div>
@@ -78,12 +80,12 @@
         </section>
         <section class="black">
             <div class="about03 content">
-                <div class="title"data-aos="fade-up" data-aos-duration="900">
+                <div class="title" data-aos="fade-up" data-aos-duration="900">
                     <h1>효율성</h1>
                     <p>트러스트애드는 <strong>체계적인 조직 시스템을 통해</strong></p>
                     <p>원활한 소통과 최대의 업무 효율을 지향하고 있습니다</p>
                 </div>
-                <div class="imgBox"data-aos="fade-up" data-aos-duration="900">
+                <div class="imgBox" data-aos="fade-up" data-aos-duration="900">
                     <img src="./images/about03.png" alt="회사 조직도">
                 </div>
             </div>
@@ -110,6 +112,48 @@
     </footer>
 </body>
 
+<script>
+    $(document).ready(function () {
+
+        $("#header").load("./load/header.html");
+
+        $("#m_menu").load("./load/m_header.html");
+
+        $("#quick").load("./load/quick.html");
+
+        $("#footer").load("./load/footer.html");
+
+    });
+</script>
+
+<script>
+
+    window.addEventListener("wheel", function (e) {
+        e.preventDefault();
+    }, { passive: false });
+
+</script>
+<script>
+    var mHtml = $("html");
+    var page = 1;
+
+
+    mHtml.animate({ scrollTop: 0 }, 10);
+</script>
+<script>
+    $(window).on("wheel", function (e) {
+        if (mHtml.is(":animated")) return;
+        if (e.originalEvent.deltaY > 0) {
+            if (page == 4) return;
+            page++;
+        } else if (e.originalEvent.deltaY < 0) {
+            if (page == 1) return;
+            page--;
+        }
+        var posTop = (page - 1) * $(window).height();
+        mHtml.animate({ scrollTop: posTop });
+    })
+</script>
 
 <script>
     AOS.init();
