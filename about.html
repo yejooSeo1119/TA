@@ -7,9 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="./css/main-style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"
         integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
     <script src="./script/script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
     <title>트러스트애드</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,7 +23,9 @@
 </head>
 
 <body>
-    <header><div id="header"></div></header>
+    <header>
+        <div id="header"></div>
+    </header>
     <div class="quick" id="quick"></div>
     <div id="m_menu" class="m_menu"></div>
     <div class="contentWrap">
@@ -33,9 +39,9 @@
                         <div class="textBox left">
                             <div class="gray">
                                 <p> Don't be be deceived by the sweet talk of "rising sales".</p>
-                                <p>The belief that is formed through the marketing realization,</p> 
+                                <p>The belief that is formed through the marketing realization,</p>
                                 <div class="pt30"></div>
-                                <p>which pursed by the client is the top priority rather than </p> 
+                                <p>which pursed by the client is the top priority rather than </p>
                                 <p>the hundreds of foolish words that can not be kept.</p>
                             </div>
                             <div class="pt100"></div>
@@ -73,12 +79,12 @@
         </section>
         <section class="black">
             <div class="about03 content">
-                <div class="title">
+                <div class="title"data-aos="fade-up" data-aos-duration="900">
                     <h1>효율성</h1>
                     <p>트러스트애드는 <strong>체계적인 조직 시스템을 통해</strong></p>
                     <p>원활한 소통과 최대의 업무 효율을 지향하고 있습니다.</p>
                 </div>
-                <div class="imgBox">
+                <div class="imgBox"data-aos="fade-up" data-aos-duration="900">
                     <img src="./images/about03.png" alt="회사 조직도">
                 </div>
             </div>
@@ -104,6 +110,15 @@
         <div id="footer"></div>
     </footer>
 </body>
+
+
+<script>
+    AOS.init();
+    AOS.init({
+        disable: false,
+        once: true,
+    });
+</script>
 <script>
 
     window.addEventListener("wheel", function (e) {

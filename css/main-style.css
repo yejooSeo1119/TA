@@ -2835,6 +2835,40 @@ nav>ul>li {
 /* about */
 
 
+/* about01 */
+
+/* animation */
+@keyframes left3{
+
+  0% {
+    transform: translateX(-1000px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+}
+@keyframes right3{
+
+  0% {
+    transform: translateX(1000px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+}
+.about01 .textBox.right h1{
+  animation: right3 2s;
+}
+.about01 .textBox.left{
+  animation: left3 2s;
+}
+
 @media screen and (min-width: 1200px) {
   .bgWrap {
     background: url(../images/about1-1.jpg) center center no-repeat;
@@ -2969,6 +3003,20 @@ nav>ul>li {
 
 }
 
+
+/* animation */
+@keyframes up{
+  0% {
+    transform: translateY(1000px);
+    opacity: 0;
+  }
+
+  100%{
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
 .aboutWrap {
   margin: 0 auto;
   text-align: center;
@@ -2976,6 +3024,11 @@ nav>ul>li {
 
 .about02 {
   position: relative;
+}
+
+.aboutWrap .about02 .headLogo,
+.aboutWrap .about02 .textBox{
+  animation: up 2s;
 }
 
 .aboutWrap .about02 {
@@ -3256,6 +3309,7 @@ nav>ul>li {
   .about03 {
     width: 95%;
     margin: 0 auto;
+    height: 100vh;
   }
 
   .about03 .title {
@@ -3292,6 +3346,7 @@ nav>ul>li {
     display: block;
     margin: auto;
     width: 100%;
+    padding-top:30px;
   }
 
   .black {
@@ -3973,7 +4028,7 @@ nav>ul>li {
   }
 
   .case .naver.center {
-    padding-top: 20px;
+    padding-top: 40px;
     width: 100%;
     overflow: hidden;
   }
@@ -4000,6 +4055,8 @@ nav>ul>li {
     max-width: 350px;
     border: 1px solid #c9c9c9;
     box-sizing: border-box;
+    animation-name: up;
+    animation-duration: 1s;
   }
 
   .case .center h2 {
@@ -4019,26 +4076,42 @@ nav>ul>li {
 /* scroll */
 
 
-@keyframes scroll {
-
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-
-  50% {
-    transform: translateY(5px);
-  }
-
-}
-
-
 /* google */
 
 .about03 {
   position: relative;
 }
 
+
+/* animation */
+@keyframes left{
+
+  0% {
+    left: -500px;
+    opacity: 0;
+    scale: 0.8;
+  }
+  100% {
+    left: 0;
+    opacity: 1;
+    scale: 1;
+  }
+
+}
+@keyframes right{
+
+  0% {
+    right: -500px;
+    opacity: 0;
+    scale: 0.8;
+  }
+  100% {
+    right: 0;
+    opacity: 1;
+    scale: 1;
+  }
+
+}
 @media screen and (min-width: 1200px) {
 
   .relative {
@@ -4068,6 +4141,8 @@ nav>ul>li {
 
   .bImgBox {
     padding-top: 40px;
+    animation-name: left;
+    animation-duration: 2.3s;
   }
 
   .bImgBox,
@@ -4125,6 +4200,8 @@ nav>ul>li {
 
   .fImgBox {
     padding-top: 350px;
+    animation-name: right;
+    animation-duration: 2s;
   }
 
   .google .fImgBox img {
@@ -4190,6 +4267,8 @@ nav>ul>li {
 
   .bImgBox {
     padding-top: 40px;
+    animation-name: left;
+    animation-duration: 2.3s;
   }
 
   .bImgBox,
@@ -4247,6 +4326,8 @@ nav>ul>li {
 
   .fImgBox {
     padding-top: 350px;
+    animation-name: right;
+    animation-duration: 2s;
   }
 
   .google .fImgBox img {
@@ -4290,6 +4371,7 @@ nav>ul>li {
   .relative {
     position: relative;
     width: 100%;
+    height: 100vh;
   }
 
   .google {
@@ -4310,9 +4392,13 @@ nav>ul>li {
     width: 100%;
     max-width: 100%;
     margin: auto;
+    padding-top: 70px;
   }
-
-
+  .bImgBox{ 
+    animation-name: left;
+    animation-duration: 2.3s;
+  }
+ 
   .bImgBox,
   .fImgBox {
     position: relative;
@@ -4370,6 +4456,8 @@ nav>ul>li {
 
   .fImgBox {
     padding-top: 380px;
+    animation-name: right;
+    animation-duration: 2s;
   }
 
   .google .fImgBox img {
@@ -4410,6 +4498,32 @@ nav>ul>li {
 }
 
 /* search */
+
+/* animation */
+@keyframes left2{
+
+  0% {
+    left: -500px;
+    opacity: 0;
+  }
+  100% {
+    left: 0;
+    opacity: 1;
+  }
+
+}
+@keyframes right2{
+
+  0% {
+    right: -500px;
+    opacity: 0;
+  }
+  100% {
+    right: 0;
+    opacity: 1;
+  }
+
+}
 @media screen and (min-width: 1200px) {
   .search {
     display: flex;
@@ -4439,6 +4553,7 @@ nav>ul>li {
 
   .exWrap.exWrap01 {
     text-align: left;
+    animation: left2 2.5s;
   }
 
   .exWrap01 .ex {
@@ -4474,6 +4589,7 @@ nav>ul>li {
   .exWrap.exWrap02 {
     text-align: right;
     margin-right: 50px;
+    animation: right2 2.5s;
   }
 
   .exWrap02 .ex {
@@ -4549,6 +4665,7 @@ nav>ul>li {
 
   .exWrap.exWrap01 {
     text-align: left;
+    animation: left2 2.5s;
   }
 
   .exWrap01 .ex {
@@ -4585,6 +4702,7 @@ nav>ul>li {
   .exWrap.exWrap02 {
     text-align: right;
     margin-right: 50px;
+    animation: right2 2.5s;
   }
 
   .exWrap02 .ex {
@@ -4656,6 +4774,7 @@ nav>ul>li {
     max-width: 100%;
     margin: auto;
     position: relative;
+    padding-top: 30px;
   }
 
   .exWrap img {
@@ -4664,6 +4783,7 @@ nav>ul>li {
 
   .exWrap.exWrap01 {
     text-align: left;
+    animation: left2 2.5s;
   }
 
   .exWrap01 .ex {
@@ -4672,7 +4792,7 @@ nav>ul>li {
     z-index: 888;
     width: 170px;
     left: 250px;
-    top: 0px;
+    top: 20px;
     text-align: left;
     border-radius: 10px;
     padding: 10px 20px;
@@ -4701,6 +4821,7 @@ nav>ul>li {
     text-align: right;
     margin-right: 50px;
     padding-top: 80px;
+    animation: right2 2.5s;
   }
 
   .exWrap02 .ex {
@@ -5285,7 +5406,7 @@ nav>ul>li {
   font-size: 20px !important;
 }
 
-.imgBox {
+.imgBox02 {
   width: 100%;
   max-width: 1500px;
   overflow: hidden;
@@ -5294,7 +5415,7 @@ nav>ul>li {
   padding: 100px 0;
 }
 
-.imgBox ul {
+.imgBox02 ul {
   width: 100%;
   display: flex;
   padding: 50px 0;
@@ -5304,13 +5425,13 @@ nav>ul>li {
   flex-wrap: nowrap;
 }
 
-.imgBox li {
+.imgBox02 li {
   text-align: center;
   margin: auto;
   overflow: hidden;
 }
 
-.imgBox li img {
+.imgBox02 li img {
   width: 500px;
   margin: auto;
   text-align: center;
@@ -5451,3 +5572,5 @@ nav>ul>li {
   float: left;
   width: 50%;
 }
+
+
