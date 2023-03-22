@@ -1340,6 +1340,7 @@ nav>ul>li {
     background-attachment: fixed;
     position: relative;
     z-index: 555;
+    height: 100vh;
   }
 
   .mainfullbox0 .contentWrap {
@@ -1377,7 +1378,7 @@ nav>ul>li {
     max-width: 100%;
     margin: 0 auto;
     box-sizing: border-box;
-    transform: scale(0.9);
+    top: -10px;
   }
 
   .main_detail .detail_1 {
