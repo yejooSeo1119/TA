@@ -3580,7 +3580,37 @@ nav>ul>li {
   text-shadow: 2px 2px 2px #adadad;
   color: #000;
 }
-
+.prod01Inner p{
+  background: url(../images/inner_bg01.jpg) center no-repeat;
+  background-size: cover;
+}
+.prod02Inner p{
+  background: url(../images/inner_bg02.jpg) center no-repeat;
+  background-size: cover;
+}
+.prod03Inner p{
+  background: url(../images/inner_bg03.jpg) center no-repeat;
+  background-size: cover;
+}
+.prod04Inner p{
+  background: url(../images/inner_bg04.jpg) center no-repeat;
+  background-size: cover;
+}
+.prod05Inner p{
+  background: url(../images/inner_bg05.jpg) center no-repeat;
+  background-size: cover;
+}
+.product li{
+  color: #e5e5e5!important;
+  text-shadow:  0px 2px 3px rgb(0, 0, 0, 0.5);
+}
+.product li p {
+  box-shadow: 2px 4px 4px rgb(0, 0, 0, 0.3);
+  transition: scale 0.3s;
+}
+.product li p:hover{
+  scale: 0.97;
+}
 @media screen and (min-width: 1200px) {
 
   .contentWrap .product {
@@ -3604,27 +3634,33 @@ nav>ul>li {
   .product ul {
     display: block;
     margin: auto;
-    padding: 20px 0;
+    padding: 20px 20px;
     overflow: hidden;
+    background-color: transparent;
   }
 
   .product li {
-    color: #000;
+    color: #fff;
     width: 33.333%;
     float: left;
     position: relative;
     line-height: 300px;
+    
+    background-color: transparent;
   }
 
   .product li p {
-    border: 2px solid #000;
-    display: inline-block;
+    display:block;
     width: 300px;
     height: 300px;
     text-align: center;
     border-radius: 10px;
     font-weight: 600;
     font-size: 22px;
+    
+  }
+  .product li p:hover{
+    scale: 0.97;
   }
 }
 
@@ -5574,3 +5610,25 @@ nav>ul>li {
 }
 
 
+
+/* top */
+.top{
+  position: fixed;
+  bottom: 50px;
+  right:30px ;
+  z-index: 888;
+}
+.top a img{
+  display: block;
+  width: 30px;
+  margin: auto;
+}
+.top a{
+  background-color: #fff;
+  width: 100%;
+  height: 100%;
+  display: block;
+  padding: 10px 7px;
+  border-radius: 50%;
+  box-shadow: 0px 2px 4px rgb(0, 0, 0, 0.2);
+}
