@@ -7,9 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="./css/main-style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"
         integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
     <script src="./script/script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
     <title>트러스트애드</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,7 +24,9 @@
 
 <body>
     <div class="quick" id="quick"></div>
-    <header><div id="header"></div></header>
+    <header>
+        <div id="header"></div>
+    </header>
     <div id="m_menu" class="m_menu"></div>
 
     <div class="swiper mySwiper swiper-container">
@@ -28,11 +34,11 @@
             <section class="mainfullbox0 swiper-slide">
                 <div class="main content">
                     <div class="contentWrap">
-                        <div class="Title">
+                        <div class="Title" data-aos="fade-right" data-aos-duration="900">
                             <div class="titleImg"><img src="./images/Title_1_1.png" alt="title"></div>
                         </div>
                         <!-- 텍스트 -->
-                        <div class="main_detail">
+                        <div class="main_detail" data-aos="fade-up" data-aos-duration="900">
                             <div class="detail_1">
                                 <div class="detail_1_1">
                                     <img src="./images/main-img1.png" alt="컨설팅">
@@ -80,7 +86,6 @@
             </section>
             <section class="mainfullbox1 swiper-slide mainbotBk">
                 <div class="client content">
-                    <div class="pt100"></div>
                     <h1 class="font">clients</h1>
                     <div class="pt100"></div>
                     <p>유아동, 식품, 여행 등 다양한 분야의 업체에서 트러스트애드의 가치를 더해주시고 있습니다.</p>
@@ -109,7 +114,7 @@
                             <div class="scroll01 scroll">
                                 <div class="s-headerWrap">
                                     <div class="s-header">
-                                        <p><strong>실시간 광고문의</strong> 진행현황</p>
+                                        <p><strong>실시간 광고문의</strong>진행현황</p>
                                     </div>
                                 </div>
                                 <div class="s-now">
@@ -238,83 +243,91 @@
         mHtml.animate({ scrollTop: posTop });
     })
 </script> -->
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+    AOS.init();
+    AOS.init({
+        disable: false,
+        once: true,
+    });
+</script>
 
 <script>
-    $( document ).ready(function() {
+    $(document).ready(function () {
         $('.main_detail').addClass('on');
         $('.main_text').addClass('on');
         var Num = 0;
-        setInterval(function(){
-            if(Num == 3){
+        setInterval(function () {
+            if (Num == 3) {
                 Num = 0;
             }
             Num++;
             $('.main_detail .detail_1').removeClass('on');
             $('.main_detail .detail_2').removeClass('on');
             $('.main_detail .detail_3').removeClass('on');
-            $('.main_detail .detail_'+ Num).addClass('on');		
-        },3000);
-        
-        $('.item1').hover( function() {
+            $('.main_detail .detail_' + Num).addClass('on');
+        }, 3000);
+
+        $('.item1').hover(function () {
             $(".item1 img").attr("src", "./images/main-img1.png");
             $('.item1').addClass('on');
-        }, function() {
+        }, function () {
             $(".item1 img").attr("src", "./images/main-text01.png");
             $('.item1').removeClass('on');
         });
-    
-        $('.item2').hover( function() {
+
+        $('.item2').hover(function () {
             $(".item2 img").attr("src", "./images/main-img2.png");
             $('.item2').addClass('on');
-        }, function() {
+        }, function () {
             $(".item2 img").attr("src", "./images/main-text02.png");
             $('.item2').removeClass('on');
         });
-        $('.item3').hover( function() {
+        $('.item3').hover(function () {
             $(".item3 img").attr("src", "./images/main-img3.png");
             $('.item3').addClass('on');
-        }, function() {
+        }, function () {
             $(".item3 img").attr("src", "./images/main-text03.png");
             $('.item3').removeClass('on');
         });
     });
-    $(window).on('scroll', function() {
+    $(window).on('scroll', function () {
         if ($(window).scrollTop() > 1900) {
-            $('.count-num').each(function() { // .count-num에 각각 적용
+            $('.count-num').each(function () { // .count-num에 각각 적용
                 var $this = $(this),
-                countTo = $this.attr('data-count');
+                    countTo = $this.attr('data-count');
                 // $this = 첫번째~세번째 .count-num
                 // countTo = 첫번째~세번째 .count-num의 data-count 속성의 값(777,555,333)
-    
-                $({ countNum: $this.text()}).animate({
-                countNum: countTo 
-                // countNum: $this.text() = 0, countNum: countTo = 777, 555, 333
-                // 0에서 countNum이 된다
+
+                $({ countNum: $this.text() }).animate({
+                    countNum: countTo
+                    // countNum: $this.text() = 0, countNum: countTo = 777, 555, 333
+                    // 0에서 countNum이 된다
                 },
-                {
-                duration: 3000, // 애니메이션이 완료될때까지 걸리는 시간
-                easing:'linear', // 애니메이션 효과 방식
-                step: function() { // 움직임 각 스텝별로 실행될 함수
-                $this.text(Math.floor(this.countNum));
-                // Math.floor -> this.countNum의 값을 정수로 만들어준다
-                },
-                complete: function() { // 움직임이 멈춘 후 실행될 함수
-                $this.text(this.countNum);
-                // this.countNum이 $this의 text값이 된다
-                //alert('finished');
-                }
-                });  
+                    {
+                        duration: 3000, // 애니메이션이 완료될때까지 걸리는 시간
+                        easing: 'linear', // 애니메이션 효과 방식
+                        step: function () { // 움직임 각 스텝별로 실행될 함수
+                            $this.text(Math.floor(this.countNum));
+                            // Math.floor -> this.countNum의 값을 정수로 만들어준다
+                        },
+                        complete: function () { // 움직임이 멈춘 후 실행될 함수
+                            $this.text(this.countNum);
+                            // this.countNum이 $this의 text값이 된다
+                            //alert('finished');
+                        }
+                    });
             });
         }
-    
-        if ($(window).scrollTop() > 900){
+
+        if ($(window).scrollTop() > 900) {
             $('.item1_pic').addClass('on');
         };
-        
-        if ($(window).scrollTop() > 900){
+
+        if ($(window).scrollTop() > 900) {
             $('.item2_pic').addClass('on');
         };
     });
-    </script>
+</script>
 
 </html>

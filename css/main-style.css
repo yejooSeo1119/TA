@@ -19,7 +19,7 @@ ol {
 a {
   text-decoration: none;
   color: #000;
-  font-family: "Noto Sans KR";
+  font-family: "Noto Sans KR" !important;
 }
 
 .clearfix {
@@ -56,10 +56,11 @@ body {
   /* IE and Edge */
   scrollbar-width: none;
   /* Firefox */
-  font-family: 'Noto Sans KR', 'Noto Sans', 'Roboto', sans-serif;
+  font-family: 'Noto Sans KR', 'Noto Sans', sans-serif !important;
   font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
-
 
 ul,
 li,
@@ -1722,6 +1723,7 @@ nav>ul>li {
 
   .mainfullbox0 .contentWrap {
     width: 600px;
+    height: 100vh;
     max-width: 100%;
     margin: auto;
     background-color: transparent;
@@ -1742,7 +1744,7 @@ nav>ul>li {
   }
 
   .titleImg img {
-    width: 400px;
+    width: 350px;
   }
 
 
@@ -1754,8 +1756,9 @@ nav>ul>li {
     max-width: 100%;
     margin: 0 auto;
     box-sizing: border-box;
-    padding-top: 200px;
-    transform: scale(0.8);
+    padding-top: 100px;
+    transform: scale(0.6);
+    top: -30px;
   }
 
   .main_detail .detail_1 {
@@ -2405,6 +2408,7 @@ nav>ul>li {
     overflow: hidden;
     box-sizing: border-box;
     flex-direction: column;
+    background-color: #f1f1f9;
   }
 
   .now {
@@ -2417,6 +2421,8 @@ nav>ul>li {
   .mainfullbox_Last h4 {
     font-weight: 400;
     padding: 100px 0;
+    color: #000;
+    font-size: 48px;
   }
 
   .scrollWrap {
@@ -2452,20 +2458,25 @@ nav>ul>li {
     font-size: 24px;
     font-weight: 500;
   }
-
+  .s-header p{
+    display: inline;
+  }
   .scroll01 .s-header,
   .gradientBox {
     background: rgb(47, 91, 181);
     background: linear-gradient(90deg, rgba(47, 91, 181, 1) 0%, rgba(9, 125, 173, 1) 50%, rgba(29, 0, 166, 1) 100%);
+    color: #f1f1f9;
   }
 
   .scroll02 .s-header {
-    background: rgb(72, 16, 113);
-    background: linear-gradient(90deg, rgba(72, 16, 113, 1) 0%, rgba(110, 3, 196, 1) 50%, rgba(40, 13, 68, 1) 100%);
+    background: rgb(47, 91, 181);
+    background: linear-gradient(90deg, rgba(47, 91, 181, 1) 0%, rgba(9, 125, 173, 1) 50%, rgba(29, 0, 166, 1) 100%);
+     color: #f1f1f9;
   }
 
   .s-header strong {
     font-size: 26px;
+    padding-right: 10px;
   }
 
   .s-now {
@@ -2505,7 +2516,7 @@ nav>ul>li {
   }
 
   span.done {
-    background-color: #a41012;
+    background-color: rgb(47, 91, 181);
     padding: 5px 15px;
     border-radius: 5px;
     box-sizing: border-box;
@@ -2520,6 +2531,7 @@ nav>ul>li {
     overflow: hidden;
     box-sizing: border-box;
     flex-direction: column;
+      background-color: #f1f1f9;
   }
 
   .now {
@@ -2534,6 +2546,7 @@ nav>ul>li {
     font-size: 30px;
     width: 70%;
     margin: auto;
+    color: #000;
   }
 
   .scrollWrap {
@@ -2571,11 +2584,13 @@ nav>ul>li {
   .gradientBox {
     background: rgb(47, 91, 181);
     background: linear-gradient(90deg, rgba(47, 91, 181, 1) 0%, rgba(9, 125, 173, 1) 50%, rgba(29, 0, 166, 1) 100%);
+    color: #f1f1f9;
   }
 
   .scroll02 .s-header {
     background: rgb(72, 16, 113);
     background: linear-gradient(90deg, rgba(72, 16, 113, 1) 0%, rgba(110, 3, 196, 1) 50%, rgba(40, 13, 68, 1) 100%);
+    color: #f1f1f9;
   }
 
   .s-header strong {
@@ -2619,7 +2634,7 @@ nav>ul>li {
   }
 
   span.done {
-    background-color: #a41012;
+    background-color: rgb(47, 91, 181);
     padding: 5px 15px;
     border-radius: 5px;
     box-sizing: border-box;
@@ -2634,6 +2649,7 @@ nav>ul>li {
     overflow: hidden;
     box-sizing: border-box;
     flex-direction: column;
+      background-color: #f1f1f9;
   }
 
   .now {
@@ -2648,6 +2664,7 @@ nav>ul>li {
     font-size: 30px;
     width: 100%;
     margin: auto;
+    color: #000;
   }
 
   .scrollWrap {
@@ -2686,11 +2703,13 @@ nav>ul>li {
   .gradientBox {
     background: rgb(47, 91, 181);
     background: linear-gradient(90deg, rgba(47, 91, 181, 1) 0%, rgba(9, 125, 173, 1) 50%, rgba(29, 0, 166, 1) 100%);
+    color: #f1f1f9;
   }
 
   .scroll02 .s-header {
     background: rgb(72, 16, 113);
     background: linear-gradient(90deg, rgba(72, 16, 113, 1) 0%, rgba(110, 3, 196, 1) 50%, rgba(40, 13, 68, 1) 100%);
+    color: #f1f1f9;
   }
 
   .s-header strong {
@@ -2740,7 +2759,7 @@ nav>ul>li {
   }
 
   span.done {
-    background-color: #a41012;
+    background-color: rgb(47, 91, 181);
     padding: 5px 15px;
     border-radius: 5px;
     box-sizing: border-box;
@@ -2801,10 +2820,12 @@ nav>ul>li {
 
 .loginBtn {
   margin-top: 10px;
+  background-color: transparent;
 }
 
 .loginBtn button {
-  padding: 0.2em 1.5em;
+  background-color: transparent;
+  color: #fff;
 }
 
 .contentWrap .textBox {
@@ -3165,6 +3186,7 @@ nav>ul>li {
     width: 100%;
     position: absolute;
     bottom: 15%;
+    padding: 0;
   }
 
   .about03 .imgBox img {
@@ -5326,7 +5348,6 @@ nav>ul>li {
   margin: auto;
   display: flex;
   flex-direction: column;
-
 }
 
 .refer p {
@@ -5372,6 +5393,61 @@ nav>ul>li {
   margin: auto;
 }
 .more ul li{
+  float: left;
+  width: 50%;
+}
+.more ul li.one{
+  text-align: center;
+  width: 100%;
+}
+
+.productWrap{
+  width: 100%;
+}
+.product{
+  width: 100%;
+  max-width: 1300px;
+  margin: auto;
+  padding-bottom: 100px;
+  padding-top: 100px !important;
+}
+.productWrap .product h2{
+  font-size: 48px;
+  padding-bottom: 50px;
+}
+.productWrap .product span{
+  width: 100%;
+  max-width: 1300px;
+  margin: auto;
+}
+.productWrap .product span img{
+  width: 100%;
+  max-width: 1300px;
+  margin: auto;
+}
+.advantageWrap{
+  width: 100%;
+  background-color: #f1f1f9;
+}
+.advantageWrap .advantage{
+  width: 100%;
+  max-width: 1300px;
+  margin: auto;
+  padding: 200px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.advantageWrap .advantage h2{
+  padding-bottom: 100px;
+  font-size: 48px;
+}
+.advantageWrap .advantage ul{
+  width: 100%;
+  text-align: center;
+  margin: auto;
+}
+.advantageWrap .advantage ul li{
   float: left;
   width: 50%;
 }
