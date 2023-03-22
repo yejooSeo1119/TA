@@ -4,7 +4,7 @@
   font-weight: normal;
   font-style: normal;
 }
-
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
 * {
   margin: 0;
   padding: 0;
@@ -44,6 +44,7 @@ body {
   object-fit: cover;
   word-wrap: break-word;
   word-break: keep-all;
+  cursor: default;
 }
 
 
@@ -56,7 +57,7 @@ body {
   /* IE and Edge */
   scrollbar-width: none;
   /* Firefox */
-  font-family: 'Noto Sans KR', 'Noto Sans', sans-serif !important;
+  font-family: 'Spoqa Han Sans Neo',  "Apple SD Gothic Neo", 'sans-serif';
   font-size: 16px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -68,7 +69,7 @@ a {
   text-decoration: none;
   color: #fff;
   list-style: none;
-  font-family: 'Noto Sans', sans-serif;
+  font-family: 'Spoqa Han Sans Neo', sans-serif;
 }
 
 body::-webkit-scrollbar {
@@ -204,7 +205,7 @@ textarea,
 button,
 table {
   font-size: 16px;
-  font-family: "Noto Sans KR", "Apple SD Gothic Neo", "맑은 고딕", "Malgun Gothic", "나눔 고딕", "Nanum Gothic", "돋움", Dotum, "굴림", Gulim, AppleGothic, Sans-serif;
+  font-family:'Spoqa Han Sans Neo', "Apple SD Gothic Neo", "맑은 고딕", "Malgun Gothic", "나눔 고딕", "Nanum Gothic", "돋움", Dotum, "굴림", Gulim, AppleGothic, Sans-serif;
 }
 
 input {
@@ -250,7 +251,7 @@ button {
 }
 
 input[type="password"] {
-  font-family: "Noto Sans KR", "Apple SD Gothic Neo", "맑은 고딕", "Malgun Gothic", "나눔 고딕", "Nanum Gothic", "돋움", Dotum, "굴림", Gulim, AppleGothic, Sans-serif;
+  font-family:'Spoqa Han Sans Neo', "Apple SD Gothic Neo", "맑은 고딕", "Malgun Gothic", "나눔 고딕", "Nanum Gothic", "돋움", Dotum, "굴림", Gulim, AppleGothic, Sans-serif;
 }
 
 
@@ -422,7 +423,7 @@ input[type="button"] {
   top: 0px;
   left: 50%;
   transform: translateX(-50%);
-  font-family: "Noto Sans KR";
+  font-family:'Spoqa Han Sans Neo', sans-serif;
   transition: background-color 0.5s ease;
 }
 
@@ -1002,6 +1003,7 @@ nav>ul>li {
     box-sizing: border-box;
     margin-top: -70px;
     padding: 50px;
+    z-index: 555;
   }
 
   .main_detail .detail_1 {
@@ -3630,7 +3632,10 @@ nav>ul>li {
   .product h1 {
     font-size: 30px;
   }
-
+  .product .inner h3{
+    padding-bottom: 50px;
+    font-size: 30px;
+  }
   .product ul {
     display: block;
     margin: auto;
@@ -3645,7 +3650,6 @@ nav>ul>li {
     float: left;
     position: relative;
     line-height: 300px;
-    
     background-color: transparent;
   }
 
@@ -3659,9 +3663,7 @@ nav>ul>li {
     font-size: 22px;
     
   }
-  .product li p:hover{
-    scale: 0.97;
-  }
+  
 }
 
 @media screen and (min-width: 751px) and (max-width: 1199px) {
@@ -3706,10 +3708,11 @@ nav>ul>li {
     height: 100%;
     display: flex;
     flex-wrap: wrap;
+    background-color: transparent;
   }
 
   .product li {
-    color: #000;
+    color: #fff;
     width: 200px;
     min-width: 140px;
     height: 200px;
@@ -3720,6 +3723,7 @@ nav>ul>li {
     text-align: center;
     display: block;
     margin-top: 30px;
+    background-color: transparent;
   }
 
   .product li:last-child {
@@ -3733,6 +3737,8 @@ nav>ul>li {
     display: block;
     font-weight: 600;
     font-size: 20px;
+    text-align: center;
+    border-radius: 10px;
   }
 
 }
@@ -3797,7 +3803,6 @@ nav>ul>li {
     text-align: center;
     display: block;
     margin-top: 30px;
-    border: 2px solid #000;
     color: #000;
   }
 
@@ -3807,13 +3812,13 @@ nav>ul>li {
 
   .product li p {
     width: 100%;
-    display: block;
+    height: 100%;
     font-weight: 600;
     font-size: 20px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
   }
 }
 
