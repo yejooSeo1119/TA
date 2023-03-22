@@ -150,7 +150,6 @@
         if (e.originalEvent.deltaY > 0) {
             if (page == 6) return;
             page++;
-            // page 7로 하면 푸터도 page처림 됨 6 하면 스크롤 막힘.ㅠ
         } else if (e.originalEvent.deltaY < 0) {
             if (page == 1) return;
             page--;

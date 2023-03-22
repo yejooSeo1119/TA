@@ -3129,7 +3129,7 @@ nav>ul>li {
   .about02 .title {
     position: absolute;
     width: 80%;
-    top: 50%;
+    top: 60%;
     left: 50%;
     transform: translate(-50%, -50%);
   }
@@ -5404,7 +5404,7 @@ nav>ul>li {
 .productWrap{
   width: 100%;
 }
-.product{
+.productWrap .product{
   width: 100%;
   max-width: 1300px;
   margin: auto;
