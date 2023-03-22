@@ -393,10 +393,9 @@ input[type="button"] {
 
 }
 
-@media screen and (min-width: 751px) and (max-width: 1199px) {
+/* @media screen and (min-width: 751px) and (max-width: 1199px) {
   .content {
     height: 100vh;
-    /* Fallback for browsers that do not support Custom Properties */
     height: calc(var(--vh, 1vh) * 100);
   }
 }
@@ -404,10 +403,9 @@ input[type="button"] {
 @media screen and (max-width: 750px) {
   .content {
     height: 100vh;
-    /* Fallback for browsers that do not support Custom Properties */
     height: calc(var(--vh, 1vh) * 100);
   }
-}
+} */
 
 
 
@@ -5162,4 +5160,43 @@ li.clearfix{
     background-color: #4026EE;
     color: #fff;
   }
+}
+
+
+/* product */
+
+.bgBox03{
+  width: 100%;
+  background: url(../images/case01.jpg) no-repeat center;
+  background-size: cover;
+  padding-top: 90px;
+}
+.Title{
+  width: 1200px;
+  margin: auto;
+}
+.imgBox{
+  width: 100%;
+  max-width: 1500px;
+  overflow: hidden;
+  margin: 0 auto;
+  clear: both;
+}
+.imgBox ul{
+width: 100%;
+display: block;
+padding: 50px 0;
+box-sizing: border-box;
+}
+.imgBox li{
+  width: 33.333%;
+  float: left;
+  display: block;
+  text-align: center;
+}
+.imgBox li img{
+  width: 500px;
+  margin: auto;
+  text-align: center;
+  display: block;
 }

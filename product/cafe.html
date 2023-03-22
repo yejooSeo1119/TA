@@ -21,6 +21,7 @@
 <body>
     <header><div id="header"></div></header>
     <div class="quick" id="quick"></div>
+    <div id="m_menu" class="m_menu"></div>
     <div class="contentWrap" id="contentWrap">
         <section class="content">
             <div class="bgBox bgBox01">
@@ -36,13 +37,13 @@
                     <h3 style="padding-top: 50px;">카페 바이럴</h3>
                     <ul>
                         <li>
-                            <p>일반 배포형</p>
+                            <p onclick="location.href='./product01.html'" style="cursor: pointer;">일반 배포형</p>
                         </li>
                         <li>
-                            <p>핫딜형</p>
+                            <p onclick="location.href='./product02.html'" style="cursor: pointer;">핫딜형</p>
                         </li>
                         <li>
-                            <p>카페 상위 보장형</p>
+                            <p onclick="location.href='./product03.html'" style="cursor: pointer;">카페 상위 보장형</p>
                         </li>
                     </ul>
                 </div>
@@ -122,6 +123,8 @@
     
         $("#header").load("./load/header.html");
     
+        $("#m_menu").load("./load/m_menu.html");
+        
         $("#quick").load("./load/quick.html");
     
         $("#footer").load("./load/footer.html");
