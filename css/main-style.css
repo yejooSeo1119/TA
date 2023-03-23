@@ -615,8 +615,6 @@ input[type="button"] {
     right: 0;
     padding: 0 20px;
     opacity: 0;
-    transition: opacity 0.1s ease;
-    display: none;
   }
 
   /* #header:hover .menuOpen_bk {
@@ -626,15 +624,16 @@ input[type="button"] {
   #header:hover .menuOpen {
     opacity: 0;
   } */
-
+ 
   .m_nav {
     width: 70%;
-    height: calc(100% - 100px);
+    height: calc(100% - 150px);
     display: block;
     background-color: #000;
-    position: absolute;
+    position: fixed;
     right: 0;
-    z-index: 999;
+    bottom: 0;
+    z-index: 777;
     padding-top: 100px;
   }
 
@@ -646,7 +645,16 @@ input[type="button"] {
     background-color: #000;
     padding: 0;
   }
-
+  .menuClose{
+    float: right;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 0 20px;
+    z-index: 999;
+    display: none;
+  }
   .m_nav ul li {
     width: 100%;
     height: 40px;
@@ -759,7 +767,7 @@ input[type="button"] {
     position: fixed;
     right: 0;
     bottom: 0;
-    z-index: 777;
+    z-index: 111;
     padding-top: 100px;
   }
 
@@ -5686,3 +5694,217 @@ nav>ul>li {
 }
 
 
+header.heaberMobile {
+  width: 100%;
+  margin: auto;
+  height: 50px;
+  background-color: #000;
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  position: fixed;
+}
+
+.heaberMobile nav {
+  max-width: 100%;
+  width: 1200px;
+  height: 50px;
+  margin: auto;
+  box-sizing: border-box;
+  position: relative;
+  padding-top: 30px;
+}
+
+.heaberMobile nav h1 {
+  width: 15%;
+  height: 100%;
+  position: absolute;
+  top: 0%;
+  left: 2%;
+  transform: translateY(-50%, -50%);
+  margin-top: 8px;
+}
+
+.heaberMobile nav h1 img {
+  width: 100px;
+}
+
+.lang-box {
+  position: absolute;
+  z-index: 4;
+  right: 10%;
+  top: 8px;
+}
+
+.lang-btn {
+  font-size: 16px;
+  font-weight: 500;
+  color: #fff;
+}
+
+.lang-btn {
+  position: relative;
+  display: block;
+  width: 100px;
+  height: 35px;
+  border: 1px solid #fff;
+  box-sizing: border-box;
+  overflow: hidden;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.nav a:hover,
+.lang-btn:hover,
+.lang-btn.active:hover {
+  background-color: #000;
+  color: #008b42;
+  text-shadow: 0px 0px 6px rgba(84, 130, 146, 0.7);
+}
+
+.lang-btn p {
+  position: absolute;
+  top: 47%;
+  left: 30px;
+  transform: translateY(-50%);
+  width: 100px;
+  padding: 0 20px 0 10px;
+  box-sizing: border-box;
+}
+
+.lang-btn i.icon {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+}
+
+.lang-btn i.icon::before {
+  content: "\e9d1";
+}
+
+@media screen and (min-width: 751px) and (max-width: 1199px){
+
+/* menubox */
+
+.menuBtn .open {
+  width: 30px;
+  height: 50px;
+  display: block;
+}
+
+.menuBtn i.icon {
+  position: absolute;
+  top: 13px;
+  right: 4%;
+  width: 30px;
+  height: 50px;
+  line-height: 25px;
+  cursor: pointer;
+  z-index: 999;
+  color: #fff;
+  display: block;
+}
+
+/* submenu */
+.menu-wrap {
+  position: absolute;
+  top: 0;
+  right: -3%;
+  width: 400px;
+  height: calc(100vh - 1px);
+  overflow-y: auto;
+  display: none;
+}
+
+.menu-box {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  margin: auto;
+  padding: 10px 0;
+  background-color: #000;
+  position: relative;
+  display: block;
+  z-index: 9;
+}
+
+.menu-box .close {
+  color: #fff;
+  width: 30px;
+  height: 50px;
+  line-height: 50px;
+  position: absolute;
+  top: 1%;
+  right: 12%;
+}
+
+.gnb {
+  display: block;
+  width: 100%;
+  padding: 50px 0px;
+  box-sizing: border-box;
+}
+
+.gnb li {
+  display: block;
+  width: 100%;
+  border-bottom: 1px solid rgba(225, 225, 225, 0.4);
+}
+
+.gnb li a {
+  color: #fff;
+  display: block;
+  padding: 20px 0 20px 30px;
+  font-size: 18px;
+  font-weight: 300;
+  transition: all 0.2s ease;
+}
+
+.gnb li a:hover,
+.mo-login li a:hover {
+  background-color: #000;
+  color: #008b42;
+  text-shadow: 0px 0px 6px rgba(84, 130, 146, 0.7);
+}
+
+.mo-login {
+  width: 100%;
+  overflow: hidden;
+  position: absolute;
+  bottom: 15%;
+}
+
+.mo-login li a {
+  color: #fff;
+  font-size: 14px;
+  display: block;
+  padding: 10px 0 10px 30px;
+  font-weight: 200;
+  transition: all 0.2s ease;
+}
+
+/* nav-bg */
+.nav-bg {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  display: none;
+}
+
+.nav-bg.active {
+  opacity: 1;
+  visibility: visible;
+}
+}
+
+@media screen and (max-width: 750px) {
+}

@@ -110,8 +110,30 @@
     <footer class="foot">
         <div id="footer"></div>
     </footer>
+
+
+    
 </body>
 
+<script>
+    
+    $(document).ready(function(){
+
+        $('.m_menuWrap > a.menuOpen').click(function(){
+
+            $('#m_menu .m_nav').show(300);
+            $('.m_menuWrap > a.menuOpen').hide();
+        });
+
+        $('.m_menuWrap > a.menuClose').click(function(){
+
+            $('#m_menu .m_nav').hide(300);
+            $('.m_menuWrap > a.menuOpen').show();
+        });
+
+    }); 
+
+</script>
 <script>
     $(document).ready(function () {
 
