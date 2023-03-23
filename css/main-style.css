@@ -939,11 +939,11 @@ nav>ul>li {
   }
 
   50% {
-    transform: translatey(-10px);
+    transform: translateY(-10px);
   }
 
   from {
-    transform: translatey(0);
+    transform: translateY(0);
   }
 }
 
@@ -1216,6 +1216,7 @@ nav>ul>li {
 
   .main_detail.on .detail_2.on .detail_2_1 {
     position: absolute;
+    animation: pan 1.5s linear infinite;
     left: 64px;
     top: 0;
     z-index: 2;
@@ -1612,6 +1613,7 @@ nav>ul>li {
 
   .main_detail.on .detail_2.on .detail_2_1 {
     position: absolute;
+    animation: pan 1.5s linear infinite;
     left: 64px;
     top: 0;
     z-index: 2;
@@ -1912,7 +1914,7 @@ nav>ul>li {
     top: 340px;
     opacity: 1;
     transition: all ease 0.5s 0s;
-    transition-delay: 2s;
+    transition-delay: 1s;
     transform: translateY(0);
     z-index: 10;
   }
@@ -1930,19 +1932,19 @@ nav>ul>li {
     top: 340px;
     opacity: 1;
     transition: all ease 0.5s 0s;
-    transition-delay: 2s;
+    transition-delay: 1s;
     transform: translateY(0);
     z-index: 10;
   }
 
   .main_detail.on .detail_1.on .detail_1_1 {
     position: absolute;
-    animation: pan 1.5s linear infinite;
+    animation: pan 1s linear infinite;
     left: 0px;
     top: 0;
     z-index: 3;
     filter: grayscale(0);
-    transition: all ease 0.5s 0s;
+    transition: all ease 0.2s 0s;
   }
 
   .main_detail.on .detail_1.on .detail_1_text {
@@ -1993,6 +1995,7 @@ nav>ul>li {
 
   .main_detail.on .detail_2.on .detail_2_1 {
     position: absolute;
+    animation: pan 1.5s linear infinite;
     left: 64px;
     top: 0;
     z-index: 2;
@@ -2085,10 +2088,10 @@ nav>ul>li {
 
 
   .main_detail.on .detail_circle {
-    animation: rotate_image 9s linear infinite;
+    animation: rotate_image 30s linear infinite;
     transform-origin: 50% 50%;
     opacity: 1;
-    transition: all ease 0.5s 0s;
+    transition: all ease 10s 5s;
     transition-delay: 3s;
   }
 }
