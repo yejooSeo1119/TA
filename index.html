@@ -23,8 +23,10 @@
 </head>
 
 <body>
-    
-    <header><div id="header"></div></header>
+
+    <header>
+        <div id="header"></div>
+    </header>
     <div class="quick" id="quick"></div>
     <div id="m_menu" class="m_menu"></div>
     <div class="top"><a href="#"><img src="./images/top.png" alt="top"></a></div>
@@ -242,59 +244,30 @@
         mHtml.animate({ scrollTop: posTop });
     })
 </script> -->
+
 <script>
-const navtab = {
+    $(document).ready(function () {
 
-init: function(){
-    this.motab();
-},
-motab: function() {
-    let mBtn = $(".mBtn");
-    let closeBtn = $(".closeBtn");
+        $('.nav_mobile > a').click(function () {
 
-    // 모바일 버튼 클릭
-    $(mBtn).click(function(){
-        $(".mNav").addClass("on");
-        $(".bg-shadow").css("display", "block");
-    });
-    // 화면 클릭
-    $(".bg-shadow").click(function(){
-        $(".mNav").removeClass("on");
-        $(".bg-shadow").css("display", "none");
-    });
-    // 닫기 버튼 클릭
-    $(closeBtn).click(function(){
-        $(".mNav").removeClass("on");
-        $(".bg-shadow").css("display", "none");
-    });
-}
-}
+            $('.nav_mobile_inner').show(300);
+            $('.nav_mobile > a').hide();
+        });
 
-$(document).ready(function(){
-navtab.init();
-})
-</script>
-<script>
-$(document).ready(function(){
+        $('.menu_close').click(function () {
 
-
-    $("#menuOpen").click(function(){
-
-        $("#m_nav").show(0)
+            $('.nav_mobile_inner').hide(300);
+            $('.nav_mobile > a').show();
+        });
 
     });
 
-    $("#menuClose").click(function(){
 
-        $("#m_nav").hide(0); 
 
-    });
-
-}); 
 </script>
 
 <script>
-    $(document).ready(function(){
+    $(document).ready(function () {
 
         $("#header").load("./load/header.html");
 

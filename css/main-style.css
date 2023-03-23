@@ -750,6 +750,7 @@ input[type="button"] {
     right: 0;
     z-index: 777;
     padding-top: 100px;
+    display: none;
   }
 
   .m_nav ul.side {

@@ -102,18 +102,20 @@ $(document).ready(function($){
 
 
 //menu
-$(document).ready(function(){
 
-    $(".m_menuWrap #menuOpen").click(function(){
+    $(document).ready(function(){
 
-        $(".m_menuWrap #m_nav").show(0)
+        $('.m_menuWrap > a.menuOpen').click(function(){
+      
+            $('#m_menu .m_nav').show(300);
+            $('.m_menuWrap > a.menuOpen').hide();
+        });
+      
+        $('.m_menuWrap > a.menuClose').click(function(){
+      
+            $('#m_menu .m_nav').hide(300);
+            $('.m_menuWrap > a.menuOpen').show();
+        });
+      
+      });
 
-    });
-
-    $(".m_menuWrap #menuClose").click(function(){
-
-        $(".m_menuWrap #m_nav").hide(0); 
-
-    });
-
-}); 
