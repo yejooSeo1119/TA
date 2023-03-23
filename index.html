@@ -248,17 +248,21 @@
 <script>
     $(document).ready(function () {
 
-        $('.nav_mobile > a').click(function () {
+        $(document).ready(function(){
 
-            $('.nav_mobile_inner').show(300);
-            $('.nav_mobile > a').hide();
-        });
+$('.m_menuWrap > a.menuOpen').click(function(){
 
-        $('.menu_close').click(function () {
+    $('#m_menu .m_nav').show(300);
+    $('.m_menuWrap > a.menuOpen').hide();
+});
 
-            $('.nav_mobile_inner').hide(300);
-            $('.nav_mobile > a').show();
-        });
+$('.m_menuWrap > a.menuClose').click(function(){
+
+    $('#m_menu .m_nav').hide(300);
+    $('.m_menuWrap > a.menuOpen').show();
+});
+
+});
 
     });
 
