@@ -104,15 +104,15 @@ $(document).ready(function($){
 //menu
 $(document).ready(function(){
 
-    $("#menuOpen").click(function(){
+    $(".m_menuWrap #menuOpen").click(function(){
 
-        $("#m_nav").show(0)
+        $(".m_menuWrap #m_nav").show(0)
 
     });
 
-    $("#menuClose").click(function(){
+    $(".m_menuWrap #menuClose").click(function(){
 
-        $("#m_nav").hide(0); 
+        $(".m_menuWrap #m_nav").hide(0); 
 
     });
 

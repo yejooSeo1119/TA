@@ -243,22 +243,54 @@
     })
 </script> -->
 <script>
-    $(function () {
-        $(".left_sub_menu").hide();
-        $(".has_sub").click(function () {
-            $(".left_sub_menu").fadeToggle(300);
-        });
-        // 왼쪽메뉴 드롭다운
-        $(".sub_menu ul.small_menu").hide();
-        $(".sub_menu ul.big_menu").click(function () {
-            $("ul", this).slideToggle(300);
-        });
-        // 외부 클릭 시 좌측 사이드 메뉴 숨기기
-        $('.overlay').on('click', function () {
-            $('.left_sub_menu').fadeOut();
-            $('.hide_sidemenu').fadeIn();
-        });
+const navtab = {
+
+init: function(){
+    this.motab();
+},
+motab: function() {
+    let mBtn = $(".mBtn");
+    let closeBtn = $(".closeBtn");
+
+    // 모바일 버튼 클릭
+    $(mBtn).click(function(){
+        $(".mNav").addClass("on");
+        $(".bg-shadow").css("display", "block");
     });
+    // 화면 클릭
+    $(".bg-shadow").click(function(){
+        $(".mNav").removeClass("on");
+        $(".bg-shadow").css("display", "none");
+    });
+    // 닫기 버튼 클릭
+    $(closeBtn).click(function(){
+        $(".mNav").removeClass("on");
+        $(".bg-shadow").css("display", "none");
+    });
+}
+}
+
+$(document).ready(function(){
+navtab.init();
+})
+</script>
+<script>
+$(document).ready(function(){
+
+
+    $("#menuOpen").click(function(){
+
+        $("#m_nav").show(0)
+
+    });
+
+    $("#menuClose").click(function(){
+
+        $("#m_nav").hide(0); 
+
+    });
+
+}); 
 </script>
 
 <script>
