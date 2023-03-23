@@ -933,6 +933,18 @@ nav>ul>li {
 
 /* main */
 
+
+/* circle */
+@keyframes rotate_image {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+
+@media screen and (min-width: 1200px) {
+  /* animation */
 @keyframes pan {
   to {
     transform: translateY(0);
@@ -946,17 +958,6 @@ nav>ul>li {
     transform: translateY(0);
   }
 }
-
-/* circle */
-@keyframes rotate_image {
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-
-
-@media screen and (min-width: 1200px) {
   .mainfullbox0 .main {
     width: 100%;
     max-width: 100%;
@@ -1332,6 +1333,20 @@ nav>ul>li {
 }
 
 @media screen and (min-width: 751px) and (max-width: 1199px) {
+  /* animation */
+@keyframes pan {
+  to {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+
+  from {
+    transform: translateY(0);
+  }
+}
   .mainfullbox0 .main {
     width: 100%;
     max-width: 100%;
@@ -1715,6 +1730,16 @@ nav>ul>li {
 }
 
 @media screen and (max-width: 750px) {
+  /* animation */
+@keyframes pan {
+  0%,100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-5px);
+  }
+}
   .mainfullbox0 .main {
     width: 100%;
     max-width: 100%;
@@ -1914,7 +1939,7 @@ nav>ul>li {
     top: 340px;
     opacity: 1;
     transition: all ease 0.5s 0s;
-    transition-delay: 1s;
+    transition-delay: 0.5s;
     transform: translateY(0);
     z-index: 10;
   }
@@ -1932,14 +1957,14 @@ nav>ul>li {
     top: 340px;
     opacity: 1;
     transition: all ease 0.5s 0s;
-    transition-delay: 1s;
+    transition-delay: 0.5s;
     transform: translateY(0);
     z-index: 10;
   }
 
   .main_detail.on .detail_1.on .detail_1_1 {
     position: absolute;
-    animation: pan 1s linear infinite;
+    animation: pan 0.8s linear infinite;
     left: 0px;
     top: 0;
     z-index: 3;
@@ -1956,7 +1981,7 @@ nav>ul>li {
     transition: all ease 0.5s 0s;
   }
 
-
+/* 
   .main_detail.on .detail_2 {
     position: absolute;
     left: 150px;
@@ -1966,7 +1991,7 @@ nav>ul>li {
     transition-delay: 2.3s;
     transform: translateY(0);
     z-index: 10;
-  }
+  } */
 
   .main_detail.on .detail_2 .detail_2_1 {
     position: absolute;
@@ -1988,14 +2013,14 @@ nav>ul>li {
     top: 30px;
     opacity: 1;
     transition: all ease 0.5s 0s;
-    transition-delay: 2.3s;
+    transition-delay: 1.7s;
     transform: translateY(0);
     z-index: 10;
   }
 
   .main_detail.on .detail_2.on .detail_2_1 {
     position: absolute;
-    animation: pan 1.5s linear infinite;
+    animation: pan 1s linear infinite;
     left: 64px;
     top: 0;
     z-index: 2;
@@ -2045,14 +2070,14 @@ nav>ul>li {
     top: 340px;
     opacity: 1;
     transition: all ease 0.5s 0s;
-    transition-delay: 2.6s;
+    transition-delay: 2s;
     transform: translateY(0);
     z-index: 10;
   }
 
   .main_detail.on .detail_3.on .detail_3_1 {
     position: absolute;
-    animation: pan 1.5s linear infinite;
+    animation: pan 1s linear infinite;
     left: 0;
     top: 0;
     z-index: 4;
@@ -2091,7 +2116,7 @@ nav>ul>li {
     animation: rotate_image 30s linear infinite;
     transform-origin: 50% 50%;
     opacity: 1;
-    transition: all ease 10s 5s;
+    transition: all ease 7s 2s;
     transition-delay: 3s;
   }
 }
@@ -2831,7 +2856,7 @@ nav>ul>li {
 
 .loginBtn button {
   background-color: transparent;
-  color: #fff;
+  color: #494949;
 }
 
 .contentWrap .textBox {
