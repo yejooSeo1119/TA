@@ -104,12 +104,12 @@ $(document).ready(function($){
 //menu
 $(document).ready(function(){
 
-    $('.m_header>a.menuOpen').click( function(){
-        $('.m_menu .m_nav').show()
+    $('.m_header> #menuOpen').click( function(){
+        $('.m_nav').show()
     });
 
-    $('.m_header>a.menuClose').click(function(){
-        $('.m_menu m_nav').hide(); 
+    $('.m_header> #menuClose').click(function(){
+        $('.m_nav').hide(); 
     });
 
 }); 
