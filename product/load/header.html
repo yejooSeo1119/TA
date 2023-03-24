@@ -28,7 +28,6 @@
         <!-- head-r -->
     </div>
 
-        <!-- 모바일 -->
 <!-- 모바일 -->
 <div class="m_header">
     <div class="navWrap">
@@ -36,37 +35,41 @@
             <a href="../index.html"><img src="../images/m_logo.png" alt="logo"></a>
         </div>
         <div class="m_menuWrap">
-            <ul>
-                <li>
-                    <a href="#" class="menuOpen" id="menuOpen"><img src="../images/menu.png" alt="menu">
-                        <ul>
-                            <li>
-                                <div class="m_nav" id="m_nav">
-                                    <ul class="side">
-                                        <li><a href="../about.html">회사소개</a></li>
-                                        <li><a href="../main-product.html">상품소개</a></li>
-                                        <li><a href="../case.html">성공사례</a></li>
-                                        <li><a href="../consult.html">무료상담</a></li>
-                                    </ul>
-                                </div>
-                            </li>
-                        </ul>
-                    </a>
-                </li>
-            </ul>
-            
-            <a href="#" class="menuClose" id="menuClose"><img src="../images/close.png" alt="close"></a>
+            <a href="#" class="menuOpen"><img src="../images/menu.png" alt="menu"></a>
+            <a href="#" class="menuClose"><img src="../images/close.png" alt="close"></a>
         </div>
         <!-- m_menuWrap -->
-        <!-- <div class="m_nav" id="m_nav">
+        <div class="m_nav2">
             <ul class="side">
                 <li><a href="./about.html">회사소개</a></li>
                 <li><a href="./product/main-product.html">상품소개</a></li>
-                <li><a href="./case.html">성공사례</a></li>
+                <li><a href="./product/case.html">성공사례</a></li>
                 <li><a href="./consult.html">무료상담</a></li>
             </ul>
         </div>
-         -->
     </div>
     <!-- navWrap -->
 </div>
+
+
+<script>
+    
+    $('.m_menuWrap > a.menuOpen').click(function () {
+        
+        $('.m_menuWrap > a.menuOpen').hide();
+        $('.m_menuWrap > a.menuClose').show();
+
+        $('.m_nav2').show();
+    
+    });
+    
+    $('.m_menuWrap > a.menuClose').click(function () {
+    
+        $('.m_nav2').hide(200);
+    
+        $('.m_menuWrap > a.menuOpen').show();
+        $('.m_menuWrap > a.menuClose').hide();
+    
+    });
+    
+</script>
