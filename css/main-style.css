@@ -4,11 +4,6 @@
   font-weight: normal;
   font-style: normal;
 }
-@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
-* {
-  margin: 0;
-  padding: 0;
-}
 
 ul,
 li,
@@ -52,7 +47,7 @@ body {
 
 body {
   padding-bottom: 200px;
-  background-color: #000;
+  background-color: #fff;
   -ms-overflow-style: none;
   /* IE and Edge */
   scrollbar-width: none;
@@ -61,6 +56,8 @@ body {
   font-size: 16px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+
 }
 
 ul,
@@ -784,6 +781,7 @@ input[type="button"] {
     bottom: 0;
     z-index: 777;
     padding-top: 100px;
+    display: none;
   }
 
   .m_nav1 ul.side,  
@@ -2171,6 +2169,17 @@ nav>ul>li {
 
 
 /* mainfullbox1 */
+@keyframes bannermove {
+  0% {
+      transform: translate(0, 0);
+  }
+  50%{
+   transform: translate(-50%, 0);
+  }
+  100%{
+      transform: translate(-100%, 0);
+  }
+ }
 @media screen and (min-width: 1200px) {
   .mainfullbox1 {
     box-sizing: border-box;
@@ -2275,17 +2284,7 @@ animation-play-state: paused;
   opacity:1;
 }
 
-@keyframes bannermove {
- 0% {
-     transform: translate(0, 0);
- }
- 50%{
-  transform: translate(-50%, 0);
- }
- 100%{
-     transform: translate(-100%, 0);
- }
-}
+
 }
 
 @media screen and (min-width: 751px) and (max-width: 1199px) {
@@ -2295,23 +2294,24 @@ animation-play-state: paused;
     margin: 0 auto;
     text-align: center;
     width: 100%;
-    height: 100vh;
+    height: 1200px;
     overflow: hidden;
     position: relative;
   }
 
   .client {
     position: absolute;
+    width: 100%;
+    top: 50%;
     left: 50%;
-    transform: translateX(-50%);
-    width: 95%;
+    transform: translate(-50%, -50%);
   }
 
   .client h1 {
     font-family: 'GongGothicMedium';
     text-transform: uppercase;
     font-size: 40px;
-    padding-top: 0px;
+    padding-top: 200px;
   }
 
   .client p {
@@ -2326,22 +2326,72 @@ animation-play-state: paused;
   }
 
   .logoBox {
-    max-width: 1500px;
+    width: 100%;
+    margin: auto;
+  }
+  .logoBox .logoInner {
     margin: auto;
     width: 100%;
   }
-
-  .logoBox span {
-    margin: 0 30px;
-    box-sizing: border-box;
-    width: 20%;
-    max-width: 100%;
+  .logoBox .logo div{
+    float: left;
+    width: 10%;
+  }
+  .logoBox .logo div ul{
+    float: left;
+    display: block;
+  }
+  .logoBox .logo div ul li{
+    display: block;
   }
 
   .logoBox img {
     max-width: 150px;
     width: 100%;
+    padding: 0;
   }
+  
+.logoInner {
+  overflow:hidden;
+  position:relative;
+  width:960px; /* 테스트를 위한 임시 값*/
+  height:1000px;
+}
+.c-logo {
+  width:960px; /* 보여야 하는 이미지 + 클론이미지 전체 합 */
+  height:100%;
+  display:flex;
+  vertical-align: middle;
+  flex-wrap:nowrap;
+  align-items: center;
+  animation: bannermove 7s linear infinite;
+}
+.c-logo:hover{
+animation-play-state: paused;
+}
+
+.c-logo > div {
+  flex:0 0 auto;
+  height:800px;
+  line-height:200px;
+  vertical-align:middle;
+  text-align:center;
+  justify-content: center;
+}
+.c-logo > div li{
+  line-height: 200px;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+}
+.logoInner img {
+  width:100%;
+  height:100%;
+}
+.c-logo > .clone {
+  opacity:1;
+}
+
 }
 
 @media screen and (max-width: 750px) {
@@ -2350,28 +2400,27 @@ animation-play-state: paused;
     margin: 0 auto;
     text-align: center;
     width: 100%;
-    height: 100vh;
+    height: 800px;
     overflow: hidden;
     position: relative;
   }
 
   .client {
     position: absolute;
+    /* width: 100%;
+    top: 50%;
     left: 50%;
-    transform: translateX(-50%);
-    width: 95%;
+    transform: translate(-50%, -50%); */
   }
 
   .client h1 {
     font-family: 'GongGothicMedium';
     text-transform: uppercase;
     font-size: 40px;
-    padding-top: 70px;
   }
 
   .client p {
     color: #7b7b7b;
-    padding: 0 50px;
   }
 
   .logoWrap {
@@ -2382,22 +2431,71 @@ animation-play-state: paused;
   }
 
   .logoBox {
-    max-width: 1500px;
+    width: 100%;
+    margin: auto;
+  }
+  .logoBox .logoInner {
     margin: auto;
     width: 100%;
   }
-
-  .logoBox span {
-    margin: 0 30px;
-    box-sizing: border-box;
-    width: 20%;
-    max-width: 100%;
+  .logoBox .logo div{
+    float: left;
+    width: 10%;
+  }
+  .logoBox .logo div ul{
+    float: left;
+    display: block;
+  }
+  .logoBox .logo div ul li{
+    display: block;
   }
 
   .logoBox img {
     max-width: 150px;
     width: 100%;
+    padding: 0;
   }
+  
+.logoInner {
+  overflow:hidden;
+  position:relative;
+  width:960px; /* 테스트를 위한 임시 값*/
+  height:500px;
+}
+.c-logo {
+  width:960px; /* 보여야 하는 이미지 + 클론이미지 전체 합 */
+  height:100%;
+  display:flex;
+  vertical-align: middle;
+  flex-wrap:nowrap;
+  align-items: center;
+  animation: bannermove 7s linear infinite;
+}
+.c-logo:hover{
+animation-play-state: paused;
+}
+
+.c-logo > div {
+  flex:0 0 auto;
+  height:500px;
+  line-height:200px;
+  vertical-align:middle;
+  text-align:center;
+  justify-content: center;
+}
+.c-logo > div li{
+  line-height: 200px;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+}
+.logoInner img {
+  width:100%;
+  height:100%;
+}
+.c-logo > .clone {
+  opacity:1;
+}
 }
 
 
@@ -2601,6 +2699,7 @@ animation-play-state: paused;
     display: inline;
   }
   .scroll01 .s-header,
+    .scroll02 .s-header,
   .gradientBox {
     background: rgb(47, 91, 181);
     background: linear-gradient(90deg, rgba(47, 91, 181, 1) 0%, rgba(9, 125, 173, 1) 50%, rgba(29, 0, 166, 1) 100%);
@@ -2799,7 +2898,7 @@ animation-play-state: paused;
 
   .mainfullbox_Last h4 {
     font-weight: 400;
-    padding: 50px 10px 30px 10px;
+    padding: 50px 0 30px;
     font-size: 30px;
     width: 100%;
     margin: auto;
@@ -2917,11 +3016,11 @@ animation-play-state: paused;
   display: block;
   width: 100%;
   overflow: hidden;
+  padding: 0;
 }
 
 .copy li {
   color: #e9e9e9;
-  ;
   font-size: 14px;
   padding: 3px 0;
 }
@@ -3020,14 +3119,14 @@ animation-play-state: paused;
   }
 
   .about01 .textBox.right {
-    text-align: right;
-    padding-right: 12%;
+    text-align: left;
+    padding-left: 10%;
     padding-top: 5%;
   }
 
   .about01 .textBox.left {
-    text-align: left;
-    padding-left: 12%;
+    text-align: right;
+    padding-right: 10%;
     margin-top: 0%;
   }
 
@@ -3513,9 +3612,8 @@ animation-play-state: paused;
   }
 
   .about04 .title strong {
-    color: #4026EE;
     font-size: 62px;
-    text-shadow: 0px 1px 5px rgba(0, 0, 0, 0.4);
+    text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.4);
   }
 
   .about04 .title h1 {
@@ -3716,8 +3814,9 @@ animation-play-state: paused;
 }
 
 .contentWrap .bgBox01 .Title {
-  text-shadow: 2px 2px 2px #adadad;
+  /* text-shadow: 2px 1px 2px rgb(0, 0, 0, 0.4); */
   color: #000;
+  font-weight: 700;
 }
 .prod01Inner p{
   background: url(../images/inner_bg01.jpg) center no-repeat;
@@ -3804,12 +3903,15 @@ animation-play-state: paused;
 }
 
 @media screen and (min-width: 751px) and (max-width: 1199px) {
-  .contentWrap .bgBox {
-    height: 150px;
+
+  .contentWrap .bgBox01,
+  .contentWrap .bgBox02{
+    padding-top: 120px;
   }
 
-  .contentWrap .bgBox01 {
-    padding-top: 150px;
+  .contentWrap .content {
+    position: relative;
+    height: 100vh;
   }
 
   .contentWrap .product {
@@ -3830,7 +3932,6 @@ animation-play-state: paused;
 
   .contentWrap .bgBox01 .Title h1 {
     font-size: 24px;
-    padding-bottom: 70px;
   }
 
   .product .inner h3 {
@@ -3854,13 +3955,10 @@ animation-play-state: paused;
     min-width: 140px;
     height: 200px;
     position: relative;
-    margin-right: 50px;
-    border: 2px solid #000;
-    border-radius: 10px;
+    margin: 30px 30px 0 0;
     text-align: center;
-    display: block;
-    margin-top: 30px;
-    background-color: transparent;
+    color: #000;
+    padding: 10px 0;
   }
 
   .product li:last-child {
@@ -3870,11 +3968,11 @@ animation-play-state: paused;
   .product li p {
     width: 100%;
     height: 100%;
-    line-height: 200px;
-    display: block;
     font-weight: 600;
     font-size: 20px;
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border-radius: 10px;
   }
 
@@ -3885,12 +3983,14 @@ animation-play-state: paused;
     height: 150px;
   }
 
-  .contentWrap .bgBox01 {
-    padding-top: 150px;
+  .contentWrap .bgBox01,
+  .contentWrap .bgBox02{
+    padding-top: 120px;
   }
 
-  #contentWrap .content {
+  .contentWrap .content {
     position: relative;
+    height: 100vh;
   }
 
   .contentWrap .product {
@@ -3899,14 +3999,9 @@ animation-play-state: paused;
 
   }
 
-  #contentWrap .product h1 {
-    font-size: 24px;
-    padding-bottom: 40px;
-
-  }
-
-  .prod01Inner {
-    padding-top: 50px !important;
+  .contentWrap .product h1 {
+    font-size: 20px;
+    line-height: 34px;
   }
 
   .product .inner:not(.prod01Inner) {
@@ -3923,7 +4018,6 @@ animation-play-state: paused;
   .product ul {
     margin: auto;
     padding: 0;
-    overflow: hidden;
     width: 100%;
     height: 100%;
     display: flex;
@@ -3936,7 +4030,6 @@ animation-play-state: paused;
     height: 150px;
     position: relative;
     margin-right: 20px;
-    border-radius: 10px;
     text-align: center;
     display: block;
     margin-top: 30px;
@@ -3964,10 +4057,13 @@ animation-play-state: paused;
 
 /* case */
 .contentWrap .bgBox02 .Title {
-  text-shadow: 2px 2px 2px #494949;
+  text-shadow: 2px 2px 4px rgb(0, 0, 0, 0.5);
   color: #fff;
 }
-
+.contentWrap .bgBox .Title{
+  color: #fff;
+  text-shadow: 2px 2px 3px rgb(0, 0, 0, 0.5);
+}
 @media screen and (min-width: 1200px) {
   .contentWrap .content {
     height: 100vh;
@@ -4011,7 +4107,7 @@ animation-play-state: paused;
   }
 
   .contentWrap .bgBox .Title p {
-    font-size: 24px;
+    font-size: 16px;
   }
 
   .bgBox02 {
@@ -4025,7 +4121,9 @@ animation-play-state: paused;
   .case .naver.center {
     padding-top: 40px;
     width: 100%;
+    height: 100vh;
     overflow: hidden;
+    height: 100vh;
   }
 
   .center ol {
@@ -4053,7 +4151,16 @@ animation-play-state: paused;
 
   .case .center h2 {
     font-size: 30px;
-    padding-bottom: 20px;
+  }
+  .case .center p{
+    padding: 3px 0;
+    margin: 0;
+  }
+  .case .center p.small {
+    font-size: 16px;
+    font-weight: bolder;
+    padding: 0;
+    margin: 0;
   }
 }
 
@@ -4062,13 +4169,12 @@ animation-play-state: paused;
     position: relative;
     height: 180px;
     width: 100%;
+    display: flex;
+    align-items: center;
   }
 
   .contentWrap .bgBox02 {
-    width: 100%;
     background: url(../images/case01.jpg) no-repeat center center;
-    background-size: cover;
-    padding-top: 150px;
   }
 
   /* .contentWrap .bgBox .Title {
@@ -4080,8 +4186,7 @@ animation-play-state: paused;
 
   .contentWrap .bgBox02 .Title h1 {
     font-size: 24px;
-    line-height: 44px;
-    padding-bottom: 25px;
+    line-height: 34px;
   }
 
   .contentWrap .bgBox .Title strong {
@@ -4109,24 +4214,25 @@ animation-play-state: paused;
   .case .naver.center {
     padding-top: 30px;
     width: 100%;
+    height: 100vh;
     overflow: hidden;
   }
 
   .naver.center ol {
-    width: 90%;
-    margin: auto;
     display: flex;
-    flex-wrap: nowrap;
     overflow: hidden;
-    padding-top: 80px;
-    box-sizing: border-box;
+    padding-top: 20px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-left: 0;
   }
 
   .naver.center ol li {
     display: block;
-    align-items: center;
+    align-items:flex-start;
     margin: auto;
     padding-right: 10px;
+    padding-top: 20px;
   }
 
   .naver.center ol li img {
@@ -4138,15 +4244,17 @@ animation-play-state: paused;
 
   .case .center h2 {
     font-size: 24px;
-    padding-bottom: 20px;
   }
 
   .case .center p {
-    font-size: 20px;
+    font-size: 16px;
+    margin: 0;
+    padding: 3px 0;
   }
 
   .ex p {
     font-size: 16px !important;
+    margin: 0;
   }
 
   .ex strong {
@@ -4154,42 +4262,25 @@ animation-play-state: paused;
   }
 
   .case .center p.small {
-    font-size: 14px;
+    font-size: 16px;
+    font-weight: bolder;
   }
 }
 
 @media screen and (max-width: 750px) {
-  .contentWrap .bgBox {
-    position: relative;
-    height: 180px;
-    width: 100%;
-  }
 
   .contentWrap .bgBox02 {
     background: url(../images/case01.jpg) no-repeat center center;
-    padding-top: 150px;
   }
 
-  /* .contentWrap .bgBox .Title {
-  position: absolute;
-  top: 50%;
-  left: 10%;
-  transform: translateY(-50%);
-} */
 
-  .contentWrap .bgBox02 .Title h1 {
-    font-size: 24px;
-    line-height: 44px;
-    padding-bottom: 10px;
-  }
 
   .contentWrap .bgBox .Title strong {
-    font-size: 32px;
+    font-size: 30px;
   }
 
   .contentWrap .bgBox .Title span {
-    font-size: 16px;
-    padding-top: 10px;
+    font-size: 14px;
     display: block;
   }
 
@@ -4207,22 +4298,21 @@ animation-play-state: paused;
 
   .case .naver.center {
     padding-top: 40px;
-    width: 100%;
+    width: 95%;
+    margin: auto;
     overflow: hidden;
   }
 
   .naver.center ol {
-    width: 90%;
-    margin: auto;
     display: flex;
     overflow: hidden;
     padding-top: 20px;
     flex-direction: row;
     flex-wrap: wrap;
+    padding-left: 0;
   }
 
   .naver.center ol li {
-
     width: 49%;
     align-items: center;
     margin: auto;
@@ -4230,7 +4320,7 @@ animation-play-state: paused;
 
   .naver.center ol li img {
     width: 100%;
-    max-width: 350px;
+    max-width: 290px;
     border: 1px solid #c9c9c9;
     box-sizing: border-box;
     animation-name: up;
@@ -4239,15 +4329,16 @@ animation-play-state: paused;
 
   .case .center h2 {
     font-size: 24px;
-    padding-bottom: 20px;
   }
 
   .case .center p {
-    font-size: 20px;
+    font-size: 16px;
   }
 
   .case .center p.small {
-    font-size: 14px;
+    font-size: 16px;
+    font-weight: bolder;
+    margin: 0;
   }
 }
 
@@ -4318,7 +4409,7 @@ animation-play-state: paused;
   }
 
   .bImgBox {
-    padding-top: 40px;
+    padding-top: 0;
     animation-name: left;
     animation-duration: 2.3s;
   }
@@ -4433,14 +4524,13 @@ animation-play-state: paused;
   }
 
   .google img {
-    width: 450px;
+    width: 400px;
   }
 
   .imgWrap {
     display: flex;
     width: 1200px;
     max-width: 100%;
-    margin: auto;
   }
 
   .bImgBox {
@@ -4459,12 +4549,16 @@ animation-play-state: paused;
 
   .ex p {
     font-size: 20px;
-    font-weight: 500;
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
   }
 
   .ex p strong {
     font-weight: 700;
     font-size: 30px;
+    margin: 0;
+    padding: 0;
   }
 
   .google .bImgBox img {
@@ -4477,7 +4571,7 @@ animation-play-state: paused;
     position: absolute;
     z-index: 888;
     width: 350px;
-    left: 390px;
+    left: 300px;
     text-align: left;
     border-radius: 10px;
     padding: 10px 20px;
@@ -4518,7 +4612,7 @@ animation-play-state: paused;
     position: absolute;
     width: 350px;
     bottom: -25%;
-    right: 420px;
+    right: 350px;
     text-align: right;
     background: #333333;
     border-radius: 10px;
@@ -4561,7 +4655,7 @@ animation-play-state: paused;
   }
 
   .google img {
-    max-width: 400px;
+    max-width: 350px;
     display: block;
   }
 
@@ -4586,14 +4680,14 @@ animation-play-state: paused;
   }
 
   .google .ex p {
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 500;
     display: inline;
   }
 
   .google .ex p strong {
     font-weight: 700;
-    font-size: 24px;
+    font-size: 20px;
   }
 
   .google .bImgBox img {
@@ -4633,7 +4727,7 @@ animation-play-state: paused;
   }
 
   .fImgBox {
-    padding-top: 380px;
+    padding-top: 330px;
     animation-name: right;
     animation-duration: 2s;
   }
@@ -4818,7 +4912,7 @@ animation-play-state: paused;
   .search {
     display: flex;
     flex-direction: column;
-    padding: 150px 50px 0px;
+    padding: 120px 50px 0px;
     box-sizing: border-box;
     margin: auto;
   }
@@ -4855,7 +4949,7 @@ animation-play-state: paused;
     top: 80px;
     text-align: left;
     border-radius: 10px;
-    padding: 10px 20px;
+    padding: 5px 10px;
     background: #E2FCF3;
     /* fallback for old browsers */
     background: -webkit-radial-gradient(#FFFFFF, #E2FCF3);
@@ -4890,7 +4984,7 @@ animation-play-state: paused;
     right: 650px;
     background: #333333;
     border-radius: 10px;
-    padding: 10px 20px;
+    padding: 5px 10px;
     background: #E2FCF3;
     /* fallback for old browsers */
     background: -webkit-radial-gradient(#FFFFFF, #E2FCF3);
@@ -4936,7 +5030,7 @@ animation-play-state: paused;
   .search {
     display: flex;
     flex-direction: column;
-    padding: 150px 20px 0px;
+    padding: 120px 20px 0px;
     box-sizing: border-box;
     margin: auto;
   }
@@ -4968,12 +5062,12 @@ animation-play-state: paused;
     position: absolute;
     display: block;
     z-index: 888;
-    width: 170px;
+    width: 180px;
     left: 250px;
     top: 20px;
     text-align: left;
     border-radius: 10px;
-    padding: 10px 20px;
+    padding: 5px 10px;
     background: #E2FCF3;
     /* fallback for old browsers */
     background: -webkit-radial-gradient(#FFFFFF, #E2FCF3);
@@ -4998,19 +5092,19 @@ animation-play-state: paused;
   .exWrap.exWrap02 {
     text-align: right;
     margin-right: 50px;
-    padding-top: 80px;
+    padding-top: 0px;
     animation: right2 2.5s;
   }
 
   .exWrap02 .ex {
     position: absolute;
-    width: 150px;
+    width: 130px;
     text-align: right;
     right: 220px;
     top: 40px;
     background: #333333;
     border-radius: 10px;
-    padding: 10px 20px;
+    padding: 5px 10px;
     background: #E2FCF3;
     /* fallback for old browsers */
     background: -webkit-radial-gradient(#FFFFFF, #E2FCF3);
@@ -5123,7 +5217,9 @@ animation-play-state: paused;
     display: block;
     border-bottom: 2px solid #4026EE;
   }
-
+  .inputbox ul{
+    padding: 0;
+  }
   .inputbox li {
     color: #000;
     margin-bottom: 40px;
@@ -5219,7 +5315,8 @@ animation-play-state: paused;
   }
 
   .btnBox button:hover {
-    background-color: #4026EE;
+   background: linear-gradient(90deg, rgba(47, 91, 181, 1) 0%, rgba(9, 125, 173, 1) 50%, rgba(29, 0, 166, 1) 100%);
+   border: 2px solid transparent;
     color: #fff;
   }
 }
@@ -5754,27 +5851,75 @@ animation-play-state: paused;
 
 
 /* top */
-.top{
-  position: fixed;
-  bottom: 50px;
-  right:30px ;
-  z-index: 888;
-}
-.top a img{
-  display: block;
-  width: 30px;
-  margin: auto;
-}
-.top a{
-  background-color: #fff;
-  width: 100%;
-  height: 100%;
-  display: block;
-  padding: 10px 7px;
-  border-radius: 50%;
-  box-shadow: 0px 2px 4px rgb(0, 0, 0, 0.2);
+
+@media screen and (min-width: 1200px){
+  .top{
+    position: fixed;
+    bottom: 50px;
+    right:30px ;
+    z-index: 888;
+  }
+  .top a img{
+    display: block;
+    width: 30px;
+    margin: auto;
+  }
+  .top a{
+    background-color: #fff;
+    width: 100%;
+    height: 100%;
+    display: block;
+    padding: 10px 7px;
+    border-radius: 50%;
+    box-shadow: 0px 2px 4px rgb(0, 0, 0, 0.2);
+  }
 }
 
+@media screen and (min-width: 751px) and (max-width: 1199px){
+  .top{
+    position: fixed;
+    bottom: 30px;
+    right:30px ;
+    z-index: 888;
+  }
+  .top a img{
+    display: block;
+    width: 25px;
+    margin: auto;
+  }
+  .top a{
+    background-color: #fff;
+    width: 100%;
+    height: 100%;
+    display: block;
+    padding: 10px 7px;
+    border-radius: 50%;
+    box-shadow: 0px 2px 4px rgb(0, 0, 0, 0.2);
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .top{
+    position: fixed;
+    bottom: 30px;
+    right:30px ;
+    z-index: 888;
+  }
+  .top a img{
+    display: block;
+    width: 25px;
+    margin: auto;
+  }
+  .top a{
+    background-color: #fff;
+    width: 100%;
+    height: 100%;
+    display: block;
+    padding: 10px 7px;
+    border-radius: 50%;
+    box-shadow: 0px 2px 4px rgb(0, 0, 0, 0.2);
+  }
+}
 
 header.heaberMobile {
   width: 100%;
