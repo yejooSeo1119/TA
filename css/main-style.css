@@ -389,6 +389,7 @@ input[type="button"] {
 @media screen and (min-width: 1200px) {
   .content {
     width: 100%;
+    height: 100%;
     overflow: hidden;
     position: relative;
   }
@@ -2176,13 +2177,14 @@ nav>ul>li {
     margin: 0 auto;
     text-align: center;
     width: 100%;
-    height: 100vh;
+    height: 1200px;
     overflow: hidden;
     position: relative;
   }
 
   .client {
     position: absolute;
+    width: 100%;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -2192,7 +2194,7 @@ nav>ul>li {
     font-family: 'GongGothicMedium';
     text-transform: uppercase;
     font-size: 40px;
-    padding-top: 90px;
+    padding-top: 200px;
   }
 
   .client p {
@@ -2207,21 +2209,83 @@ nav>ul>li {
   }
 
   .logoBox {
-    max-width: 1500px;
+    width: 100%;
     margin: auto;
   }
-
-  .logoBox span {
-    margin: 0 30px;
-    box-sizing: border-box;
+  .logoBox .logoInner {
+    margin: auto;
+    width: 100%;
+  }
+  .logoBox .logo div{
+    float: left;
     width: 20%;
-    max-width: 100%;
+  }
+  .logoBox .logo div ul{
+    float: left;
+    display: block;
+  }
+  .logoBox .logo div ul li{
+    display: block;
   }
 
   .logoBox img {
     max-width: 200px;
     width: 100%;
+    padding: 10px 20px;
   }
+  
+.logoInner {
+  overflow:hidden;
+  position:relative;
+  width:960px; /* 테스트를 위한 임시 값*/
+  height:1000px;
+}
+.c-logo {
+  width:960px; /* 보여야 하는 이미지 + 클론이미지 전체 합 */
+  height:100%;
+  display:flex;
+  vertical-align: middle;
+  flex-wrap:nowrap;
+  align-items: center;
+  animation: bannermove 5s linear infinite;
+}
+.c-logo:hover{
+animation-play-state: paused;
+}
+
+.c-logo > div {
+  flex:0 0 auto;
+  height:800px;
+  line-height:200px;
+  vertical-align:middle;
+  text-align:center;
+  justify-content: center;
+}
+.c-logo > div li{
+  line-height: 200px;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+}
+.logoInner img {
+  width:100%;
+  height:100%;
+}
+.c-logo > .clone {
+  opacity:1;
+}
+
+@keyframes bannermove {
+ 0% {
+     transform: translate(0, 0);
+ }
+ 50%{
+  transform: translate(-50%, 0);
+ }
+ 100%{
+     transform: translate(-100%, 0);
+ }
+}
 }
 
 @media screen and (min-width: 751px) and (max-width: 1199px) {
@@ -2900,7 +2964,7 @@ nav>ul>li {
 
 .loginBtn button {
   background-color: transparent;
-  color: #494949;
+  color: #292929;
 }
 
 .contentWrap .textBox {

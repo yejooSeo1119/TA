@@ -72,13 +72,15 @@
 //     $("header").addClass("head");
 // });
 
+
 $(window).scroll(function () {
   if (document.body.scrollHeight - $(this).scrollTop() <= $(this).height()) {
-    $(".foot_main").addClass("transition-up");
-    $("header.head").css("background","#000");
-  } else {
-    $(".foot_main").removeClass("transition-up");
-    $("header.head").css("background","transparent");
+
+    $("header #head").css("background","#000");
+  } 
+  else {
+
+    $("header #head").css("background","#fff");
   }
 });
 
