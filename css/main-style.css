@@ -634,7 +634,8 @@ input[type="button"] {
     right: 0;
     bottom: 0;
     z-index: 777;
-    padding-top: 100px;
+    padding: 70px 0 30px 0;
+    display: none;
   }
 
   .m_nav1 ul.side,
@@ -661,6 +662,7 @@ input[type="button"] {
     top: 20px;
     padding: 0 20px;
     z-index: 999;
+    display: none;
   }
   .m_nav1 ul li, 
   .m_nav2 ul li {
@@ -1454,7 +1456,7 @@ nav>ul>li {
 
   .main_detail .detail_1 .detail_1_1 {
     position: absolute;
-    left: 0px;
+    left: 0;
     top: 0;
     z-index: 2;
     filter: grayscale(90%);
@@ -1509,7 +1511,7 @@ nav>ul>li {
 
   .main_detail .detail_3 {
     position: absolute;
-    left: 550px;
+    left: 500px;
     top: 320px;
     opacity: 1;
     /* transform: translateY(-50px); */
@@ -1564,7 +1566,7 @@ nav>ul>li {
   .main_detail .detail_5 {
     position: absolute;
     left: 190px;
-    top: 250px;
+    top: 190px;
     z-index: 5;
     opacity: 1;
     transform: scale(0.6);
@@ -1690,7 +1692,7 @@ nav>ul>li {
 
   .main_detail.on .detail_3 {
     position: absolute;
-    left: 550px;
+    left: 500px;
     top: 320px;
     opacity: 1;
     transition: all ease 0.5s 0s;
@@ -1716,7 +1718,7 @@ nav>ul>li {
 
   .main_detail.on .detail_3.on {
     position: absolute;
-    left: 550px;
+    left: 500px;
     top: 320px;
     opacity: 1;
     transition: all ease 0.5s 0s;
@@ -1747,8 +1749,8 @@ nav>ul>li {
 
   .main_detail.on .detail_4 {
     position: absolute;
-    left: 160px;
-    top: 150px;
+    left: 180px;
+    top: 100px;
     opacity: 1;
     transition: all ease 0.5s 0s;
     transition-delay: 3s;
