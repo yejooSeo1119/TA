@@ -59,7 +59,11 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   margin: 0;
-
+  /* 드래그 방지 */
+  -webkit-user-select:none;
+  -moz-user-select:none;
+  -ms-user-select:none;
+  user-select:none;
 }
 
 ul,
@@ -79,26 +83,32 @@ body::-webkit-scrollbar {
 
 h1 {
   font-size: 64px;
+  margin: 0;
 }
 
 h2 {
   font-size: 56px;
+   margin: 0;
 }
 
 h3 {
   font-size: 48px;
+   margin: 0;
 }
 
 h4 {
   font-size: 40px;
+   margin: 0;
 }
 
 h5 {
   font-size: 36px;
+   margin: 0;
 }
 
 h6 {
   font-size: 24px;
+   margin: 0;
 }
 
 
@@ -3137,16 +3147,19 @@ animation-play-state: paused;
     font-weight: 600;
     font-size: 22px;
     line-height: 42px;
+    margin: 0;
   }
 
   .about01 .textBox.right h1 {
     font-size: 120px;
+    margin: 50px 0 0 0;
   }
 
   .about01 .textBox p {
     font-size: 28px;
     line-height: 48px;
     font-weight: 600;
+    margin: 0;
   }
 
   .aboutWrap {
@@ -3167,15 +3180,15 @@ animation-play-state: paused;
   }
 
   .about01 .textBox.right {
-    text-align: right;
-    padding-right: 50px;
+    text-align: left;
+    padding-left: 50px;
     padding-top: 150px;
   }
 
   .about01 .textBox.left {
-    text-align: left;
-    padding-left: 50px;
-    margin-top: 0;
+    text-align: right;
+    padding-right: 50px;
+    margin-top: 50px;
   }
 
   .textBox.left div.gray p {
@@ -3183,16 +3196,19 @@ animation-play-state: paused;
     font-weight: 600;
     font-size: 20px;
     line-height: 40px;
+    margin: 0;
   }
 
   .about01 .textBox.right h1 {
     font-size: 80px;
+    margin: 0;
   }
 
   .about01 .textBox p {
     font-size: 24px;
     line-height: 48px;
     font-weight: 600;
+    margin: 0;
   }
 
 
@@ -3208,37 +3224,40 @@ animation-play-state: paused;
     position: relative;
   }
 
-  .about01 .textBox.left {
-    width: 80%;
-  }
-
   .about01 .textBox.right {
-    text-align: right;
-    padding-right: 50px;
+    text-align: left;
+    padding-left: 50px;
     padding-top: 150px;
   }
 
   .about01 .textBox.left {
-    text-align: left;
-    padding-left: 20px;
+    text-align: right;
+    padding-right: 50px;
     margin-top: 50px;
   }
-
+  .textBox.left div.gray{
+    padding-bottom: 30px;
+  }
   .textBox.left div.gray p {
     color: rgb(225, 225, 225, 0.5);
     font-weight: 600;
     font-size: 14px;
     line-height: 24px;
+    margin: 0;
+    padding: 5px 0;
   }
 
   .about01 .textBox.right h1 {
     font-size: 60px;
+    margin: 0;
   }
 
   .about01 .textBox p {
-    font-size: 20px;
+    font-size: 18px;
     line-height: 40px;
     font-weight: 600;
+    margin: 0;
+    padding: 5px 0;
   }
 
 }
@@ -3277,6 +3296,7 @@ animation-play-state: paused;
   color: #fff;
   background: url(../images/about1-2.jpg) center no-repeat;
   position: relative;
+  z-index: 1;
 }
 
 @media screen and (min-width: 1200px) {
@@ -3398,7 +3418,7 @@ animation-play-state: paused;
   }
 
   .aboutWrap .about02 .title h1 {
-    font-size: 48px;
+    font-size: 62px;
     padding: 50px 0 50px 0;
   }
 
@@ -3460,13 +3480,15 @@ animation-play-state: paused;
 
   .about03 .title h1 {
     font-size: 72px;
-    padding: 30px 0 10px 0;
+    padding: 30px 0 30px 0;
+    margin: 0;
   }
 
   .about03 .title p {
     font-size: 20px;
     padding: 5px 0;
     font-weight: 400;
+    margin: 0;
   }
 
   .about03 .title p strong {
@@ -3478,7 +3500,7 @@ animation-play-state: paused;
     margin: 0 auto;
     width: 100%;
     position: absolute;
-    bottom: 15%;
+    bottom: 10%;
     padding: 0;
   }
 
@@ -3487,7 +3509,7 @@ animation-play-state: paused;
     display: block;
     margin: auto;
     width: 100%;
-    max-width: 1000px;
+    max-width: 900px;
   }
 
   .black {
@@ -3511,12 +3533,14 @@ animation-play-state: paused;
   .about03 .title h1 {
     font-size: 48px;
     padding-bottom: 20px;
+    margin: 0;
   }
 
   .about03 .title p {
     font-size: 20px;
     padding: 5px 0;
     font-weight: 400;
+    margin: 0;
   }
 
   .about03 .title p strong {
@@ -3563,9 +3587,10 @@ animation-play-state: paused;
   }
 
   .about03 .title p {
-    font-size: 20px;
+    font-size: 18px;
     padding: 5px 0;
     font-weight: 400;
+    margin: 0;
   }
 
   .about03 .title p strong {
@@ -3576,7 +3601,7 @@ animation-play-state: paused;
   .about03 .imgBox {
     width: 100%;
     position: absolute;
-    bottom: 15%;
+    bottom: 20%;
     left: 0;
     right: 0;
   }
@@ -3586,7 +3611,7 @@ animation-play-state: paused;
     display: block;
     margin: auto;
     width: 100%;
-    padding-top:30px;
+    max-width: 100%;
   }
 
   .black {
@@ -3677,7 +3702,6 @@ animation-play-state: paused;
   }
 
   .about04 .title strong {
-    color: #4026EE;
     font-size: 40px;
     text-shadow: 0px 1px 5px rgba(0, 0, 0, 0.4);
   }
@@ -3742,7 +3766,6 @@ animation-play-state: paused;
   }
 
   .about04 .title strong {
-    color: #4026EE;
     font-size: 40px;
     text-shadow: 0px 1px 5px rgba(0, 0, 0, 0.4);
   }
@@ -3899,7 +3922,6 @@ animation-play-state: paused;
     border-radius: 10px;
     font-weight: 600;
     font-size: 22px;
-    
   }
   
 }
@@ -3918,8 +3940,8 @@ animation-play-state: paused;
 
   .contentWrap .product {
     width: 80%;
+    height: 100%;
     margin: 0 auto;
-    overflow: hidden;
     position: relative;
 
   }
@@ -3942,8 +3964,8 @@ animation-play-state: paused;
 
   .product ul {
     margin: auto;
-    padding: 20px 0;
-    overflow: hidden;
+    padding: 20px;
+    box-sizing: border-box;
     width: 100%;
     height: 100%;
     display: flex;
@@ -4006,7 +4028,7 @@ animation-play-state: paused;
     line-height: 34px;
   }
 
-  .product .inner:not(.prod01Inner) {
+  .product .inner {
     position: absolute;
     top: 55%;
     transform: translateY(-50%);
@@ -4027,14 +4049,13 @@ animation-play-state: paused;
   }
 
   .product li {
-    width: 150px;
+    width: 33.333%;
     min-width: 140px;
     height: 150px;
     position: relative;
-    margin-right: 20px;
     text-align: center;
     display: block;
-    margin-top: 30px;
+    margin: 30px 30px 0 0;
     color: #000;
   }
 
@@ -4175,6 +4196,7 @@ animation-play-state: paused;
     align-items: center;
   }
 
+
   .contentWrap .bgBox02 {
     background: url(../images/case01.jpg) no-repeat center center;
   }
@@ -4274,9 +4296,13 @@ animation-play-state: paused;
   .contentWrap .bgBox02 {
     background: url(../images/case01.jpg) no-repeat center center;
   }
-
-
-
+  .contentWrap .bgBox {
+    position: relative;
+    height: 150px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
   .contentWrap .bgBox .Title strong {
     font-size: 30px;
   }
@@ -4287,7 +4313,7 @@ animation-play-state: paused;
   }
 
   .contentWrap .bgBox .Title p {
-    font-size: 16px;
+    font-size: 14px;
   }
 
   .bgBox02 {
@@ -5936,12 +5962,19 @@ animation-play-state: paused;
   left: 0;
   right: 0;
   z-index: 999;
+  display: none;
 }
 .popupBg{
   width: 100%;
   height: 100%;
   background-color: rgb(0, 0, 0, 0.5);
   position: relative;
+}
+.notScroll {
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+  touch-action:none;
 }
 .popupClose{
   display: flex;
@@ -5952,13 +5985,14 @@ animation-play-state: paused;
   padding-right: 12px;
 }
 .popupClose p img{
-  width: 25px;
+  width: 15px;
 }
 .popupClose p:hover{
   cursor: pointer;
 }
 .popupInner{
-  width: 400px;
+  width: 100%;
+  max-width: 400px;
   overflow: hidden;
   background-color: #fff;
   position: fixed;
@@ -5973,7 +6007,7 @@ animation-play-state: paused;
   box-sizing: border-box;
 }
 .popupInner > p > img{
-  width: 200px;
+  width: 150px;
 }
 .popupInner>p{
   text-align: center;

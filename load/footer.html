@@ -55,15 +55,17 @@
 
 <script>
     $(document).ready(function () {
-        $('.popup').hide();
+       
 
-        $('.loginBtn').on('click', function () {
-
+        $('.loginBtn>button').click(function () {
+            $('.popup').show();
+            $("body").addClass('notScroll');
         });
-        $('.popupClose > p').on('click', function () {
+
+        $('.popupClose > p').click(function () {
 
             $('.popup').hide();
-
+            $("body").removeClass('notScroll');
         });
     });
 </script>
