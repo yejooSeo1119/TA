@@ -3068,6 +3068,17 @@ animation-play-state: paused;
   margin-bottom: 30px;
 }
 
+@media screen and (max-width: 750px) {
+  .f-logo p.small {
+    font-size: 16px;
+  }
+  
+  .f-logo p.strong {
+    font-size: 30px;
+    margin-top: -15px;
+    margin-bottom: 30px;
+  }
+}
 .loginBtn {
   margin-top: 10px;
   background-color: transparent;
@@ -3076,6 +3087,8 @@ animation-play-state: paused;
 .loginBtn button {
   background-color: transparent;
   color: #292929;
+  padding: 0;
+  margin: 0;
 }
 
 .contentWrap .textBox {
@@ -3226,13 +3239,13 @@ animation-play-state: paused;
 
   .about01 .textBox.right {
     text-align: left;
-    padding-left: 50px;
+    padding-left: 5%;
     padding-top: 150px;
   }
 
   .about01 .textBox.left {
     text-align: right;
-    padding-right: 50px;
+    padding-right: 5%;
     margin-top: 50px;
   }
   .textBox.left div.gray{
@@ -3928,10 +3941,7 @@ animation-play-state: paused;
 
 @media screen and (min-width: 751px) and (max-width: 1199px) {
 
-  .contentWrap .bgBox01,
-  .contentWrap .bgBox02{
-    padding-top: 120px;
-  }
+
 
   .contentWrap .content {
     position: relative;
@@ -4008,11 +4018,12 @@ animation-play-state: paused;
   }
 
   .contentWrap .bgBox01,
-  .contentWrap .bgBox02{
+  .contentWrap .bgBox02,
+  .contentWrap .bgBox03{
     padding-top: 120px;
   }
 
-  .contentWrap .content {
+  .contentWrap .content{
     position: relative;
     height: 100vh;
   }
@@ -4023,17 +4034,21 @@ animation-play-state: paused;
 
   }
 
-  .contentWrap .product h1 {
+  .contentWrap .product h1,
+  .contentWrap .bgBox03 h1 {
     font-size: 20px;
     line-height: 34px;
   }
 
-  .product .inner {
+  .product .inner:not(.prod01Inner) {
     position: absolute;
     top: 55%;
     transform: translateY(-50%);
   }
-
+.prod01Inner{
+  position: absolute;
+  top:350px
+}
   .product .inner h3 {
     font-size: 24px;
     color: #000;
@@ -4190,10 +4205,11 @@ animation-play-state: paused;
 @media screen and (min-width: 751px) and (max-width: 1199px) {
   .contentWrap .bgBox {
     position: relative;
-    height: 180px;
+    height: 150px;
     width: 100%;
     display: flex;
     align-items: center;
+    padding-top: 150px;
   }
 
 
@@ -4208,16 +4224,16 @@ animation-play-state: paused;
   transform: translateY(-50%);
 } */
 
-  .contentWrap .bgBox02 .Title h1 {
+  .contentWrap .Title h1 {
     font-size: 24px;
     line-height: 34px;
   }
 
-  .contentWrap .bgBox .Title strong {
+  .contentWrap .Title strong {
     font-size: 32px;
   }
 
-  .contentWrap .bgBox .Title span {
+  .contentWrap .Title span {
     font-size: 16px;
     padding-top: 10px;
     display: block;
@@ -5686,28 +5702,26 @@ animation-play-state: paused;
 
 /* product */
 
-.bgBox03 {
-  width: 100%;
+.bgBox03{
   background: url(../images/case01.jpg) no-repeat center;
-  background-size: cover;
-  display: flex;
-  align-items: center;
-  margin-top: 64px;
 }
 
-.bgBox03>.Title {
-  width: 1200px;
-  margin: auto;
-  color: #fff;
+@media screen and (max-width: 750px) {
+  .bgBox03 .Title{
+    padding-left: 8%;
+  }
+}
+@media screen and (min-width: 1200px){
+  .bgBox03>.Title>h1 {
+    font-size: 48px !important;
+  }
+  
+  .bgBox03>.Title>p {
+    font-size: 20px !important;
+  }
 }
 
-.bgBox03>.Title>h1 {
-  font-size: 48px !important;
-}
 
-.bgBox03>.Title>p {
-  font-size: 20px !important;
-}
 
 .imgBox02 {
   width: 100%;
@@ -5725,9 +5739,37 @@ animation-play-state: paused;
   box-sizing: border-box;
   margin: auto;
   overflow: hidden;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
+}
+@media screen and (min-width: 751px) and (max-width: 1199px){
+  .imgBox02 li {
+    text-align: center;
+    margin: auto;
+    overflow: hidden;
+    padding: 0 0 20px 0;
+  }
+  
 }
 
+
+@media screen and (max-width: 750px) {
+  .imgBox02 ul {
+    width: 90%;
+    display: flex;
+    padding: 50px 0;
+    box-sizing: border-box;
+    margin: auto;
+    overflow: hidden;
+    flex-wrap: wrap;
+  }
+  .imgBox02 li {
+    width: 100%;
+    text-align: center;
+    margin: auto;
+    padding: 0 0 20px 0;
+  }
+  
+}
 .imgBox02 li {
   text-align: center;
   margin: auto;
@@ -5735,7 +5777,8 @@ animation-play-state: paused;
 }
 
 .imgBox02 li img {
-  width: 500px;
+  width: 100%;
+  max-width: 500px;
   margin: auto;
   text-align: center;
   display: block;
@@ -5815,6 +5858,13 @@ animation-play-state: paused;
   width: 50%;
   text-align: center;
   margin: auto;
+}
+@media screen and (max-width: 750px) {
+  .more ul {
+    width: 100%;
+    text-align: center;
+    margin: auto;
+  }
 }
 .more ul li{
   float: left;
@@ -5982,10 +6032,10 @@ animation-play-state: paused;
 }
 .popupClose p{
   display: inline-flex;
-  padding-right: 12px;
+  padding: 10px 20px 15px 15px;
 }
 .popupClose p img{
-  width: 15px;
+  width: 18px;
 }
 .popupClose p:hover{
   cursor: pointer;
