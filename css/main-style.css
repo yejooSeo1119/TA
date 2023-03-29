@@ -5113,7 +5113,7 @@ animation-play-state: paused;
     display: block;
     z-index: 888;
     width: 180px;
-    left: 200px;
+    left: 185px;
     top: 20px;
     text-align: left;
     border-radius: 10px;
@@ -5564,14 +5564,14 @@ animation-play-state: paused;
   .contentWrap .sub {
     padding: 50px 5px 30px;
     box-sizing: border-box;
-    width: 500px;
-    max-width: 100%;
+    width: 100%;
+    max-width: 480px;
     margin: 0 auto;
     text-align: center;
   }
 
   .contentWrap .inside {
-    max-width: 100%;
+    max-width: 480px;
     width: 100%;
     margin: auto;
     overflow: hidden;
