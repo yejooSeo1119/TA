@@ -4102,7 +4102,6 @@ animation-play-state: paused;
 .contentWrap .bgBox .Title{
   color: #fff;
   text-shadow: 2px 2px 3px rgb(0, 0, 0, 0.5);
-  padding-left: 100px;
 }
 @media screen and (min-width: 1200px) {
   .contentWrap .content {
