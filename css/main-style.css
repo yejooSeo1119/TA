@@ -5779,6 +5779,11 @@ animation-play-state: paused;
   .more h2{
     font-size: 30px !important;
   }
+  .more ul {
+    width: 90% !important;
+    text-align: center;
+    margin: auto;
+  }
 }
 .imgBox02 li {
   text-align: center;
@@ -5869,13 +5874,6 @@ animation-play-state: paused;
   width: 50%;
   text-align: center;
   margin: auto;
-}
-@media screen and (max-width: 750px) {
-  .more ul {
-    width: 100%;
-    text-align: center;
-    margin: auto;
-  }
 }
 .more ul li{
   float: left;
