@@ -1807,10 +1807,10 @@ nav>ul>li {
   }
 
   .mainfullbox0 .contentWrap {
-    width: 600px;
+    width: 100%;
     height: 100vh;
-    max-width: 100%;
-    margin: auto;
+    max-width: 450px;
+    margin:0 auto;
     background-color: transparent;
   }
 
@@ -2220,6 +2220,7 @@ nav>ul>li {
 
   .client p {
     color: #7b7b7b;
+    
   }
 
   .logoWrap {
@@ -2433,6 +2434,10 @@ animation-play-state: paused;
 
   .client p {
     color: #7b7b7b;
+    width: 100%;
+    max-width: 400px;
+    display: block;
+    margin: 0 auto;
   }
 
   .logoWrap {
@@ -2912,7 +2917,7 @@ animation-play-state: paused;
     font-weight: 400;
     padding: 50px 0 30px;
     font-size: 30px;
-    width: 100%;
+    width: 90%;
     margin: auto;
     color: #000;
   }
@@ -3455,14 +3460,14 @@ animation-play-state: paused;
   .about02 .title {
     position: absolute;
     width: 80%;
-    top: 60%;
+    top: 55%;
     left: 50%;
     transform: translate(-50%, -50%);
   }
 
   .aboutWrap .about02 .title h1 {
     font-size: 48px;
-    padding: 50px 0 50px 0;
+    padding: 30px 0 30px 0;
   }
 
   .aboutWrap .about02 .title p {
@@ -5074,7 +5079,7 @@ animation-play-state: paused;
   .search {
     display: flex;
     flex-direction: column;
-    padding: 120px 30px 0px;
+    padding: 180px 30px 0px;
     box-sizing: border-box;
     margin: auto;
   }
@@ -5754,7 +5759,7 @@ animation-play-state: paused;
 
 @media screen and (max-width: 750px) {
   .imgBox02 ul {
-    width: 90%;
+    width: 80%;
     display: flex;
     padding: 50px 0;
     box-sizing: border-box;
@@ -5766,9 +5771,14 @@ animation-play-state: paused;
     width: 100%;
     text-align: center;
     margin: auto;
-    padding: 0 0 20px 0;
+    padding: 0 0 50px 0;
   }
-  
+  .imgBox02 li:last-child{
+    padding: 0 0 0 0;
+  }
+  .more h2{
+    font-size: 30px !important;
+  }
 }
 .imgBox02 li {
   text-align: center;
@@ -5839,15 +5849,16 @@ animation-play-state: paused;
   height: 400px;
   background: url(../images/more_bg.jpg) no-repeat center;
   display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
 }
 .more{
   width: 100%;
   max-width: 1500px;
   margin: auto;
   color: #fff;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
+
 }
 .more h2{
   font-size: 48px;
