@@ -3796,7 +3796,7 @@ animation-play-state: paused;
 
   .down,
   .blog {
-    padding: 100px 0;
+    padding: 50px 0;
   }
 
   .down a,
@@ -5780,9 +5780,10 @@ animation-play-state: paused;
     font-size: 30px !important;
   }
   .more ul {
-    width: 90% !important;
+    width: 85% !important;
     text-align: center;
-    margin: auto;
+    margin:0 auto;
+    overflow: hidden;
   }
 }
 .imgBox02 li {
