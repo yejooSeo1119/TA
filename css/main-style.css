@@ -722,8 +722,6 @@ input[type="button"] {
     padding: 3px 20px;
     box-sizing: border-box;
     z-index: 999;
-    background-color: #000;
-    display: flex;
   }
 
   .m_header .navWrap .home {
@@ -784,16 +782,13 @@ input[type="button"] {
 
   .m_nav1, 
   .m_nav2 {
-    width: 70%;
-    height: calc(100% - 150px);
-    display: block;
+    width: 95%;
+    height:100vh;
     background-color: #000;
     position: static;
-    right: 0;
-    bottom: 0;
     z-index: 777;
-    padding-top: 100px;
     display: none;
+    float: right;
   }
 
   .m_nav1 ul.side,  
@@ -825,6 +820,7 @@ input[type="button"] {
   .m_nav1 ul li:hover a,
   .m_nav2 ul li:hover a {
     border-bottom: 1px solid #fff;
+    cursor: pointer;
   }
 }
 
@@ -4106,6 +4102,7 @@ animation-play-state: paused;
 .contentWrap .bgBox .Title{
   color: #fff;
   text-shadow: 2px 2px 3px rgb(0, 0, 0, 0.5);
+  padding-left: 100px;
 }
 @media screen and (min-width: 1200px) {
   .contentWrap .content {
@@ -4118,6 +4115,9 @@ animation-play-state: paused;
     width: 100%;
     display: flex;
     align-items: center;
+  }
+  .contentWrap .bgBox.bgBox03{
+    margin-top: 88px;
   }
 
   .contentWrap .bgBox02 {
@@ -5360,7 +5360,7 @@ animation-play-state: paused;
     font-size: 20px;
     height: 50px;
     border-radius: 10px;
-    transition: all 0.3s ease;
+    transition: border 0.1s ease;
   }
 
   .btnBox button:hover {
@@ -5716,15 +5716,6 @@ animation-play-state: paused;
     padding-left: 8%;
   }
 }
-@media screen and (min-width: 1200px){
-  .bgBox03>.Title>h1 {
-    font-size: 48px !important;
-  }
-  
-  .bgBox03>.Title>p {
-    font-size: 20px !important;
-  }
-}
 
 
 
@@ -5746,6 +5737,7 @@ animation-play-state: paused;
   overflow: hidden;
   flex-wrap: wrap;
 }
+
 @media screen and (min-width: 751px) and (max-width: 1199px){
   .imgBox02 li {
     text-align: center;
@@ -5753,7 +5745,6 @@ animation-play-state: paused;
     overflow: hidden;
     padding: 0 0 20px 0;
   }
-  
 }
 
 
