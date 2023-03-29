@@ -1848,8 +1848,8 @@ nav>ul>li {
 
   .main_detail .detail_1 {
     position: absolute;
-    left: 20px;
-    top: 340px;
+    left: 40px;
+    top: 300px;
     opacity: 1;
     /* transform: translateY(-50px); */
     z-index: 10;
@@ -1885,7 +1885,7 @@ nav>ul>li {
 
   .main_detail .detail_2 {
     position: absolute;
-    left: 150px;
+    left: 110px;
     top: 30px;
     opacity: 1;
     /* transform: translateY(-50px); */
@@ -1916,8 +1916,8 @@ nav>ul>li {
 
   .main_detail .detail_3 {
     position: absolute;
-    left: 320px;
-    top: 340px;
+    left: 260px;
+    top: 320px;
     opacity: 1;
     /* transform: translateY(-50px); */
     z-index: 10;
@@ -1935,7 +1935,7 @@ nav>ul>li {
   }
 
   .main_detail .detail_3 .detail_3_1 img {
-    width: 150px;
+    width: 140px;
   }
 
   .main_detail .detail_3 .detail_3_text {
@@ -1960,7 +1960,7 @@ nav>ul>li {
   }
 
   .main_detail .detail_4 img {
-    width: 350px;
+    width: 300px;
   }
 
   .detail_4 .detail_circle {
@@ -1970,8 +1970,8 @@ nav>ul>li {
 
   .main_detail .detail_5 {
     position: absolute;
-    left: 70px;
-    top: 190px;
+    left: 33px;
+    top: 160px;
     z-index: 5;
     opacity: 1;
     transform: scale(0.5);
@@ -1990,8 +1990,8 @@ nav>ul>li {
 
   .main_detail.on .detail_1 {
     position: absolute;
-    left: 20px;
-    top: 340px;
+    left: 40px;
+    top: 300px;
     opacity: 1;
     transition: all ease 0.5s 0s;
     transition-delay: 0.5s;
@@ -2008,8 +2008,8 @@ nav>ul>li {
 
   .main_detail.on .detail_1.on {
     position: absolute;
-    left: 20px;
-    top: 340px;
+    left: 40px;
+    top: 300px;
     opacity: 1;
     transition: all ease 0.5s 0s;
     transition-delay: 0.5s;
@@ -2064,7 +2064,7 @@ nav>ul>li {
 
   .main_detail.on .detail_2.on {
     position: absolute;
-    left: 150px;
+    left: 110px;
     top: 30px;
     opacity: 1;
     transition: all ease 0.5s 0s;
@@ -2095,8 +2095,8 @@ nav>ul>li {
 
   .main_detail.on .detail_3 {
     position: absolute;
-    left: 320px;
-    top: 340px;
+    left: 260px;
+    top: 320px;
     opacity: 1;
     transition: all ease 0.5s 0s;
     transition-delay: 2.6s;
@@ -2121,8 +2121,8 @@ nav>ul>li {
 
   .main_detail.on .detail_3.on {
     position: absolute;
-    left: 320px;
-    top: 340px;
+    left: 260px;
+    top: 320px;
     opacity: 1;
     transition: all ease 0.5s 0s;
     transition-delay: 2s;
@@ -3796,7 +3796,7 @@ animation-play-state: paused;
 
   .down,
   .blog {
-    padding: 50px 0;
+    padding: 30px 0;
   }
 
   .down a,
@@ -5781,10 +5781,14 @@ animation-play-state: paused;
     font-size: 30px !important;
   }
   .more ul {
-    width: 85% !important;
+    width: 100% !important;
     text-align: center;
     margin:0 auto;
     overflow: hidden;
+  }
+  .more ul li{
+    float: left;
+    width: 100% !important;
   }
 }
 .imgBox02 li {
