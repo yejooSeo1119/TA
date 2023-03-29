@@ -3804,7 +3804,7 @@ animation-play-state: paused;
     padding: 10px 20px;
     border: 2px solid #fff;
     border-radius: 10px;
-    transition: all 0.5s ease;
+    transition: all 0.3s ease;
     background-color: transparent;
   }
 
@@ -4713,7 +4713,6 @@ animation-play-state: paused;
     width: 100%;
     max-width: 100%;
     margin: auto;
-    padding-top: 70px;
   }
   .bImgBox{ 
     animation-name: left;
