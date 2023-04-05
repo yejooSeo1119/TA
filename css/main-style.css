@@ -2288,6 +2288,7 @@ animation-play-state: paused;
 .logoInner img {
   width:100%;
   height:100%;
+  cursor: default;
 }
 .c-logo > .clone {
   opacity:1;
@@ -2530,6 +2531,8 @@ animation-play-state: paused;
     background-color: transparent;
     border-radius: 20px 0 0 20px;
     box-shadow: 5.142px 6.128px 12.35px 0.65px rgba(25, 48, 88, 0.3);
+    width: 82px;
+    background: #fff;
   }
 
   .quick p {
@@ -2539,6 +2542,7 @@ animation-play-state: paused;
     color: #fff;
     background-color: #4026EE;
     border-radius: 20px 0 0 0px;
+    margin: 0;
   }
 
   .quick a {
@@ -6083,4 +6087,97 @@ animation-play-state: paused;
   border-radius: 10px;
   font-size: 16px;
   font-weight: bold;
+}
+
+.mainbox2,
+.mainbox3
+{
+  width: 100%;
+  height: 100%;
+  display: block;
+  overflow: hidden;
+  margin-top: 88px;
+}
+.mainbox3{
+  background-color: #f1f1f9;
+}
+.main02,
+.main03{
+  width: 100%;
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 100px 0;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.main02-le{
+  width: 50%;
+}
+.main02 img,
+.main03 img{
+  cursor: default;
+}
+.main02-le a img{
+  display: block;
+  max-width: 100%;
+}
+.main02Img p.main02-ti,
+p.main03-ti{
+  font-size: 30px;
+  font-weight: 500;
+  padding: 50px 0 0 0;
+}
+p.main03-ti{
+  text-align: right;
+}
+.main02Img p.main02-ti span,
+p.main03-ti span{
+  color: #4026EE;
+  font-weight: 800;
+}
+.main02Img p.gray{
+  color:#797979
+}
+.main02-ri img{
+  width: 70%;
+  float: right;
+  display: block;
+}
+.main03Img{
+  display:block;
+}
+.main03Img span{
+  color: #000;
+  text-align: center;
+  font-size: 20px;
+}
+.main03Img span p{
+  display: inline;
+  font-size: 90px;
+}
+.main03Img span img.icon{
+  width: 30px;
+}
+.main03Img ul {
+  display: flex;
+  flex-direction: row;
+}
+.main03Img ul div{
+  display: flex;
+  flex-direction: column;
+  padding: 0 20px;
+}
+.main03-ri a{
+  display: block;
+  width: 100%;
+  overflow: hidden;
+}
+.main03-ri a img{
+  float: right;
+  display: block;
+}
+.main03-ti span{
+  display: inline-block;
 }
