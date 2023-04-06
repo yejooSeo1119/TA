@@ -968,7 +968,7 @@ input[type="button"] {
   padding-bottom: 50px;
   letter-spacing: -0.5px;
   font-family: "Noto Sans KR";
-  width: 750px;
+  width: 100%;
   max-width: 100%;
   clear: both;
 }
