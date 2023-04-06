@@ -6119,14 +6119,17 @@ animation-play-state: paused;
     width: 100%;
     max-width: 1500px;
     margin: 0 auto;
-    padding: 100px 85px;
+    padding: 100px 40px 100px 40px;
     box-sizing: border-box;
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
   .main02-le{
-    width: 50%;
+    width: 80%;
+  }
+  .main02Img{
+    width: 100%;
   }
   .main02 img,
   .main03 img{
