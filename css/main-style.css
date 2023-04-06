@@ -1020,12 +1020,17 @@ nav>ul>li {
   }
 
   .mainfullbox0 .contentWrap {
-    width: 1500px;
-    max-width: 100%;
+    width: 100%;
+    max-width: 1500px;
     margin: auto;
     margin-top: -100px;
+    height: 100%;
+    background-color: transparent;
   }
-
+  .mainfullbox0 .contentWrap::after{
+    content: "";
+    clear: both;
+  }
   .main .Title {
     width: 500px;
     overflow: hidden;
@@ -1051,13 +1056,16 @@ nav>ul>li {
     position: relative;
     float: left;
     width: 800px;
-    margin-right: 100px;
     box-sizing: border-box;
     margin-top: -70px;
-    padding: 50px;
+    padding: 50px 100px 0 0;
     z-index: 555;
   }
-
+  .main_detail::after{
+    content: "";
+    display: block;
+    clear: both;
+  }
   .main_detail .detail_1 {
     position: absolute;
     left: 0px;
@@ -6111,7 +6119,7 @@ animation-play-state: paused;
     width: 100%;
     max-width: 1500px;
     margin: 0 auto;
-    padding: 100px 0;
+    padding: 100px 85px;
     box-sizing: border-box;
     display: flex;
     align-items: center;
@@ -6146,6 +6154,9 @@ animation-play-state: paused;
   .main03-ri p.gray{
     color:#7b7b7b;
   }
+  .main03-ri p.gray{
+    text-align: right;
+  }
   .main02-ri img{
     width: 70%;
     float: right;
@@ -6160,13 +6171,20 @@ animation-play-state: paused;
     font-size: 16px;
     font-weight: 800;
     padding-top: 5px;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    height: 55px;
   }
   .main03Img span p{
     display: inline;
     font-size: 90px;
+    margin-right: 10px;
   }
   .main03Img span img.icon{
     width: 30px;
+    height: 30px;
   }
   .main03Img ul {
     display: flex;
@@ -6190,9 +6208,19 @@ animation-play-state: paused;
   .main03-ti span{
     display: inline-block;
   }
+  .main03-ri .mobile{
+    display: none;
+  }
 }
 
 @media screen and (min-width: 751px) and (max-width: 1199px){
+  .main03-ri .web{
+    display: none;
+  }
+  .main03-ri .mobile img{
+    display: block;
+    margin: 0 auto;
+  }
   .main02{
     background: url(../images/main02.png) 90% 100% no-repeat;
     background-size: 300px;
@@ -6220,7 +6248,6 @@ animation-play-state: paused;
     padding: 100px 0;
     box-sizing: border-box;
     display: flex;
-    align-items: center;
     flex-wrap: nowrap;
   }
   .main02{
@@ -6228,7 +6255,11 @@ animation-play-state: paused;
   }
   .main03{
     justify-content: center;
-    flex-direction: column;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  .main03-ri p.gray{
+    text-align: center;
   }
   .main02-le{
     width: 60%;
@@ -6249,7 +6280,7 @@ animation-play-state: paused;
     padding: 20px 0 0 0;
   }
   p.main03-ti{
-    text-align: right;
+    text-align: center;
   }
   .main02Img p.main02-ti span,
   p.main03-ti span{
@@ -6283,6 +6314,7 @@ animation-play-state: paused;
   }
   .main03Img span img.icon{
     width: 30px;
+    display: inline;
   }
   .main03Img ul {
     display: block;
@@ -6298,16 +6330,15 @@ animation-play-state: paused;
     width: 100%;
     overflow: hidden;
   }
-  .main03-ri a img{
-    float: right;
-    display: block;
-  }
   .main03-ti span{
     display: inline-block;
   }
 }
 
 @media screen and (max-width: 750px) {
+  .main03-ri .web{
+    display: none;
+  }
   .main02{
     background: url(../images/main02.png) 90% 100% no-repeat;
     background-size: 250px;
@@ -6424,3 +6455,4 @@ animation-play-state: paused;
     display: inline-block;
   }
 }
+ 
