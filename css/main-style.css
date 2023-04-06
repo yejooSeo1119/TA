@@ -828,6 +828,134 @@ input[type="button"] {
 
 
 /* footer */
+
+@media screen and (min-width: 1200px){
+  #footer {
+    background-color: #000;
+    width: 100%;
+    overflow: hidden;
+    margin: auto;
+  }
+  
+  .foot {
+    background-color: #000;
+    padding-bottom: 50px;
+    letter-spacing: -0.5px;
+    font-family: "Noto Sans KR";
+    width: 1920px;
+    max-width: 100%;
+    clear: both;
+  }
+  
+  .foot.black .footer_main_area {
+    background-color: #000 !important;
+    color: #fff;
+  }
+  
+  #footer .foot_main {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    left: 0px;
+    right: 0px;
+    top: 100vh;
+    z-index: 1200;
+    transition: top 0.6s ease-in-out;
+    height: calc(var(--vh, 1vh) * 100);
+    height: 100vh;
+    background-color: transparent;
+  }
+  
+  #footer .foot_main.transition-up {
+    top: 0px;
+  }
+  
+  #footer .footer_main_area {
+    width: 1600px;
+    max-width: 100%;
+    min-width: 1200px;
+    overflow: hidden;
+    margin: 0 auto;
+    padding: 50px 50px 0;
+    box-sizing: border-box;
+  }
+  
+  #footer .foot_main .footer_main_area {
+    margin-top: auto;
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 751px) and (max-width: 1199px){
+  #footer {
+    background-color: #000;
+    width: 100%;
+    overflow: hidden;
+    margin: auto;
+  }
+  
+  .foot {
+    background-color: #000;
+    padding-bottom: 50px;
+    letter-spacing: -0.5px;
+    font-family: "Noto Sans KR";
+    width: 1920px;
+    max-width: 100%;
+    clear: both;
+  }
+  
+  .foot.black .footer_main_area {
+    background-color: #000 !important;
+    color: #fff;
+  }
+  
+  #footer .foot_main {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    left: 0px;
+    right: 0px;
+    top: 100%;
+    z-index: 1200;
+    transition: top 0.6s ease-in-out;
+    height: calc(var(--vh, 1vh) * 100);
+    height: 100vh;
+    background-color: transparent;
+  }
+  
+  #footer .foot_main.transition-up {
+    top: 0px;
+  }
+  
+  #footer .footer_main_area {
+    width: 1199px;
+    max-width: 100%;
+    min-width: 1200px;
+    overflow: hidden;
+    margin: 0 auto;
+    padding: 50px 50px 0;
+    box-sizing: border-box;
+  }
+  
+  #footer .foot_main .footer_main_area {
+    margin-top: auto;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  #footer .footer_main_area {
+    width: 100%;
+    max-width: 100%;
+    min-width: 750px;
+    overflow: hidden;
+    margin: 0 auto;
+    padding: 50px 0 10px 50px !important;
+    box-sizing: border-box;
+  }
+}
 #footer {
   background-color: #000;
   width: 100%;
@@ -840,7 +968,7 @@ input[type="button"] {
   padding-bottom: 50px;
   letter-spacing: -0.5px;
   font-family: "Noto Sans KR";
-  width: 1920px;
+  width: 750px;
   max-width: 100%;
   clear: both;
 }
@@ -883,6 +1011,7 @@ input[type="button"] {
   margin-top: auto;
   width: 100%;
 }
+
 
 /* flex */
 #header>.container,
@@ -3086,13 +3215,17 @@ animation-play-state: paused;
 
 @media screen and (max-width: 750px) {
   .f-logo p.small {
-    font-size: 16px;
+    font-size: 14px;
   }
   
   .f-logo p.strong {
-    font-size: 30px;
+    font-size: 20px;
     margin-top: -15px;
     margin-bottom: 30px;
+  }
+  .copy li span {
+    font-weight: 500;
+    font-size: 14px;
   }
 }
 .loginBtn {
