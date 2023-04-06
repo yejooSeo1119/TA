@@ -2745,6 +2745,7 @@ animation-play-state: paused;
     width: 100%;
     max-width: 100%;
     box-sizing: border-box;
+    margin: 0;
   }
 
   .s-now p:last-child {
@@ -2863,6 +2864,7 @@ animation-play-state: paused;
     width: 100%;
     max-width: 100%;
     box-sizing: border-box;
+    margin: 0;
   }
 
   .s-now p:last-child {
@@ -2984,6 +2986,7 @@ animation-play-state: paused;
     box-sizing: border-box;
     display: flex;
     flex-wrap: nowrap;
+    margin: 0;
   }
 
   .s-now p:last-child {
@@ -6089,95 +6092,335 @@ animation-play-state: paused;
   font-weight: bold;
 }
 
-.mainbox2,
-.mainbox3
-{
-  width: 100%;
-  height: 100%;
-  display: block;
-  overflow: hidden;
-  margin-top: 88px;
+
+@media screen and (min-width: 1200px){
+  .mainbox2,
+  .mainbox3
+  {
+    width: 100%;
+    height: 100%;
+    display: block;
+    overflow: hidden;
+    margin-top: 88px;
+  }
+  .mainbox3{
+    background-color: #f1f1f9;
+  }
+  .main02,
+  .main03{
+    width: 100%;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 100px 0;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .main02-le{
+    width: 50%;
+  }
+  .main02 img,
+  .main03 img{
+    cursor: default;
+  }
+  .main02-le a img{
+    display: block;
+    max-width: 100%;
+  }
+  .main02Img p.main02-ti,
+  p.main03-ti{
+    font-size: 30px;
+    font-weight: 500;
+    padding: 50px 0 0 0;
+  }
+  p.main03-ti{
+    text-align: right;
+  }
+  .main02Img p.main02-ti span,
+  p.main03-ti span{
+    color: #4026EE;
+    font-weight: 800;
+  }
+  .main02Img p.gray,
+  .main03-ri p.gray{
+    color:#7b7b7b;
+  }
+  .main02-ri img{
+    width: 70%;
+    float: right;
+    display: block;
+  }
+  .main03Img{
+    display:block;
+  }
+  .main03Img span{
+    color: #000;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 800;
+    padding-top: 5px;
+  }
+  .main03Img span p{
+    display: inline;
+    font-size: 90px;
+  }
+  .main03Img span img.icon{
+    width: 30px;
+  }
+  .main03Img ul {
+    display: flex;
+    flex-direction: row;
+  }
+  .main03Img ul div{
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px;
+  }
+  .main03-ri a{
+    display: block;
+    width: 100%;
+    overflow: hidden;
+  }
+  .main03-ri a img{
+    float: right;
+    display: block;
+    width: 85%;
+  }
+  .main03-ti span{
+    display: inline-block;
+  }
 }
-.mainbox3{
-  background-color: #f1f1f9;
+
+@media screen and (min-width: 751px) and (max-width: 1199px){
+  .main02{
+    background: url(../images/main02.png) 90% 100% no-repeat;
+    background-size: 300px;
+  }
+  .main02-ri{
+    display: none;
+  }
+  .mainbox2,
+  .mainbox3
+  {
+    width: 100%;
+    height: 100%;
+    display: block;
+    overflow: hidden;
+    margin-top: 88px;
+  }
+  .mainbox3{
+    background-color: #f1f1f9;
+  }
+  .main02,
+  .main03{
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 100px 0;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+  }
+  .main02{
+    justify-content: space-between;
+  }
+  .main03{
+    justify-content: center;
+    flex-direction: column;
+  }
+  .main02-le{
+    width: 60%;
+    padding-left: 5%;
+  }
+  .main02 img,
+  .main03 img{
+    cursor: default;
+  }
+  .main02-le a img{
+    display: block;
+    max-width: 100%;
+  }
+  .main02Img p.main02-ti,
+  p.main03-ti{
+    font-size: 30px;
+    font-weight: 500;
+    padding: 20px 0 0 0;
+  }
+  p.main03-ti{
+    text-align: right;
+  }
+  .main02Img p.main02-ti span,
+  p.main03-ti span{
+    color: #4026EE;
+    font-weight: 800;
+  }
+  .main02Img p.gray,
+  .main03-ri p.gray{
+    color:#7b7b7b;
+  }
+  .main02-ri img{
+    width: 60%;
+    float: right;
+    display: block;
+  }
+  .main03Img{
+    display:block;
+  }
+  .main03Img li{
+    float: left;
+    padding: 0 30px 80px 30px;
+  }
+  .main03Img span{
+    color: #000;
+    text-align: center;
+    font-size: 20px;
+  }
+  .main03Img span p{
+    display: inline;
+    font-size: 50px;
+  }
+  .main03Img span img.icon{
+    width: 30px;
+  }
+  .main03Img ul {
+    display: block;
+  }
+  .main03Img ul div{
+    display: flex;
+    padding: 0 10px;
+    box-sizing: border-box;
+    flex-direction: column;
+  }
+  .main03-ri a{
+    display: block;
+    width: 100%;
+    overflow: hidden;
+  }
+  .main03-ri a img{
+    float: right;
+    display: block;
+  }
+  .main03-ti span{
+    display: inline-block;
+  }
 }
-.main02,
-.main03{
-  width: 100%;
-  max-width: 1500px;
-  margin: 0 auto;
-  padding: 100px 0;
-  box-sizing: border-box;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.main02-le{
-  width: 50%;
-}
-.main02 img,
-.main03 img{
-  cursor: default;
-}
-.main02-le a img{
-  display: block;
-  max-width: 100%;
-}
-.main02Img p.main02-ti,
-p.main03-ti{
-  font-size: 30px;
-  font-weight: 500;
-  padding: 50px 0 0 0;
-}
-p.main03-ti{
-  text-align: right;
-}
-.main02Img p.main02-ti span,
-p.main03-ti span{
-  color: #4026EE;
-  font-weight: 800;
-}
-.main02Img p.gray{
-  color:#797979
-}
-.main02-ri img{
-  width: 70%;
-  float: right;
-  display: block;
-}
-.main03Img{
-  display:block;
-}
-.main03Img span{
-  color: #000;
-  text-align: center;
-  font-size: 20px;
-}
-.main03Img span p{
-  display: inline;
-  font-size: 90px;
-}
-.main03Img span img.icon{
-  width: 30px;
-}
-.main03Img ul {
-  display: flex;
-  flex-direction: row;
-}
-.main03Img ul div{
-  display: flex;
-  flex-direction: column;
-  padding: 0 20px;
-}
-.main03-ri a{
-  display: block;
-  width: 100%;
-  overflow: hidden;
-}
-.main03-ri a img{
-  float: right;
-  display: block;
-}
-.main03-ti span{
-  display: inline-block;
+
+@media screen and (max-width: 750px) {
+  .main02{
+    background: url(../images/main02.png) 90% 100% no-repeat;
+    background-size: 250px;
+  }
+  .main02-ri{
+    display: none;
+  }
+  .mainbox2,
+  .mainbox3
+  {
+    width: 100%;
+    height: 100%;
+    display: block;
+    overflow: hidden;
+    margin-top: 88px;
+  }
+  .mainbox3{
+    background-color: #f1f1f9;
+  }
+  .main02,
+  .main03{
+    width: 100%;
+    max-width: 750px;
+    margin: 0 auto;
+    padding: 50px 0;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+  }
+  .main02{
+    justify-content: space-between;
+    padding-bottom: 200px;
+  }
+  .main03{
+    flex-direction: column-reverse;
+    width: 80%;
+  }
+ 
+  .main02-le{
+    width: 80%;
+    padding-left: 3%;
+  }
+  .main02 img,
+  .main03 img{
+    cursor: default;
+  }
+  .main02-le a img{
+    display: block;
+    max-width: 100%;
+  }
+  .main02Img p.main02-ti,
+  p.main03-ti{
+    font-size: 24px;
+    font-weight: 500;
+    padding: 10px 0 0 0;
+  }
+  p.main03-ti{
+    text-align: right;
+  }
+  .main02Img p.main02-ti span,
+  p.main03-ti span{
+    color: #4026EE;
+    font-weight: 800;
+  }
+  .main02Img p.gray,
+  .main03-ri p.gray{
+    color:#7b7b7b;
+    font-size: 14px;
+  }  
+  .main03-ri p.gray{
+    text-align: right;
+  }
+  .main02-ri img{
+    width: 60%;
+    float: right;
+    display: block;
+  }
+  .main03Img{
+    display:block;
+  }
+  .main03Img span{
+    color: #000;
+    text-align: center;
+    font-size: 20px;
+  }
+  .main03Img span p{
+    display: inline;
+    font-size: 50px;
+  }
+  .main03Img span img.icon{
+    width: 30px;
+  }
+  .main03Img ul {
+    display: block;
+  }
+  .main03Img ul div{
+    display: flex;
+    padding: 20px 10px;
+    box-sizing: border-box;
+    flex-direction: column;
+  }
+  .main03-ri a{
+    display: block;
+    width: 100%;
+    overflow: hidden;
+  }
+  .main03-ri a img{
+    float: right;
+    display: block;
+    width: 85%;
+  }
+  .main03-ti span{
+    display: inline-block;
+  }
 }
