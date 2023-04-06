@@ -3904,9 +3904,11 @@ animation-play-state: paused;
   scale: 0.97;
 }
 @media screen and (min-width: 1200px) {
-
-  .contentWrap .product {
-    width: 80%;
+  .productWrap .product .mobile{
+    display: none;
+  }
+  .contentWrap .productWrap .product {
+    width: 95%;
     margin: auto;
     overflow: hidden;
   }
@@ -3956,7 +3958,9 @@ animation-play-state: paused;
 }
 
 @media screen and (min-width: 751px) and (max-width: 1199px) {
-
+  .productWrap .product .mobile{
+    display: none;
+  }
 
 
   .contentWrap .content {
@@ -3964,8 +3968,8 @@ animation-play-state: paused;
     height: 100vh;
   }
 
-  .contentWrap .product {
-    width: 80%;
+  .contentWrap .productWrap .product {
+    width: 95%;
     height: 100%;
     margin: 0 auto;
     position: relative;
@@ -4029,6 +4033,9 @@ animation-play-state: paused;
 }
 
 @media screen and (max-width: 750px) {
+  .productWrap .product .web{
+    display: none;
+  }
   .contentWrap .bgBox {
     height: 150px;
   }
@@ -4044,8 +4051,8 @@ animation-play-state: paused;
     height: 100vh;
   }
 
-  .contentWrap .product {
-    width: 80%;
+  .contentWrap .productWrap .product {
+    width: 95%;
     margin: 0 auto;
 
   }
@@ -4117,6 +4124,12 @@ animation-play-state: paused;
 .contentWrap .bgBox .Title{
   color: #fff;
   text-shadow: 2px 2px 3px rgb(0, 0, 0, 0.5);
+  width: 95%;
+  margin: auto;
+}
+.contentWrap .product{
+  width: 95%;
+  margin: auto;
 }
 @media screen and (min-width: 1200px) {
   .contentWrap .content {
@@ -5725,14 +5738,6 @@ animation-play-state: paused;
   background: url(../images/case01.jpg) no-repeat center;
 }
 
-@media screen and (max-width: 750px) {
-  .bgBox03 .Title{
-    padding-left: 8%;
-  }
-}
-
-
-
 .imgBox02 {
   width: 100%;
   max-width: 1500px;
@@ -5742,16 +5747,30 @@ animation-play-state: paused;
   padding: 100px 0;
 }
 
-.imgBox02 ul {
-  width: 100%;
-  display: flex;
-  padding: 50px 0;
-  box-sizing: border-box;
-  margin: auto;
-  overflow: hidden;
-  flex-wrap: wrap;
+
+@media screen and (min-width: 1200px){
+  .imgBox02 ul {
+    width: 100%;
+    display: flex;
+    padding: 50px 0;
+    box-sizing: border-box;
+    margin: auto;
+    overflow: hidden;
+    flex-wrap: nowrap;
+  }
 }
 
+@media screen and (min-width: 751px) and (max-width: 1199px){
+  .imgBox02 ul {
+    width: 100%;
+    display: flex;
+    padding: 50px 0;
+    box-sizing: border-box;
+    margin: auto;
+    overflow: hidden;
+    flex-wrap: nowrap;
+  }
+}
 @media screen and (min-width: 751px) and (max-width: 1199px){
   .imgBox02 li {
     text-align: center;
@@ -5824,13 +5843,13 @@ animation-play-state: paused;
 
 .refer h2 {
   font-size: 30px;
-  width: 80%;
+  width: 95%;
   margin: auto;
 }
 
 .refer ul {
   display: flex;
-  width: 80%;
+  width: 95%;
   margin: auto;
 }
 
@@ -5847,6 +5866,26 @@ animation-play-state: paused;
   font-size: 20px;
 }
 
+@media screen and (min-width: 1200px){
+  .refer p {
+    padding-top: 50px;
+    font-size: 20px;
+  }
+}
+
+@media screen and (min-width: 751px) and (max-width: 1199px){
+  .refer p {
+    padding-top: 50px;
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .refer p {
+    padding-top: 30px;
+    font-size: 14px;
+  }
+}
 .refer span {
   width: 100%;
   display: block;
@@ -5897,54 +5936,187 @@ animation-play-state: paused;
 .productWrap{
   width: 100%;
 }
-.productWrap .product{
-  width: 100%;
-  max-width: 1300px;
-  margin: auto;
-  padding-bottom: 100px;
-  padding-top: 100px !important;
-}
-.productWrap .product h2{
-  font-size: 48px;
-  padding-bottom: 50px;
-}
-.productWrap .product span{
-  width: 100%;
-  max-width: 1300px;
-  margin: auto;
-}
-.productWrap .product span img{
-  width: 100%;
-  max-width: 1300px;
-  margin: auto;
-}
-.advantageWrap{
-  width: 100%;
-  background-color: #f1f1f9;
-}
-.advantageWrap .advantage{
-  width: 100%;
-  max-width: 1300px;
-  margin: auto;
-  padding: 200px 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.advantageWrap .advantage h2{
-  padding-bottom: 100px;
-  font-size: 48px;
-}
-.advantageWrap .advantage ul{
-  width: 100%;
-  text-align: center;
-  margin: auto;
-}
-.advantageWrap .advantage ul li{
-  float: left;
-  width: 50%;
+
+
+@media screen and (min-width: 1200px){
+  .productWrap .product{
+    width: 100%;
+    max-width: 1300px;
+    margin: auto;
+    padding-bottom: 100px;
+    padding-top: 100px !important;
+  }
+  .productWrap .product h2{
+    font-size: 48px;
+    padding-bottom: 50px;
+  }
+  .productWrap .product span{
+    width: 100%;
+    max-width: 1300px;
+    margin: auto;
+  }
+  
+  .productWrap .product span img{
+    width: 100%;
+    max-width: 1300px;
+    margin: auto;
+    display: block;
+  }
 }
 
+@media screen and (min-width: 751px) and (max-width: 1199px){
+  .productWrap .product{
+    width: 100%;
+    max-width: 1000px;
+    margin: auto;
+    padding-bottom: 100px;
+    padding-top: 100px !important;
+  }
+  .productWrap .product h2{
+    font-size: 30px;
+    padding-bottom: 50px;
+  }
+  .productWrap .product span{
+    width: 100%;
+    max-width: 1000px;
+    margin: auto;
+  }
+  
+  .productWrap .product span img{
+    width: 98%;
+    max-width: 1000px;
+    margin: auto;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .productWrap .product{
+    width: 100%;
+    max-width: 700px;
+    margin: auto;
+    padding-bottom: 100px;
+    padding-top: 100px !important;
+  }
+  .productWrap .product h2{
+    font-size: 24px;
+    padding-bottom: 50px;
+  }
+  .productWrap .product span{
+    width: 100%;
+    max-width: 700px;
+    margin: auto;
+  }
+  
+  .productWrap .product span img{
+    width: 90%;
+    max-width: 700px;
+    margin:0 auto;
+    display: block;
+  }
+}
+
+
+@media screen and (min-width: 1200px){
+  .advantageWrap{
+    width: 100%;
+    background-color: #f1f1f9;
+  }
+  .advantageWrap .advantage{
+    width: 95%;
+    max-width: 1300px;
+    margin: auto;
+    padding: 200px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .advantageWrap .advantage h2{
+    padding-bottom: 100px;
+    font-size: 48px;
+  }
+  .advantageWrap .advantage ul{
+    width: 100%;
+    text-align: center;
+    margin: auto;
+  }
+  .advantageWrap .advantage ul li{
+    float: left;
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 751px) and (max-width: 1199px){
+  .advantageWrap{
+    width: 100%;
+    background-color: #f1f1f9;
+  }
+  .advantageWrap .advantage{
+    width: 95%;
+    max-width: 1000px;
+    margin: auto;
+    padding: 100px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .advantageWrap .advantage h2{
+    padding-bottom: 100px;
+    font-size: 30px;
+  }
+  .advantageWrap .advantage ul{
+    width: 100%;
+    text-align: center;
+    margin: auto;
+  }
+  .advantageWrap .advantage ul li{
+    float: left;
+    width: 50%;
+    display: block;
+  }
+  .advantageWrap .advantage ul li img{
+    width: 100%;
+    display: block;
+    max-width: 350px;
+    margin: auto;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .advantageWrap{
+    width: 100%;
+    background-color: #f1f1f9;
+  }
+  .advantageWrap .advantage{
+    width: 95%;
+    max-width: 1000px;
+    margin: auto;
+    padding: 100px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .advantageWrap .advantage h2{
+    padding-bottom: 80px;
+    font-size: 30px;
+  }
+  .advantageWrap .advantage ul{
+    width: 100%;
+    text-align: center;
+    margin: auto;
+  }
+  .advantageWrap .advantage ul li{
+    display: block;
+  }
+  .advantageWrap .advantage ul:last-child li{
+    padding-bottom: 50px;
+  }
+  .advantageWrap .advantage ul li img{
+    width: 400px;
+    display: block;
+    margin: auto;
+  }
+}
 
 
 /* top */
